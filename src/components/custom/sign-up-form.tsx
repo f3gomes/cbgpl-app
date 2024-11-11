@@ -232,7 +232,12 @@ export default function SignUpForm() {
           />
         </div>
 
-        <Button type="submit">Enviar Cadastro</Button>
+        <Button
+          type="submit"
+          className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700"
+        >
+          Enviar Cadastro
+        </Button>
       </form>
     </Form>
   );
