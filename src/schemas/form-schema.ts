@@ -55,6 +55,7 @@ export const formSchema = z.object({
     .regex(/[a-zA-Z]/, {
       message: "A confirmação de senha deve conter pelo menos uma letra.",
     })
+    // eslint-disable-next-line
     .superRefine(({ password, confirmPassword }: any, ctx) => {
       if (password !== confirmPassword) {
         ctx.addIssue({
