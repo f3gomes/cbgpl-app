@@ -19,4 +19,13 @@ export const formSchema = z.object({
   areasInteresse: z.array(z.string()).min(1, {
     message: "Selecione pelo menos uma área de interesse.",
   }),
+  linkedin: z.string().min(2, {
+    message: "Linkedin deve ter pelo menos 2 caracteres.",
+  }),
+  instagram: z.string().min(2, {
+    message: "Instagram deve ter pelo menos 2 caracteres.",
+  }),
+  twitter: z.string().min(2, {
+    message: "Twitter deve ter pelo menos 2 caracteres.",
+  }),
 });

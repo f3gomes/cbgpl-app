@@ -91,7 +91,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         disabled={disabled}
         type="button"
       >
-        <span className="truncate">
+        <span className="truncate text-muted-foreground">
           {selectedCount === 0
             ? placeholder
             : `${selectedCount} selected${maxItems !== Infinity ? ` (max ${maxItems})` : ""}`}
