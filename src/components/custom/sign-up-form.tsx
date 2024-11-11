@@ -18,15 +18,18 @@ import { formSchema } from "@/schemas/form-schema";
 import MultiSelect from "./multi-select";
 
 const defaultValues = {
-  nomeCompleto: "",
+  name: "",
   email: "",
-  telefone: "",
-  cargo: "",
-  organizacao: "",
-  areasInteresse: [],
+  phone: "",
+  role: "",
+  company: "",
+  areas: [],
   linkedin: "",
   instagram: "",
   twitter: "",
+  idPmi: "",
+  password: "",
+  confirmPassword: "",
 };
 
 export default function SignUpForm() {
@@ -50,7 +53,7 @@ export default function SignUpForm() {
           <h1>Dados Pessoais</h1>
           <FormField
             control={form.control}
-            name="nomeCompleto"
+            name="name"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Nome Completo</FormLabel>
@@ -78,7 +81,7 @@ export default function SignUpForm() {
 
           <FormField
             control={form.control}
-            name="telefone"
+            name="phone"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Número de Telefone</FormLabel>
@@ -92,7 +95,7 @@ export default function SignUpForm() {
 
           <FormField
             control={form.control}
-            name="cargo"
+            name="role"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Cargo</FormLabel>
@@ -106,7 +109,7 @@ export default function SignUpForm() {
 
           <FormField
             control={form.control}
-            name="organizacao"
+            name="company"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Organização</FormLabel>
@@ -120,7 +123,7 @@ export default function SignUpForm() {
 
           <FormField
             control={form.control}
-            name="areasInteresse"
+            name="areas"
             render={({ field }) => (
               <FormItem className="relative z-10">
                 <FormLabel>Áreas de Interesse</FormLabel>
@@ -185,6 +188,48 @@ export default function SignUpForm() {
 
         <div>
           <h1>Identificações</h1>
+
+          <FormField
+            control={form.control}
+            name="idPmi"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>ID PMI</FormLabel>
+                <FormControl>
+                  <Input placeholder="Identificação do PMI" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Senha</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="********" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="confirmPassword"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Confirmar Senha</FormLabel>
+                <FormControl>
+                  <Input type="password" placeholder="********" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
 
         <Button type="submit">Enviar Cadastro</Button>
