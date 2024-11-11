@@ -50,7 +50,7 @@ export default function SignUpForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div>
-          <h1>Dados Pessoais</h1>
+          <h1 className="font-semibold">Dados Pessoais</h1>
           <FormField
             control={form.control}
             name="name"
@@ -138,7 +138,7 @@ export default function SignUpForm() {
         </div>
 
         <div>
-          <h1>Redes Sociais</h1>
+          <h1 className="font-semibold">Redes Sociais</h1>
 
           <FormField
             control={form.control}
@@ -187,7 +187,7 @@ export default function SignUpForm() {
         </div>
 
         <div>
-          <h1>Identificações</h1>
+          <h1 className="font-semibold">Identificações</h1>
 
           <FormField
             control={form.control}
@@ -232,7 +232,12 @@ export default function SignUpForm() {
           />
         </div>
 
-        <Button type="submit">Enviar Cadastro</Button>
+        <Button
+          type="submit"
+          className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700"
+        >
+          Enviar Cadastro
+        </Button>
       </form>
     </Form>
   );
