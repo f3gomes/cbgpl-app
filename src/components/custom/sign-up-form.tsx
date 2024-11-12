@@ -56,7 +56,7 @@ export default function SignUpForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nome Completo</FormLabel>
+                <FormLabel>Nome Completo *</FormLabel>
                 <FormControl>
                   <Input placeholder="João da Silva" {...field} />
                 </FormControl>
@@ -70,7 +70,7 @@ export default function SignUpForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>E-mail</FormLabel>
+                <FormLabel>E-mail *</FormLabel>
                 <FormControl>
                   <Input placeholder="joao@exemplo.com" {...field} />
                 </FormControl>
@@ -84,7 +84,7 @@ export default function SignUpForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Número de Telefone</FormLabel>
+                <FormLabel>Número de Telefone *</FormLabel>
                 <FormControl>
                   <Input placeholder="(11) 98765-4321" {...field} />
                 </FormControl>
@@ -98,7 +98,7 @@ export default function SignUpForm() {
             name="role"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Cargo</FormLabel>
+                <FormLabel>Cargo *</FormLabel>
                 <FormControl>
                   <Input placeholder="Gerente" {...field} />
                 </FormControl>
@@ -112,7 +112,7 @@ export default function SignUpForm() {
             name="company"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Organização</FormLabel>
+                <FormLabel>Organização *</FormLabel>
                 <FormControl>
                   <Input placeholder="Empresa XYZ" {...field} />
                 </FormControl>
@@ -126,7 +126,7 @@ export default function SignUpForm() {
             name="areas"
             render={({ field }) => (
               <FormItem className="relative z-10">
-                <FormLabel>Áreas de Interesse</FormLabel>
+                <FormLabel>Áreas de Interesse *</FormLabel>
                 <FormControl>
                   <MultiSelect {...field} />
                 </FormControl>
@@ -208,7 +208,7 @@ export default function SignUpForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Senha</FormLabel>
+                <FormLabel>Senha *</FormLabel>
                 <FormControl>
                   <Input type="password" placeholder="********" {...field} />
                 </FormControl>
@@ -222,7 +222,7 @@ export default function SignUpForm() {
             name="confirmPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Confirmar Senha</FormLabel>
+                <FormLabel>Confirmar Senha *</FormLabel>
                 <FormControl>
                   <Input type="password" placeholder="********" {...field} />
                 </FormControl>
