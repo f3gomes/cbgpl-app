@@ -39,10 +39,10 @@ export default function SignUpForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues,
+    mode: "onChange",
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     toast({
       title: "Cadastro realizado com sucesso!",
       description: "Seus dados foram enviados.",
