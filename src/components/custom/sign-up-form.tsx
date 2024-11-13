@@ -216,7 +216,7 @@ export default function SignUpForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold">Identificações</h1>
+            <h1 className="font-semibold">Credenciais</h1>
 
             <FormField
               control={form.control}
