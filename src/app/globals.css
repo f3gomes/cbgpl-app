@@ -39,7 +39,22 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* CBGPL Official Colors */
+
+    --cbgpl-aqua: #05bfe0;
+    --cbgpl-aqua-hover: #21d3ef;
+    --cbgpl-aqua-active: #0791b3;
+
+    --cbgpl-violet: #4f17a8;
+    --cbgpl-violet-hover: #5818bf;
+    --cbgpl-violet-active: #2b0b6a;
+
+    --cbgpl-tangerine: #ff610f;
+    --cbgpl-tangerine-hover: #ff8337;
+    --cbgpl-tangerine-active: #f04606;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
