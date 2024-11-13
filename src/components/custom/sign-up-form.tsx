@@ -47,7 +47,7 @@ export default function SignUpForm() {
   }
 
   return (
-    <div className="w-[28rem] md:w-[34rem] rounded-lg p-8 shadow-lg">
+    <div className="w-[28rem] rounded-lg p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
@@ -238,7 +238,7 @@ export default function SignUpForm() {
 
           <Button
             type="submit"
-            className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700"
+            className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
           >
             Enviar Cadastro
           </Button>
