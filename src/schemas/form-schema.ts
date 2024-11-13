@@ -3,18 +3,18 @@ import { z } from "zod";
 export const formSchema = z
   .object({
     name: z.string().min(2, {
-      message: "Nome completo deve ter pelo menos 2 caracteres.",
+      message: "Nome completo deve ter pelo menos 2 caracteres",
     }),
     email: z.string().email({
-      message: "Email inválido.",
+      message: "Email inválido",
     }),
     phone: z.string().min(10, {
-      message: "Número de telefone inválido.",
+      message: "Número de telefone inválido",
     }),
     role: z.string(),
     company: z.string(),
     areas: z.array(z.string()).min(1, {
-      message: "Selecione pelo menos uma área de interesse.",
+      message: "Selecione pelo menos uma área de interesse",
     }),
 
     linkedin: z.string().url("URL inválida"),
@@ -25,28 +25,28 @@ export const formSchema = z
     password: z
       .string()
       .min(8, {
-        message: "A senha deve ter no mínimo 8 caracteres.",
+        message: "A senha deve ter no mínimo 8 caracteres",
       })
       .regex(/[0-9]/, {
-        message: "A senha deve conter pelo menos um número.",
+        message: "A senha deve conter pelo menos um número",
       })
       .regex(/[a-zA-Z]/, {
-        message: "A senha deve conter pelo menos uma letra.",
+        message: "A senha deve conter pelo menos uma letra",
       }),
 
     confirmPassword: z
       .string()
       .min(8, {
-        message: "A confirmação de senha deve ter no mínimo 8 caracteres.",
+        message: "A confirmação de senha deve ter no mínimo 8 caracteres",
       })
       .regex(/[0-9]/, {
-        message: "A confirmação de senha deve conter pelo menos um número.",
+        message: "A confirmação de senha deve conter pelo menos um número",
       })
       .regex(/[a-zA-Z]/, {
-        message: "A confirmação de senha deve conter pelo menos uma letra.",
+        message: "A confirmação de senha deve conter pelo menos uma letra",
       }),
   })
   .refine((fields) => fields.password === fields.confirmPassword, {
-    message: "As senhas não correspondem.",
+    message: "As senhas não correspondem",
     path: ["confirmPassword"],
   });
