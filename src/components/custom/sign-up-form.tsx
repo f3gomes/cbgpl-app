@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { formSchema } from "@/schemas/form-schema";
 import MultiSelect from "./multi-select";
+import { phoneMask } from "@/lib/utils";
 
 const defaultValues = {
   name: "",
@@ -49,7 +50,9 @@ export default function SignUpForm() {
   return (
     <div className="w-[28rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
-        <h1 className="mb-6 text-2xl font-bold text-center">Crie uma nova conta</h1>
+        <h1 className="mb-6 text-center text-2xl font-bold">
+          Crie uma nova conta
+        </h1>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
@@ -103,7 +106,13 @@ export default function SignUpForm() {
                 <FormItem>
                   <FormLabel>Número de Telefone *</FormLabel>
                   <FormControl>
-                    <Input placeholder="(11) 98765-4321" {...field} />
+                    <Input
+                      {...field}
+                      placeholder="(11) 98765-4321"
+                      onChange={(e) =>
+                        field.onChange(phoneMask(e.target.value))
+                      }
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
