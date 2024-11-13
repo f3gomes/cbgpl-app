@@ -47,8 +47,10 @@ export default function SignUpForm() {
   }
 
   return (
-    <div className="w-[28rem] rounded-lg p-8 shadow-lg md:w-[34rem]">
+    <div className="w-[28rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
+        <h1 className="mb-6 text-2xl font-bold text-center">Crie uma nova conta</h1>
+
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
             <h1 className="font-semibold">Dados Pessoais</h1>
