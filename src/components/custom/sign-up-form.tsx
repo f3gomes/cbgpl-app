@@ -47,198 +47,203 @@ export default function SignUpForm() {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div>
-          <h1 className="font-semibold">Dados Pessoais</h1>
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Nome Completo *</FormLabel>
-                <FormControl>
-                  <Input placeholder="João da Silva" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <div className="w-[28rem] md:w-[34rem] rounded-lg p-8 shadow-lg">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <div className="flex flex-col gap-2">
+            <h1 className="font-semibold">Dados Pessoais</h1>
+            <FormField
+              control={form.control}
+              name="idPmi"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>ID PMI</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Identificação do PMI" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>E-mail *</FormLabel>
-                <FormControl>
-                  <Input placeholder="joao@exemplo.com" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Nome Completo *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="João da Silva" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Número de Telefone *</FormLabel>
-                <FormControl>
-                  <Input placeholder="(11) 98765-4321" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>E-mail *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="joao@exemplo.com" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="role"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Cargo *</FormLabel>
-                <FormControl>
-                  <Input placeholder="Gerente" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Número de Telefone *</FormLabel>
+                  <FormControl>
+                    <Input placeholder="(11) 98765-4321" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="company"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Organização *</FormLabel>
-                <FormControl>
-                  <Input placeholder="Empresa XYZ" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="role"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Cargo</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Gerente" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="areas"
-            render={({ field }) => (
-              <FormItem className="relative z-10">
-                <FormLabel>Áreas de Interesse *</FormLabel>
-                <FormControl>
-                  <MultiSelect {...field} />
-                </FormControl>
+            <FormField
+              control={form.control}
+              name="company"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Organização</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Empresa XYZ" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+            <FormField
+              control={form.control}
+              name="areas"
+              render={({ field }) => (
+                <FormItem className="relative z-10">
+                  <FormLabel>Áreas de Interesse *</FormLabel>
+                  <FormControl>
+                    <MultiSelect {...field} />
+                  </FormControl>
 
-        <div>
-          <h1 className="font-semibold">Redes Sociais</h1>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
-          <FormField
-            control={form.control}
-            name="linkedin"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Linkedin</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="https://www.linkedin.com/in/"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="flex flex-col gap-2">
+            <h1 className="font-semibold">Redes Sociais</h1>
 
-          <FormField
-            control={form.control}
-            name="instagram"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Instagram</FormLabel>
-                <FormControl>
-                  <Input placeholder="https://www.instagram.com/" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="linkedin"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Linkedin</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="https://www.linkedin.com/in/"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="twitter"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Twitter</FormLabel>
-                <FormControl>
-                  <Input placeholder="https://x.com/" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+            <FormField
+              control={form.control}
+              name="instagram"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Instagram</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="https://www.instagram.com/"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <div>
-          <h1 className="font-semibold">Identificações</h1>
+            <FormField
+              control={form.control}
+              name="twitter"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Twitter</FormLabel>
+                  <FormControl>
+                    <Input placeholder="https://x.com/" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
-          <FormField
-            control={form.control}
-            name="idPmi"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>ID PMI</FormLabel>
-                <FormControl>
-                  <Input placeholder="Identificação do PMI" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="flex flex-col gap-2">
+            <h1 className="font-semibold">Identificações</h1>
 
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Senha *</FormLabel>
-                <FormControl>
-                  <Input type="password" placeholder="********" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Senha *</FormLabel>
+                  <FormControl>
+                    <Input type="password" placeholder="********" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Confirmar Senha *</FormLabel>
-                <FormControl>
-                  <Input type="password" placeholder="********" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+            <FormField
+              control={form.control}
+              name="confirmPassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirmar Senha *</FormLabel>
+                  <FormControl>
+                    <Input type="password" placeholder="********" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
-        <Button
-          type="submit"
-          className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700"
-        >
-          Enviar Cadastro
-        </Button>
-      </form>
-    </Form>
+          <Button
+            type="submit"
+            className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700"
+          >
+            Enviar Cadastro
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 }

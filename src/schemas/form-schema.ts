@@ -11,12 +11,8 @@ export const formSchema = z
     phone: z.string().min(10, {
       message: "Número de telefone inválido.",
     }),
-    role: z.string().min(2, {
-      message: "Cargo deve ter pelo menos 2 caracteres.",
-    }),
-    company: z.string().min(2, {
-      message: "Organização deve ter pelo menos 2 caracteres.",
-    }),
+    role: z.string(),
+    company: z.string(),
     areas: z.array(z.string()).min(1, {
       message: "Selecione pelo menos uma área de interesse.",
     }),
