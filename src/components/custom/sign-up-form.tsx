@@ -13,12 +13,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
+
 import { formSchema } from "@/schemas/form-schema";
 import MultiSelect from "./multi-select";
 import { phoneMask } from "@/lib/utils";
 import Link from "next/link";
 import PrivacyAgreement from "./terms-modal";
+import { toast } from "sonner";
 
 const defaultValues = {
   name: "",
@@ -43,9 +44,9 @@ export default function SignUpForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    toast({
-      title: "Cadastro realizado com sucesso!",
+    toast.message("Cadastro realizado com sucesso!", {
       description: "Seus dados foram enviados.",
+      position: "top-right",
     });
   }
 
