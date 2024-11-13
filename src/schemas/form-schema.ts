@@ -17,9 +17,9 @@ export const formSchema = z
       message: "Selecione pelo menos uma área de interesse",
     }),
 
-    linkedin: z.string().url("URL inválida"),
-    instagram: z.string().url("URL inválida"),
-    twitter: z.string().url("URL inválida"),
+    linkedin: z.string().optional(),
+    instagram: z.string().optional(),
+    twitter: z.string().optional(),
     idPmi: z.string(),
 
     password: z

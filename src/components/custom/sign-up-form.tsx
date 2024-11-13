@@ -253,9 +253,10 @@ export default function SignUpForm() {
             <Button
               type="submit"
               size={"lg"}
+              disabled={!form?.formState?.isValid}
               className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
             >
-              Enviar Cadastro
+              Enviar
             </Button>
 
             <Link
