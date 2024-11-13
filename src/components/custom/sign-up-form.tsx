@@ -17,6 +17,7 @@ import { toast } from "@/hooks/use-toast";
 import { formSchema } from "@/schemas/form-schema";
 import MultiSelect from "./multi-select";
 import { phoneMask } from "@/lib/utils";
+import Link from "next/link";
 
 const defaultValues = {
   name: "",
@@ -51,7 +52,7 @@ export default function SignUpForm() {
     <div className="w-[28rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
         <h1 className="mb-6 text-center text-2xl font-bold">
-          Crie uma nova conta
+          Crie sua conta
         </h1>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -247,12 +248,22 @@ export default function SignUpForm() {
             />
           </div>
 
-          <Button
-            type="submit"
-            className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
-          >
-            Enviar Cadastro
-          </Button>
+          <div className="flex flex-col items-center gap-4">
+            <Button
+              type="submit"
+              size={"lg"}
+              className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
+            >
+              Enviar Cadastro
+            </Button>
+
+            <Link
+              href={"/login"}
+              className="text-sm transition duration-200 hover:text-blue-800"
+            >
+              Já sou cadastrado
+            </Link>
+          </div>
         </form>
       </Form>
     </div>
