@@ -44,6 +44,8 @@ export default function SignUpForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+
     toast.message("Cadastro realizado com sucesso!", {
       description: "Seus dados foram enviados.",
       position: "top-right",
