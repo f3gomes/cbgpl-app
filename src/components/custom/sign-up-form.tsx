@@ -18,6 +18,7 @@ import { formSchema } from "@/schemas/form-schema";
 import MultiSelect from "./multi-select";
 import { phoneMask } from "@/lib/utils";
 import Link from "next/link";
+import PrivacyAgreement from "./terms-modal";
 
 const defaultValues = {
   name: "",
@@ -51,9 +52,7 @@ export default function SignUpForm() {
   return (
     <div className="w-[28rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
-        <h1 className="mb-6 text-center text-2xl font-bold">
-          Crie sua conta
-        </h1>
+        <h1 className="mb-6 text-center text-2xl font-bold">Crie sua conta</h1>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
@@ -249,6 +248,8 @@ export default function SignUpForm() {
           </div>
 
           <div className="flex flex-col items-center gap-4">
+            <PrivacyAgreement />
+
             <Button
               type="submit"
               size={"lg"}
