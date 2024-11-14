@@ -51,6 +51,7 @@ export default function Login() {
       }
     } catch (error) {
       setLoginError("Ocorreu um erro. Por favor, tente novamente.");
+      console.log(error);
     }
   };
 
