@@ -57,7 +57,7 @@ export default function Login() {
   return (
     <div className="flex min-h-screen">
       {/* Lado Esquerdo - Logo e Fundo */}
-      <div className="hidden w-1/2 items-center justify-center bg-gradient-to-r from-purple-700 to-purple-900 p-8 md:flex">
+      <div className="bg-cbgpl-aqua hidden w-1/2 items-center justify-center p-8 md:flex">
         <Image
           src="/assets/logo.png"
           alt="Logo do App"
@@ -68,7 +68,7 @@ export default function Login() {
       </div>
 
       {/* Lado Direito - Formulário de Login */}
-      <div className="flex w-full items-center justify-center bg-gray-100 p-8 md:w-1/2">
+      <div className="flex w-full items-center justify-center bg-slate-200 p-8 md:w-1/2">
         <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
           <h2 className="mb-6 text-center text-2xl font-bold text-orange-500">
             Login
@@ -84,8 +84,9 @@ export default function Login() {
                 type="email"
                 placeholder="seuemail@exemplo.com"
                 {...register("email")}
-                className={`mt-1 block w-full ${errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">
@@ -104,8 +105,9 @@ export default function Login() {
                 type="password"
                 placeholder="********"
                 {...register("password")}
-                className={`mt-1 block w-full ${errors.password ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.password && (
                 <p className="mt-1 text-sm text-red-600">
@@ -146,10 +148,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Não possui cadastro ainda?{" "}
-              <Link
-                href="/cadastro"
-                className="text-orange-500 hover:underline"
-              >
+              <Link href="/sign-up" className="text-orange-500 hover:underline">
                 Crie sua conta
               </Link>
             </p>
