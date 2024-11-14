@@ -53,7 +53,7 @@ export default function SignUpForm() {
   }
 
   return (
-    <div className="w-[28rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
+    <div className="w-[25rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
         <h1 className="mb-6 text-center text-2xl font-bold">Crie sua conta</h1>
 
@@ -65,7 +65,7 @@ export default function SignUpForm() {
               name="idPmi"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>ID PMI</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">ID PMI</FormLabel>
                   <FormControl>
                     <Input placeholder="Identificação do PMI" {...field} />
                   </FormControl>
@@ -79,7 +79,9 @@ export default function SignUpForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nome Completo *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Nome Completo *
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="João da Silva" {...field} />
                   </FormControl>
@@ -93,7 +95,9 @@ export default function SignUpForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>E-mail *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    E-mail *
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="joao@exemplo.com" {...field} />
                   </FormControl>
@@ -107,7 +111,9 @@ export default function SignUpForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Número de Telefone *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Número de Telefone *
+                  </FormLabel>
                   <FormControl>
                     <Input
                       {...field}
@@ -127,7 +133,7 @@ export default function SignUpForm() {
               name="role"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Cargo</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">Cargo</FormLabel>
                   <FormControl>
                     <Input placeholder="Gerente" {...field} />
                   </FormControl>
@@ -141,7 +147,9 @@ export default function SignUpForm() {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Organização</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Organização
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="Empresa XYZ" {...field} />
                   </FormControl>
@@ -155,7 +163,9 @@ export default function SignUpForm() {
               name="areas"
               render={({ field }) => (
                 <FormItem className="relative z-10">
-                  <FormLabel>Áreas de Interesse *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Áreas de Interesse *
+                  </FormLabel>
                   <FormControl>
                     <MultiSelect {...field} />
                   </FormControl>
@@ -174,7 +184,9 @@ export default function SignUpForm() {
               name="linkedin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Linkedin</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Linkedin
+                  </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="https://www.linkedin.com/in/"
@@ -191,7 +203,9 @@ export default function SignUpForm() {
               name="instagram"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Instagram</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Instagram
+                  </FormLabel>
                   <FormControl>
                     <Input
                       placeholder="https://www.instagram.com/"
@@ -208,7 +222,9 @@ export default function SignUpForm() {
               name="twitter"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Twitter</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Twitter
+                  </FormLabel>
                   <FormControl>
                     <Input placeholder="https://x.com/" {...field} />
                   </FormControl>
@@ -226,7 +242,9 @@ export default function SignUpForm() {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Senha *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Senha *
+                  </FormLabel>
                   <FormControl>
                     <Input type="password" placeholder="********" {...field} />
                   </FormControl>
@@ -240,7 +258,9 @@ export default function SignUpForm() {
               name="confirmPassword"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Confirmar Senha *</FormLabel>
+                  <FormLabel className="text-cbgpl-tangerine">
+                    Confirmar Senha *
+                  </FormLabel>
                   <FormControl>
                     <Input type="password" placeholder="********" {...field} />
                   </FormControl>
