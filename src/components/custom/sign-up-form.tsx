@@ -59,13 +59,13 @@ export default function SignUpForm() {
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold">Dados Pessoais</h1>
+            <h1 className="font-semibold text-cbgpl-tangerine">Dados Pessoais</h1>
             <FormField
               control={form.control}
               name="idPmi"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">ID PMI</FormLabel>
+                  <FormLabel>ID PMI</FormLabel>
                   <FormControl>
                     <Input placeholder="Identificação do PMI" {...field} />
                   </FormControl>
@@ -79,7 +79,7 @@ export default function SignUpForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Nome Completo *
                   </FormLabel>
                   <FormControl>
@@ -95,7 +95,7 @@ export default function SignUpForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     E-mail *
                   </FormLabel>
                   <FormControl>
@@ -111,7 +111,7 @@ export default function SignUpForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Número de Telefone *
                   </FormLabel>
                   <FormControl>
@@ -133,7 +133,7 @@ export default function SignUpForm() {
               name="role"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">Cargo</FormLabel>
+                  <FormLabel>Cargo</FormLabel>
                   <FormControl>
                     <Input placeholder="Gerente" {...field} />
                   </FormControl>
@@ -147,7 +147,7 @@ export default function SignUpForm() {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Organização
                   </FormLabel>
                   <FormControl>
@@ -163,7 +163,7 @@ export default function SignUpForm() {
               name="areas"
               render={({ field }) => (
                 <FormItem className="relative z-10">
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Áreas de Interesse *
                   </FormLabel>
                   <FormControl>
@@ -177,14 +177,14 @@ export default function SignUpForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold">Redes Sociais</h1>
+            <h1 className="font-semibold text-cbgpl-tangerine">Redes Sociais</h1>
 
             <FormField
               control={form.control}
               name="linkedin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Linkedin
                   </FormLabel>
                   <FormControl>
@@ -203,7 +203,7 @@ export default function SignUpForm() {
               name="instagram"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Instagram
                   </FormLabel>
                   <FormControl>
@@ -222,7 +222,7 @@ export default function SignUpForm() {
               name="twitter"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Twitter
                   </FormLabel>
                   <FormControl>
@@ -235,14 +235,14 @@ export default function SignUpForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold">Credenciais</h1>
+            <h1 className="font-semibold text-cbgpl-tangerine">Credenciais</h1>
 
             <FormField
               control={form.control}
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Senha *
                   </FormLabel>
                   <FormControl>
@@ -258,7 +258,7 @@ export default function SignUpForm() {
               name="confirmPassword"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-cbgpl-tangerine">
+                  <FormLabel>
                     Confirmar Senha *
                   </FormLabel>
                   <FormControl>
