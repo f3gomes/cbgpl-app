@@ -57,10 +57,15 @@ export default function Login() {
 
   return (
     <div className="flex min-h-screen">
-      {/* Lado Esquerdo - Logo e Fundo */}
-      <div className="bg-cbgpl-aqua hidden w-1/2 items-center justify-center p-8 md:flex">
+      {/* Lado Esquerdo */}
+      <div
+        className="relative hidden w-1/2 items-center justify-center bg-cover bg-center p-8 md:flex"
+        style={{
+          backgroundImage: `linear-gradient(rgba(71, 29, 195, 0.7), rgba(71, 29, 195, 0.7)), url('/assets/Fortaleza.png')`,
+        }}
+      >
         <Image
-          src="/assets/logo.png"
+          src="/assets/cbgpl icone colorido letra branca.png"
           alt="Logo do App"
           width={500}
           height={500}
