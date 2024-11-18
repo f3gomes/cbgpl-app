@@ -12,9 +12,9 @@ const PrivacyAgreement: React.FC = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <div className="gap-1 text-sm text-center">
+      <div className="gap-1 text-center text-sm">
         <span>Ao clicar em Enviar você concorda com as </span>
-        <DialogTrigger className="transition duration-200 hover:underline">
+        <DialogTrigger className="text-orange-500 transition duration-200 hover:underline">
           Políticas de Privacidade
         </DialogTrigger>
       </div>
