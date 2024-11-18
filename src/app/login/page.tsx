@@ -65,7 +65,7 @@ export default function Login() {
         }}
       >
         <Image
-          src="/assets/cbgpl icone colorido letra branca.png"
+          src="/assets/logo.png"
           alt="Logo do App"
           width={500}
           height={500}
