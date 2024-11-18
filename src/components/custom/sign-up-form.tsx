@@ -59,7 +59,9 @@ export default function SignUpForm() {
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold text-cbgpl-tangerine">Dados Pessoais</h1>
+            <h1 className="font-semibold text-cbgpl-tangerine">
+              Dados Pessoais
+            </h1>
             <FormField
               control={form.control}
               name="idPmi"
@@ -80,7 +82,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Nome Completo *
+                    Nome Completo<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="João da Silva" {...field} />
@@ -96,7 +98,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    E-mail *
+                    E-mail<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="joao@exemplo.com" {...field} />
@@ -112,7 +114,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Número de Telefone *
+                    Número de Telefone<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input
@@ -147,9 +149,7 @@ export default function SignUpForm() {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>
-                    Organização
-                  </FormLabel>
+                  <FormLabel>Organização</FormLabel>
                   <FormControl>
                     <Input placeholder="Empresa XYZ" {...field} />
                   </FormControl>
@@ -164,7 +164,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem className="relative z-10">
                   <FormLabel>
-                    Áreas de Interesse *
+                    Áreas de Interesse<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <MultiSelect {...field} />
@@ -177,16 +177,16 @@ export default function SignUpForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold text-cbgpl-tangerine">Redes Sociais</h1>
+            <h1 className="font-semibold text-cbgpl-tangerine">
+              Redes Sociais
+            </h1>
 
             <FormField
               control={form.control}
               name="linkedin"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>
-                    Linkedin
-                  </FormLabel>
+                  <FormLabel>Linkedin</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="https://www.linkedin.com/in/"
@@ -203,9 +203,7 @@ export default function SignUpForm() {
               name="instagram"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>
-                    Instagram
-                  </FormLabel>
+                  <FormLabel>Instagram</FormLabel>
                   <FormControl>
                     <Input
                       placeholder="https://www.instagram.com/"
@@ -222,9 +220,7 @@ export default function SignUpForm() {
               name="twitter"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>
-                    Twitter
-                  </FormLabel>
+                  <FormLabel>Twitter</FormLabel>
                   <FormControl>
                     <Input placeholder="https://x.com/" {...field} />
                   </FormControl>
@@ -243,7 +239,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Senha *
+                    Senha<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input type="password" placeholder="********" {...field} />
@@ -259,7 +255,7 @@ export default function SignUpForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Confirmar Senha *
+                    Confirmar Senha<span className="text-red-600">*</span>
                   </FormLabel>
                   <FormControl>
                     <Input type="password" placeholder="********" {...field} />
@@ -283,8 +279,8 @@ export default function SignUpForm() {
             </Button>
 
             <Link
-              href={"/login"}
-              className="text-sm transition duration-200 hover:text-blue-800"
+              href="/login"
+              className="text-orange-500 transition duration-200 hover:underline"
             >
               Já sou cadastrado
             </Link>
