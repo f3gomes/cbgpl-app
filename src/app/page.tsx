@@ -1,4 +1,20 @@
 import { IoAccessibility } from "react-icons/io5";
+import { SiInstagram } from "react-icons/si";
+import { GrLinkedin } from "react-icons/gr";
+import { LuMail } from "react-icons/lu";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { VscFeedback } from "react-icons/vsc";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { IoIosChatboxes } from "react-icons/io";
+import { FaUserCircle } from "react-icons/fa";
+import { IoNotifications } from "react-icons/io5";
+import { MdOutlinePermMedia } from "react-icons/md";
+import { FaUserTag } from "react-icons/fa";
+import { PiMicrophoneStage } from "react-icons/pi";
+import { PiUsersThree } from "react-icons/pi";
+import { LiaHotelSolid } from "react-icons/lia";
+import { IoIosRestaurant } from "react-icons/io";
+import { TbMapSearch } from "react-icons/tb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -51,33 +67,32 @@ export default function HomePage() {
         </nav>
         <div className="flex items-center space-x-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <IoAccessibility size={20} className="text-[#FFFFFF]" />
+            <FaUserCircle size={20} className="text-[#FFFFFF]" />
           </div>
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <IoAccessibility size={20} className="text-[#FFFFFF]" />
+            <IoNotifications size={20} className="text-[#FFFFFF]" />
           </div>
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <IoAccessibility size={20} className="text-[#FFFFFF]" />
+            <IoIosChatboxes size={20} className="text-[#FFFFFF]" />
           </div>
         </div>
       </header>
-
       {/* Main Content */}
       <main className="mx-auto flex w-full max-w-7xl flex-grow gap-6 p-6">
         {/* Sidebar */}
         <aside className="w-64 rounded-lg bg-white p-4 shadow-md">
           <div className="mb-3 flex items-center justify-between">
-            <IoAccessibility size={20} className="text-[#35246F]" />
-            <IoAccessibility size={20} className="text-[#35246F]" />
-            <IoAccessibility size={20} className="text-[#35246F]" />
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <SiInstagram size={20} className="text-[#35246F]" />
+            <GrLinkedin size={20} className="text-[#35246F]" />
+            <AiOutlineYoutube size={20} className="text-[#35246F]" />
+            <LuMail size={20} className="text-[#35246F]" />
           </div>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <PiMicrophoneStage size={20} className="text-[#35246F]" />
             <span>Palestrantes</span>
           </Button>
           <hr className="my-2 border-gray-300" />
@@ -85,7 +100,7 @@ export default function HomePage() {
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <PiUsersThree size={20} className="text-[#35246F]" />
             <span>Participantes</span>
           </Button>
           <hr className="my-2 border-gray-300" />
@@ -93,7 +108,7 @@ export default function HomePage() {
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <LiaHotelSolid size={20} className="text-[#35246F]" />
             <span>Hotéis Parceiros</span>
           </Button>
           <hr className="my-2 border-gray-300" />
@@ -101,7 +116,7 @@ export default function HomePage() {
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <IoIosRestaurant size={20} className="text-[#35246F]" />
             <span>Restaurantes Parceiros</span>
           </Button>
           <hr className="my-2 border-gray-300" />
@@ -109,7 +124,7 @@ export default function HomePage() {
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoAccessibility size={20} className="text-[#35246F]" />
+            <TbMapSearch size={20} className="text-[#35246F]" />
             <span>Visitas Indicadas</span>
           </Button>
           <hr className="my-2 border-gray-300" />
@@ -142,11 +157,11 @@ export default function HomePage() {
             </div>
             <div className="mt-4 flex justify-end gap-2">
               <Button variant="outline">
-                <IoAccessibility size={16} className="text-[#35246F]" />
+                <MdOutlinePermMedia size={16} className="text-[#35246F]" />
                 Mídia
               </Button>
               <Button variant="outline">
-                <IoAccessibility size={16} className="text-[#35246F]" />
+                <FaUserTag size={16} className="text-[#35246F]" />
                 Marcar pessoas
               </Button>
             </div>
