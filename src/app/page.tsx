@@ -24,43 +24,56 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col bg-gray-50">
       {/* Header */}
-      <header className="flex h-24 w-full items-center justify-between bg-white px-4 py-2 shadow-sm">
+      <header className="relative flex h-[134px] w-full items-center justify-between bg-white px-4 py-2 shadow-sm">
         <div className="flex items-center space-x-2">
-          <div className="h-20 w-auto flex-shrink-0">
-            <img
-              src="/assets/Design sem nome.png"
+          <div className="flex-shrink-0">
+            <Image
+              width={215}
+              height={78}
+              src="/assets/Design_sem_nome-removebg-preview.png"
               alt="Congresso Logo"
-              className="h-25 w-12 object-contain"
+              className="object-contain"
             />
           </div>
         </div>
-        <nav className="hidden space-x-6 text-gray-600 md:flex">
+        <nav
+          className="absolute flex items-center justify-between"
+          style={{
+            width: "586px",
+            height: "25px",
+            top: "54px",
+            left: "422px",
+            right: "423px",
+            margin: "0 auto",
+          }}
+        >
           <a
             href="#"
-            className="flex items-center gap-2 text-base font-medium hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-gray-900"
           >
             Início
           </a>
           <a
             href="#"
-            className="flex items-center gap-2 text-base font-medium hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-gray-900"
           >
             Programação
           </a>
           <a
             href="#"
-            className="flex items-center gap-2 text-base font-medium hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-gray-900"
           >
             Notícias
           </a>
           <a
             href="#"
-            className="flex items-center gap-2 text-base font-medium hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-gray-900"
           >
             Fotos
           </a>
@@ -82,10 +95,18 @@ export default function HomePage() {
         {/* Sidebar */}
         <aside className="w-64 rounded-lg bg-white p-4 shadow-md">
           <div className="mb-3 flex items-center justify-between">
-            <SiInstagram size={20} className="text-[#35246F]" />
-            <GrLinkedin size={20} className="text-[#35246F]" />
-            <AiOutlineYoutube size={20} className="text-[#35246F]" />
-            <LuMail size={20} className="text-[#35246F]" />
+            <Button variant="ghost">
+              <SiInstagram size={20} className="text-[#35246F]" />
+            </Button>
+            <Button variant="ghost">
+              <GrLinkedin size={20} className="text-[#35246F]" />
+            </Button>
+            <Button variant="ghost">
+              <AiOutlineYoutube size={20} className="text-[#35246F]" />
+            </Button>
+            <Button variant="ghost">
+              <LuMail size={20} className="text-[#35246F]" />
+            </Button>
           </div>
           <hr className="my-2 border-gray-300" />
           <Button
