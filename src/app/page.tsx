@@ -1,22 +1,17 @@
-import { IoAccessibility } from "react-icons/io5";
-import { SiInstagram } from "react-icons/si";
-import { GrLinkedin } from "react-icons/gr";
-import { LuMail } from "react-icons/lu";
-import { IoDocumentTextOutline } from "react-icons/io5";
-import { VscFeedback } from "react-icons/vsc";
-import { AiOutlineYoutube } from "react-icons/ai";
-import { IoIosChatboxes } from "react-icons/io";
-import { FaUserCircle } from "react-icons/fa";
-import { IoNotifications } from "react-icons/io5";
-import { MdOutlinePermMedia } from "react-icons/md";
-import { FaUserTag } from "react-icons/fa";
-import { PiMicrophoneStage } from "react-icons/pi";
-import { PiUsersThree } from "react-icons/pi";
-import { LiaHotelSolid } from "react-icons/lia";
-import { IoIosRestaurant } from "react-icons/io";
-import { TbMapSearch } from "react-icons/tb";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Instagram } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import { Youtube } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Images } from "lucide-react";
+import { UserSearch } from "lucide-react";
+import { CircleUserRound } from "lucide-react";
+import { Bell } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import { MicVocal } from "lucide-react";
+import { UsersRound } from "lucide-react";
+import { MapPinned } from "lucide-react";
+import { UserPen } from "lucide-react";
+import { FileCheck2 } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -25,6 +20,8 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function HomePage() {
   return (
@@ -79,33 +76,44 @@ export default function HomePage() {
           </a>
         </nav>
         <div className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <FaUserCircle size={20} className="text-[#FFFFFF]" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
+            <CircleUserRound size={20} className="text-[#FFFFFF]" />
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <IoNotifications size={20} className="text-[#FFFFFF]" />
+          {/* Botão 2 */}
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
+            <Bell size={20} className="text-[#FFFFFF]" />
           </div>
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500">
-            <IoIosChatboxes size={20} className="text-[#FFFFFF]" />
+
+          {/* Botão 3 */}
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
+            <MessageCircle size={20} className="text-[#FFFFFF]" />
           </div>
         </div>
       </header>
       {/* Main Content */}
-      <main className="mx-auto flex w-full max-w-7xl flex-grow gap-6 p-6">
+      <main className="mx-auto flex w-full max-w-7xl flex-grow gap-2 p-6">
         {/* Sidebar */}
-        <aside className="w-64 rounded-lg bg-white p-4 shadow-md">
+        <aside
+          className="rounded-lg bg-white p-4 shadow-md"
+          style={{
+            width: "330px",
+            height: "600px",
+            top: "156px",
+            left: "33px",
+          }}
+        >
           <div className="mb-3 flex items-center justify-between">
             <Button variant="ghost">
-              <SiInstagram size={20} className="text-[#35246F]" />
+              <Instagram size={40} className="text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <GrLinkedin size={20} className="text-[#35246F]" />
+              <Linkedin size={20} className="text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <AiOutlineYoutube size={20} className="text-[#35246F]" />
+              <Youtube size={20} className="text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <LuMail size={20} className="text-[#35246F]" />
+              <Mail size={20} className="text-[#35246F]" />
             </Button>
           </div>
           <hr className="my-2 border-gray-300" />
@@ -113,61 +121,54 @@ export default function HomePage() {
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <PiMicrophoneStage size={20} className="text-[#35246F]" />
-            <span>Palestrantes</span>
+            <MicVocal size={40} className="text-[#35246F]" />
+            <span className="font-inter text-lg">Palestrantes</span>
           </Button>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <PiUsersThree size={20} className="text-[#35246F]" />
-            <span>Participantes</span>
+            <UsersRound size={20} className="text-[#35246F]" />
+            <span className="font-inter text-lg">Participantes</span>
           </Button>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <LiaHotelSolid size={20} className="text-[#35246F]" />
-            <span>Hotéis Parceiros</span>
+            <MapPinned size={20} className="text-[#35246F]" />
+            <span className="font-inter text-lg">Espaço experiência</span>
           </Button>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <IoIosRestaurant size={20} className="text-[#35246F]" />
-            <span>Restaurantes Parceiros</span>
+            <UserPen size={20} className="text-[#35246F]" />
+            <span className="font-inter text-lg">
+              Certificações do Congresso
+            </span>
           </Button>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
             className="flex w-full items-center justify-start gap-1"
           >
-            <TbMapSearch size={20} className="text-[#35246F]" />
-            <span>Visitas Indicadas</span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
-          >
-            <IoAccessibility size={20} className="text-[#35246F]" />
-            <span>Certificações do Congresso</span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
-          >
-            <IoAccessibility size={20} className="text-[#35246F]" />
-            <span>Feedbacks</span>
+            <FileCheck2 size={20} className="text-[#35246F]" />
+            <span className="font-inter text-lg">Feedbacks</span>
           </Button>
         </aside>
+
         {/* Feed */}
-        <section className="flex-grow">
-          <Card className="mb-4 p-4">
+        <section className="flex flex-col items-center">
+          <Card
+            className="rounded-[27px] p-4 shadow-md"
+            style={{
+              width: "699px",
+              height: "160px",
+            }}
+          >
             <div className="flex items-center gap-4">
               {/* Avatar do usuário */}
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-300"></div>
@@ -178,16 +179,16 @@ export default function HomePage() {
             </div>
             <div className="mt-4 flex justify-end gap-2">
               <Button variant="outline">
-                <MdOutlinePermMedia size={16} className="text-[#35246F]" />
+                <Images size={16} className="text-[#35246F]" />
                 Mídia
               </Button>
               <Button variant="outline">
-                <FaUserTag size={16} className="text-[#35246F]" />
+                <UserSearch size={16} className="text-[#35246F]" />
                 Marcar pessoas
               </Button>
             </div>
           </Card>
-          <Card className="flex-grow rounded-lg bg-gray-100 p-4 shadow-inner">
+          <Card className="mt-6 flex-grow rounded-lg bg-gray-100 p-4 shadow-inner">
             <CardHeader>
               <CardTitle>Postagens Recentes</CardTitle>
               <CardDescription>
@@ -201,7 +202,15 @@ export default function HomePage() {
         </section>
 
         {/* Patrocinado Sidebar */}
-        <aside className="w-64 rounded-lg bg-white p-4 shadow-md">
+        <aside
+          className="rounded-lg bg-white p-4 shadow-md"
+          style={{
+            width: "400px",
+            height: "600px",
+            top: "156px",
+            left: "1083px",
+          }}
+        >
           <div className="mb-4 flex items-center gap-2 font-semibold text-gray-400">
             <span>Patrocinado</span>
           </div>
