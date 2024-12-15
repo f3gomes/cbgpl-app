@@ -52,49 +52,57 @@ export default function HomePage() {
         >
           <a
             href="#"
-            className="text-base font-medium text-black hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-black"
           >
             Início
           </a>
           <a
             href="#"
-            className="text-base font-medium text-black hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-black"
           >
             Programação
           </a>
           <a
             href="#"
-            className="text-base font-medium text-black hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-black"
           >
             Notícias
           </a>
           <a
             href="#"
-            className="text-base font-medium text-black hover:text-gray-900"
+            className="text-base font-medium text-black hover:text-black"
           >
             Fotos
           </a>
         </nav>
-        <div className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
-            <CircleUserRound size={20} className="text-[#FFFFFF]" />
-          </div>
-          {/* Botão 2 */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
-            <Bell size={20} className="text-[#FFFFFF]" />
-          </div>
-
-          {/* Botão 3 */}
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 hover:bg-orange-600">
+        <div className="flex items-center space-x-4 p-4">
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
+          >
             <MessageCircle size={20} className="text-[#FFFFFF]" />
-          </div>
+          </button>
+          {/* Botão 2 */}
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
+          >
+            <Bell size={20} className="text-[#FFFFFF]" />
+          </button>
+          {/* Botão 3 */}
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
+          >
+            <CircleUserRound size={20} className="text-[#FFFFFF]" />
+          </button>
         </div>
       </header>
       {/* Main Content */}
-      <main className="mx-auto flex w-full max-w-7xl flex-grow gap-2 p-6">
+      <main className="mx-auto flex max-w-full flex-grow gap-4 p-6">
         {/* Sidebar */}
         <aside
-          className="rounded-lg bg-white p-4 shadow-md"
+          className="mt-1 rounded-2xl bg-white p-4 shadow-md"
           style={{
             width: "330px",
             height: "600px",
@@ -102,18 +110,18 @@ export default function HomePage() {
             left: "33px",
           }}
         >
-          <div className="mb-3 flex items-center justify-between">
+          <div className="mb-4 flex items-center justify-between">
             <Button variant="ghost">
-              <Instagram size={40} className="text-[#35246F]" />
+              <Linkedin size={64} className="text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <Linkedin size={20} className="text-[#35246F]" />
+              <Instagram className="h-16 w-16 text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <Youtube size={20} className="text-[#35246F]" />
+              <Youtube size={64} className="text-[#35246F]" />
             </Button>
             <Button variant="ghost">
-              <Mail size={20} className="text-[#35246F]" />
+              <Mail size={64} className="text-[#35246F]" />
             </Button>
           </div>
           <hr className="my-2 border-gray-300" />
@@ -163,21 +171,21 @@ export default function HomePage() {
         {/* Feed */}
         <section className="flex flex-col items-center">
           <Card
-            className="rounded-[27px] p-4 shadow-md"
+            className="rounded-2xl p-4 shadow-md"
             style={{
               width: "699px",
               height: "160px",
             }}
           >
-            <div className="flex items-center gap-4">
+            <div className="mt-1 flex items-center gap-4">
               {/* Avatar do usuário */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-300"></div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-300"></div>
               <Input
                 placeholder="Compartilhe uma publicação"
                 className="flex-grow"
               />
             </div>
-            <div className="mt-4 flex justify-end gap-2">
+            <div className="mt-7 flex justify-end gap-2">
               <Button variant="outline">
                 <Images size={16} className="text-[#35246F]" />
                 Mídia
@@ -188,7 +196,7 @@ export default function HomePage() {
               </Button>
             </div>
           </Card>
-          <Card className="mt-6 flex-grow rounded-lg bg-gray-100 p-4 shadow-inner">
+          <Card className="mt-6 w-full flex-grow rounded-2xl bg-gray-100 p-4 shadow-inner">
             <CardHeader>
               <CardTitle>Postagens Recentes</CardTitle>
               <CardDescription>
@@ -203,19 +211,18 @@ export default function HomePage() {
 
         {/* Patrocinado Sidebar */}
         <aside
-          className="rounded-lg bg-white p-4 shadow-md"
+          className="rounded-2xl bg-white p-4 shadow-md"
           style={{
-            width: "400px",
+            width: "330px",
             height: "600px",
             top: "156px",
             left: "1083px",
           }}
         >
+          <hr className="my-4 border-gray-300" />
           <div className="mb-4 flex items-center gap-2 font-semibold text-gray-400">
             <span>Patrocinado</span>
           </div>
-          <hr className="my-4 border-gray-300" />
-          <div className="flex h-32 w-full items-center justify-center rounded-lg bg-gray-200"></div>
         </aside>
       </main>
     </div>
