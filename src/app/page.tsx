@@ -1,4 +1,4 @@
-import { icons, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Youtube } from "lucide-react";
 import { Mail } from "lucide-react";
@@ -81,19 +81,21 @@ export default function HomePage() {
             margin: "0 auto",
           }}
         >
-          {navItems.map((Item) => (
+          {navItems.map((item, index) => (
             <a
-              href={Item.link}
+              key={index}
+              href={item.link}
               className="text-base font-medium text-black hover:text-black"
             >
-              {Item.title}
+              {item.title}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center space-x-4 p-4">
-          {topIcons.map((Item) => (
+          {topIcons.map((Item, index) => (
             <button
+              key={index}
               type="button"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
             >
@@ -115,16 +117,20 @@ export default function HomePage() {
           }}
         >
           <div className="mb-4 flex items-center justify-between">
-            {socialIcons.map((Item) => (
-              <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
+            {socialIcons.map((Item, index) => (
+              <Button
+                key={index}
+                variant="ghost"
+                className="[&_svg]:h-6 [&_svg]:w-6"
+              >
                 <Item size={64} className="text-[#35246F]" />
               </Button>
             ))}
           </div>
 
           <div>
-            {sideIcons.map((Item) => (
-              <>
+            {sideIcons.map((Item, index) => (
+              <div key={index}>
                 <hr className="my-2 border-gray-300" />
                 <Button
                   variant="ghost"
@@ -133,7 +139,7 @@ export default function HomePage() {
                   <Item.icons size={40} className="text-[#35246F]" />
                   <span className="font-inter text-lg">{Item.title}</span>
                 </Button>
-              </>
+              </div>
             ))}
           </div>
         </aside>
