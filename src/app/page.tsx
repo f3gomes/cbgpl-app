@@ -111,23 +111,23 @@ export default function HomePage() {
           }}
         >
           <div className="mb-4 flex items-center justify-between">
-            <Button variant="ghost">
+            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
               <Linkedin size={64} className="text-[#35246F]" />
             </Button>
-            <Button variant="ghost">
+            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
               <Instagram className="h-16 w-16 text-[#35246F]" />
             </Button>
-            <Button variant="ghost">
+            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
               <Youtube size={64} className="text-[#35246F]" />
             </Button>
-            <Button variant="ghost">
+            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
               <Mail size={64} className="text-[#35246F]" />
             </Button>
           </div>
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
+            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
           >
             <MicVocal size={40} className="text-[#35246F]" />
             <span className="font-inter text-lg">Palestrantes</span>
@@ -135,7 +135,7 @@ export default function HomePage() {
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
+            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
           >
             <UsersRound size={20} className="text-[#35246F]" />
             <span className="font-inter text-lg">Participantes</span>
@@ -143,7 +143,7 @@ export default function HomePage() {
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
+            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
           >
             <MapPinned size={20} className="text-[#35246F]" />
             <span className="font-inter text-lg">Espaço experiência</span>
@@ -151,7 +151,7 @@ export default function HomePage() {
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
+            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
           >
             <UserPen size={20} className="text-[#35246F]" />
             <span className="font-inter text-lg">
@@ -161,7 +161,7 @@ export default function HomePage() {
           <hr className="my-2 border-gray-300" />
           <Button
             variant="ghost"
-            className="flex w-full items-center justify-start gap-1"
+            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
           >
             <FileCheck2 size={20} className="text-[#35246F]" />
             <span className="font-inter text-lg">Feedbacks</span>
@@ -186,11 +186,11 @@ export default function HomePage() {
               />
             </div>
             <div className="mt-7 flex justify-end gap-2">
-              <Button variant="outline">
+              <Button variant="outline" className="[&_svg]:h-6 [&_svg]:w-6">
                 <Images size={16} className="text-[#35246F]" />
                 Mídia
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" className="[&_svg]:h-6 [&_svg]:w-6">
                 <UserSearch size={16} className="text-[#35246F]" />
                 Marcar pessoas
               </Button>
