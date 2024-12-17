@@ -22,7 +22,6 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Item } from "@radix-ui/react-select";
 
 const topIcons = [MessageCircle, Bell, CircleUserRound];
 const socialIcons = [Linkedin, Instagram, Youtube, Mail];
@@ -35,6 +34,24 @@ const sideIcons = [
   { title: "Espaço experiência", icons: MapPinned },
   { title: "Certificações do Congresso", icons: UserPen },
   { title: "Feedbacks", icons: FileCheck2 },
+];
+const navItems = [
+  {
+    title: "Início",
+    link: "/",
+  },
+  {
+    title: "Programação",
+    link: "/",
+  },
+  {
+    title: "Notícias",
+    link: "/",
+  },
+  {
+    title: "Fotos",
+    link: "/",
+  },
 ];
 
 export default function HomePage() {
@@ -64,30 +81,14 @@ export default function HomePage() {
             margin: "0 auto",
           }}
         >
-          <a
-            href="#"
-            className="text-base font-medium text-black hover:text-black"
-          >
-            Início
-          </a>
-          <a
-            href="#"
-            className="text-base font-medium text-black hover:text-black"
-          >
-            Programação
-          </a>
-          <a
-            href="#"
-            className="text-base font-medium text-black hover:text-black"
-          >
-            Notícias
-          </a>
-          <a
-            href="#"
-            className="text-base font-medium text-black hover:text-black"
-          >
-            Fotos
-          </a>
+          {navItems.map((Item) => (
+            <a
+              href={Item.link}
+              className="text-base font-medium text-black hover:text-black"
+            >
+              {Item.title}
+            </a>
+          ))}
         </nav>
 
         <div className="flex items-center space-x-4 p-4">
