@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { icons, Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Youtube } from "lucide-react";
 import { Mail } from "lucide-react";
@@ -22,6 +22,20 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Item } from "@radix-ui/react-select";
+
+const topIcons = [MessageCircle, Bell, CircleUserRound];
+const socialIcons = [Linkedin, Instagram, Youtube, Mail];
+const sideIcons = [
+  {
+    title: "Palestrantes",
+    icons: MicVocal,
+  },
+  { title: "Participantes", icons: UsersRound },
+  { title: "Espaço experiência", icons: MapPinned },
+  { title: "Certificações do Congresso", icons: UserPen },
+  { title: "Feedbacks", icons: FileCheck2 },
+];
 
 export default function HomePage() {
   return (
@@ -75,27 +89,16 @@ export default function HomePage() {
             Fotos
           </a>
         </nav>
+
         <div className="flex items-center space-x-4 p-4">
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
-          >
-            <MessageCircle size={20} className="text-[#FFFFFF]" />
-          </button>
-          {/* Botão 2 */}
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
-          >
-            <Bell size={20} className="text-[#FFFFFF]" />
-          </button>
-          {/* Botão 3 */}
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
-          >
-            <CircleUserRound size={20} className="text-[#FFFFFF]" />
-          </button>
+          {topIcons.map((Item) => (
+            <button
+              type="button"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
+            >
+              <Item size={20} className="text-[#FFFFFF]" />
+            </button>
+          ))}
         </div>
       </header>
       {/* Main Content */}
@@ -111,61 +114,27 @@ export default function HomePage() {
           }}
         >
           <div className="mb-4 flex items-center justify-between">
-            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
-              <Linkedin size={64} className="text-[#35246F]" />
-            </Button>
-            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
-              <Instagram className="h-16 w-16 text-[#35246F]" />
-            </Button>
-            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
-              <Youtube size={64} className="text-[#35246F]" />
-            </Button>
-            <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
-              <Mail size={64} className="text-[#35246F]" />
-            </Button>
+            {socialIcons.map((Item) => (
+              <Button variant="ghost" className="[&_svg]:h-6 [&_svg]:w-6">
+                <Item size={64} className="text-[#35246F]" />
+              </Button>
+            ))}
           </div>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
-          >
-            <MicVocal size={40} className="text-[#35246F]" />
-            <span className="font-inter text-lg">Palestrantes</span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
-          >
-            <UsersRound size={20} className="text-[#35246F]" />
-            <span className="font-inter text-lg">Participantes</span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
-          >
-            <MapPinned size={20} className="text-[#35246F]" />
-            <span className="font-inter text-lg">Espaço experiência</span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
-          >
-            <UserPen size={20} className="text-[#35246F]" />
-            <span className="font-inter text-lg">
-              Certificações do Congresso
-            </span>
-          </Button>
-          <hr className="my-2 border-gray-300" />
-          <Button
-            variant="ghost"
-            className="flex w-full items-center justify-start gap-1 [&_svg]:h-6 [&_svg]:w-6"
-          >
-            <FileCheck2 size={20} className="text-[#35246F]" />
-            <span className="font-inter text-lg">Feedbacks</span>
-          </Button>
+
+          <div>
+            {sideIcons.map((Item) => (
+              <>
+                <hr className="my-2 border-gray-300" />
+                <Button
+                  variant="ghost"
+                  className="flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6"
+                >
+                  <Item.icons size={40} className="text-[#35246F]" />
+                  <span className="font-inter text-lg">{Item.title}</span>
+                </Button>
+              </>
+            ))}
+          </div>
         </aside>
 
         {/* Feed */}
