@@ -42,7 +42,7 @@ const navItems = [
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
+    <div className="flex min-h-screen w-full flex-col bg-green-600">
       {/* Header */}
       <header className="relative flex h-[134px] w-full items-center justify-between bg-white px-4 py-2 shadow-sm">
         <div className="flex items-center space-x-2">
@@ -57,7 +57,7 @@ export default function HomePage() {
           </div>
         </div>
         <nav
-          className="absolute flex items-center justify-between"
+          className="flex items-center justify-between"
           style={{
             width: "586px",
             height: "25px",
@@ -91,17 +91,8 @@ export default function HomePage() {
         </div>
       </header>
       {/* Main Content */}
-      <main className="mx-auto flex max-w-full flex-grow gap-4 p-6">
-        {/* Sidebar */}
-        <aside
-          className="rounded-2xl bg-white p-4 shadow-md"
-          style={{
-            width: "330px",
-            height: "600px",
-            top: "156px",
-            left: "33px",
-          }}
-        >
+      <main className="mx-auto flex w-full flex-grow flex-col gap-4 p-2 md:flex-row md:p-6">
+        <aside className="h-12 w-full items-center rounded-2xl bg-white px-4 shadow-md md:h-[600px] md:w-[330px] md:p-4 md:px-0">
           <div className="mb-4 flex items-center justify-between">
             {socialIcons.map((Item, index) => (
               <Button
@@ -114,7 +105,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div>
+          <div className="hidden md:block">
             {sideIcons.map((Item, index) => (
               <div key={index}>
                 <hr className="my-2 border-gray-300" />
@@ -130,17 +121,9 @@ export default function HomePage() {
           </div>
         </aside>
 
-        {/* Feed */}
         <section className="flex flex-col items-center">
-          <Card
-            className="rounded-2xl p-4 shadow-md"
-            style={{
-              width: "699px",
-              height: "160px",
-            }}
-          >
+          <Card className="h-[160px] w-[699px] rounded-2xl p-4 shadow-md">
             <div className="mt-1 flex items-center gap-4">
-              {/* Avatar do usuário */}
               <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]"></div>
               <Input
                 placeholder="Compartilhe uma publicação"
@@ -165,22 +148,11 @@ export default function HomePage() {
                 Aqui você encontrará as últimas atualizações do Congresso.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              {/* Conteúdo adicional pode ser adicionado aqui */}
-            </CardContent>
+            <CardContent></CardContent>
           </Card>
         </section>
 
-        {/* Patrocinado Sidebar */}
-        <aside
-          className="rounded-2xl bg-white p-4 shadow-md"
-          style={{
-            width: "330px",
-            height: "600px",
-            top: "156px",
-            left: "1083px",
-          }}
-        >
+        <aside className="h-[600px] w-[330px] rounded-2xl bg-white p-4 shadow-md">
           <hr className="my-4 border-gray-300" />
           <div className="mb-4 flex items-center gap-2 font-semibold text-gray-400">
             <span>Patrocinado</span>
