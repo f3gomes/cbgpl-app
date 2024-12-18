@@ -22,36 +22,22 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Menu } from "lucide-react";
 
 const topIcons = [MessageCircle, Bell, CircleUserRound];
 const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 const sideIcons = [
-  {
-    title: "Palestrantes",
-    icons: MicVocal,
-  },
+  { title: "Palestrantes", icons: MicVocal },
   { title: "Participantes", icons: UsersRound },
   { title: "Espaço experiência", icons: MapPinned },
   { title: "Certificações do Congresso", icons: UserPen },
   { title: "Feedbacks", icons: FileCheck2 },
 ];
 const navItems = [
-  {
-    title: "Início",
-    link: "/",
-  },
-  {
-    title: "Programação",
-    link: "/",
-  },
-  {
-    title: "Notícias",
-    link: "/",
-  },
-  {
-    title: "Fotos",
-    link: "/",
-  },
+  { title: "Início", link: "/" },
+  { title: "Programação", link: "/" },
+  { title: "Notícias", link: "/" },
+  { title: "Fotos", link: "/" },
 ];
 
 export default function HomePage() {
@@ -108,7 +94,7 @@ export default function HomePage() {
       <main className="mx-auto flex max-w-full flex-grow gap-4 p-6">
         {/* Sidebar */}
         <aside
-          className="mt-1 rounded-2xl bg-white p-4 shadow-md"
+          className="rounded-2xl bg-white p-4 shadow-md"
           style={{
             width: "330px",
             height: "600px",
@@ -155,13 +141,13 @@ export default function HomePage() {
           >
             <div className="mt-1 flex items-center gap-4">
               {/* Avatar do usuário */}
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-300"></div>
+              <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]"></div>
               <Input
                 placeholder="Compartilhe uma publicação"
-                className="flex-grow"
+                className="h-[72px] w-[537px] flex-grow rounded-3xl bg-[#F3F3F3]"
               />
             </div>
-            <div className="mt-7 flex justify-end gap-2">
+            <div className="mt-4 flex justify-end gap-2">
               <Button variant="outline" className="[&_svg]:h-6 [&_svg]:w-6">
                 <Images size={16} className="text-[#35246F]" />
                 Mídia
@@ -172,7 +158,7 @@ export default function HomePage() {
               </Button>
             </div>
           </Card>
-          <Card className="mt-6 w-full flex-grow rounded-2xl bg-gray-100 p-4 shadow-inner">
+          <Card className="mt-6 w-full flex-grow rounded-2xl bg-[#F3F3F3] p-4 shadow-inner">
             <CardHeader>
               <CardTitle>Postagens Recentes</CardTitle>
               <CardDescription>
