@@ -56,17 +56,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <nav
-          className="flex items-center justify-between"
-          style={{
-            width: "586px",
-            height: "25px",
-            top: "54px",
-            left: "422px",
-            right: "423px",
-            margin: "0 auto",
-          }}
-        >
+        <nav className="left-[422px] top-[54px] flex h-[25px] w-[586px] items-center justify-between">
           {navItems.map((item, index) => (
             <a
               key={index}
