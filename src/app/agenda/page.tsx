@@ -39,6 +39,47 @@ const navItems = [
   { title: "Notícias", link: "/" },
   { title: "Fotos", link: "/" },
 ];
+const schedule = [
+  {
+    date: "22 de Abril",
+    sessions: [
+      {
+        time: "9h - 10h",
+        type: "Workshop",
+        theme: "IA e o futuro da profissão em gestão de projetos",
+        speaker:
+          "Americo Pinto, Managing Director of PMO Global Alliance - PMI",
+        typeColor: "bg-blue-500",
+      },
+      {
+        time: "10h - 11h",
+        type: "Palestra",
+        theme: "Estratégias para gestão ágil",
+        speaker: "Mariana Lima, Especialista em Scrum - PMI",
+        typeColor: "bg-purple-500",
+      },
+    ],
+  },
+  {
+    date: "23 de Abril",
+    sessions: [
+      {
+        time: "9h - 10h",
+        type: "Painel",
+        theme: "Tendências globais em gerenciamento de projetos",
+        speaker: "João Silva, Diretor de Inovação - PMO Alliance",
+        typeColor: "bg-orange-500",
+      },
+      {
+        time: "11h - 12h",
+        type: "Workshop",
+        theme: "Ferramentas tecnológicas no gerenciamento de equipes",
+        speaker: "Ana Souza, CTO da PM Tech",
+        typeColor: "bg-teal-500",
+      },
+    ],
+  },
+];
 
 export default function HomePage() {
   return (
@@ -110,6 +151,47 @@ export default function HomePage() {
             ))}
           </div>
         </aside>
+
+        <section className="flex h-full flex-row gap-6">
+          {schedule.map((day, index) => (
+            <div key={index} className="w-1/2">
+              <h2 className="mb-4 text-xl font-bold text-orange-500">
+                {day.date}
+              </h2>
+              <div className="flex flex-col gap-4">
+                {day.sessions.map((session, idx) => (
+                  <Card
+                    key={idx}
+                    className="rounded-2xl bg-white p-4 shadow-md"
+                  >
+                    <div className="mb-4 flex items-center gap-4">
+                      <span
+                        className={`rounded px-3 py-1 text-sm font-bold text-white ${session.typeColor}`}
+                      >
+                        {session.type}
+                      </span>
+                      <span className="text-gray-600">{session.time}</span>
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold">
+                      Tema: {session.theme}
+                    </h3>
+                    <p className="mb-4 text-gray-600">
+                      Palestrante: <strong>{session.speaker}</strong>
+                    </p>
+                    <div className="flex justify-between">
+                      <Button variant="outline" className="text-orange-500">
+                        Detalhes
+                      </Button>
+                      <Button className="bg-orange-500 text-white">
+                        Inscreva-se!
+                      </Button>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
 
         <aside className="h-[600px] w-[330px] rounded-2xl bg-white p-4 shadow-md">
           <hr className="my-4 border-gray-300" />
