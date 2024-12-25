@@ -35,9 +35,9 @@ export default function HomePage() {
     <div className="flex w-full flex-col bg-gray-50">
       <Header />
 
-      <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-2 lg:flex-row lg:p-6">
-        <aside className="h-12 w-full items-center rounded-2xl bg-white px-4 shadow-md lg:h-[600px] lg:w-[330px] lg:p-4 lg:px-0">
-          <div className="mb-4 flex items-center justify-between">
+      <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-4 xl:flex-row">
+        <aside className="flex h-12 w-full flex-col items-center rounded-2xl px-4 shadow-md xl:h-[600px] xl:w-[330px] xl:p-4 xl:px-0">
+          <div className="mt-2 flex w-full justify-between xl:mt-0">
             {socialIcons.map((Item, index) => (
               <Button
                 key={index}
@@ -49,7 +49,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             {sideIcons.map((Item, index) => (
               <div key={index}>
                 <hr className="my-2 border-gray-300" />
@@ -66,7 +66,7 @@ export default function HomePage() {
         </aside>
 
         <section className="flex flex-col items-center">
-          <Card className="h-[160px] w-[699px] rounded-2xl p-4 shadow-md">
+          <Card className="h-[160px] w-full rounded-2xl p-4 shadow-md">
             <div className="mt-1 flex items-center gap-4">
               <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]"></div>
               <Input
@@ -85,6 +85,7 @@ export default function HomePage() {
               </Button>
             </div>
           </Card>
+
           <Card className="mt-6 w-full flex-grow rounded-2xl bg-[#F3F3F3] p-4 shadow-inner">
             <CardHeader>
               <CardTitle>Postagens Recentes</CardTitle>
@@ -96,9 +97,9 @@ export default function HomePage() {
           </Card>
         </section>
 
-        <aside className="h-[600px] w-[330px] rounded-2xl bg-white p-4 shadow-md">
+        <aside className="min-w- h-[600px] min-w-[330px] rounded-2xl bg-white p-4 shadow-md">
           <hr className="my-4 border-gray-300" />
-          <div className="mb-4 flex items-center gap-2 font-semibold text-gray-400">
+          <div className="flex items-center gap-2 font-semibold text-gray-400">
             <span>Patrocinado</span>
           </div>
         </aside>
