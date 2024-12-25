@@ -27,12 +27,12 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="left-[422px] top-[54px] flex h-[25px] w-[586px] items-center justify-between">
+      <nav className="flex h-[25px] w-[586px] items-center justify-around xl:justify-between">
         {navItems.map((item, index) => (
           <a
             key={index}
             href={item.link}
-            className="text-base font-medium text-black hover:text-black"
+            className="text-base font-medium text-black transition duration-200 hover:text-slate-700"
           >
             {item.title}
           </a>
