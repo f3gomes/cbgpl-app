@@ -23,6 +23,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Menu } from "lucide-react";
+import Header from "@/components/custom/header";
 
 const topIcons = [MessageCircle, Bell, CircleUserRound];
 const socialIcons = [Linkedin, Instagram, Youtube, Mail];
@@ -83,48 +84,12 @@ const schedule = [
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-green-600">
-      {/* Header */}
-      <header className="relative flex h-[134px] w-full items-center justify-between bg-white px-4 py-2 shadow-sm">
-        <div className="flex items-center space-x-2">
-          <div className="flex-shrink-0">
-            <Image
-              width={215}
-              height={78}
-              src="/assets/Design_sem_nome-removebg-preview.png"
-              alt="Congresso Logo"
-              className="object-contain"
-            />
-          </div>
-        </div>
-        <nav className="left-[422px] top-[54px] flex h-[25px] w-[586px] items-center justify-between">
-          {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              className="text-base font-medium text-black hover:text-black"
-            >
-              {item.title}
-            </a>
-          ))}
-        </nav>
+    <div className="flex min-h-screen w-full flex-col bg-gray-50">
+      <Header />
 
-        <div className="flex items-center space-x-4 p-4">
-          {topIcons.map((Item, index) => (
-            <button
-              key={index}
-              type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
-            >
-              <Item size={20} className="text-[#FFFFFF]" />
-            </button>
-          ))}
-        </div>
-      </header>
-      {/* Main Content */}
-      <main className="mx-auto flex w-full flex-grow flex-col gap-4 p-2 md:flex-row md:p-6">
-        <aside className="h-12 w-full items-center rounded-2xl bg-white px-4 shadow-md md:h-[600px] md:w-[330px] md:p-4 md:px-0">
-          <div className="mb-4 flex items-center justify-between">
+      <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-4 xl:flex-row">
+        <aside className="flex h-12 w-full flex-col items-center rounded-2xl px-4 shadow-md xl:h-[600px] xl:w-[330px] xl:p-4 xl:px-0">
+          <div className="mt-2 flex w-full justify-between xl:mt-0">
             {socialIcons.map((Item, index) => (
               <Button
                 key={index}
@@ -136,7 +101,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             {sideIcons.map((Item, index) => (
               <div key={index}>
                 <hr className="my-2 border-gray-300" />
@@ -153,44 +118,52 @@ export default function HomePage() {
         </aside>
 
         <section className="flex h-full flex-row gap-6">
-          {schedule.map((day, index) => (
-            <div key={index} className="w-1/2">
-              <h2 className="mb-4 text-xl font-bold text-orange-500">
-                {day.date}
-              </h2>
-              <div className="flex flex-col gap-4">
-                {day.sessions.map((session, idx) => (
-                  <Card
-                    key={idx}
-                    className="rounded-2xl bg-white p-4 shadow-md"
-                  >
-                    <div className="mb-4 flex items-center gap-4">
-                      <span
-                        className={`rounded px-3 py-1 text-sm font-bold text-white ${session.typeColor}`}
-                      >
-                        {session.type}
-                      </span>
-                      <span className="text-gray-600">{session.time}</span>
-                    </div>
-                    <h3 className="mb-2 text-lg font-semibold">
-                      Tema: {session.theme}
-                    </h3>
-                    <p className="mb-4 text-gray-600">
-                      Palestrante: <strong>{session.speaker}</strong>
-                    </p>
-                    <div className="flex justify-between">
-                      <Button variant="outline" className="text-orange-500">
-                        Detalhes
-                      </Button>
-                      <Button className="bg-orange-500 text-white">
-                        Inscreva-se!
-                      </Button>
-                    </div>
-                  </Card>
-                ))}
+          <div className="relative z-10 flex h-full flex-row gap-4 p-6">
+            {schedule.map((day, index) => (
+              <div
+                key={index}
+                className="relative w-[345px] rounded-[27px] bg-white p-4 shadow-md"
+              >
+                {/* Fundo branco atrás do conteúdo */}
+                <div className="absolute inset-0 -z-10 rounded-[27px] bg-white shadow-md"></div>
+
+                <h2 className="font-inter mb-4 text-xl hover:bg-orange-500">
+                  {day.date}
+                </h2>
+                <div className="flex flex-col gap-4">
+                  {day.sessions.map((session, idx) => (
+                    <Card
+                      key={idx}
+                      className="rounded-[27px] bg-white p-4 shadow-md"
+                    >
+                      <div className="mb-4 flex items-center gap-4">
+                        <span
+                          className={`rounded px-3 py-1 text-sm font-bold text-white ${session.typeColor}`}
+                        >
+                          {session.type}
+                        </span>
+                        <span className="text-gray-600">{session.time}</span>
+                      </div>
+                      <h3 className="mb-2 text-lg font-semibold">
+                        Tema: {session.theme}
+                      </h3>
+                      <p className="mb-4 text-gray-600">
+                        Palestrante: <strong>{session.speaker}</strong>
+                      </p>
+                      <div className="flex justify-between">
+                        <Button variant="outline" className="text-orange-500">
+                          Detalhes
+                        </Button>
+                        <Button className="bg-orange-500 text-white">
+                          Inscreva-se!
+                        </Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
 
         <aside className="h-[600px] w-[330px] rounded-2xl bg-white p-4 shadow-md">
