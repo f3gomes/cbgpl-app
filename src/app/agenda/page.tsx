@@ -117,19 +117,18 @@ export default function HomePage() {
           </div>
         </aside>
 
-        <section className="flex h-full flex-row gap-6">
-          <div className="relative z-10 flex h-full flex-row gap-4 p-6">
+        <section className="flex h-full flex-row">
+          <div className="relative z-10 flex h-full flex-row gap-4">
             {schedule.map((day, index) => (
               <div
                 key={index}
                 className="relative w-[345px] rounded-[27px] bg-white p-4 shadow-md"
               >
-                {/* Fundo branco atrás do conteúdo */}
-                <div className="absolute inset-0 -z-10 rounded-[27px] bg-white shadow-md"></div>
-
-                <h2 className="font-inter mb-4 text-xl hover:bg-orange-500">
-                  {day.date}
-                </h2>
+                <div className="mb-4 flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500">
+                  <h2 className="font-inter p-2 text-xl text-white">
+                    {day.date}
+                  </h2>
+                </div>
                 <div className="flex flex-col gap-4">
                   {day.sessions.map((session, idx) => (
                     <Card
