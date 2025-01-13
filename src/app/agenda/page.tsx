@@ -2,9 +2,6 @@ import { Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Youtube } from "lucide-react";
 import { Mail } from "lucide-react";
-import { CircleUserRound } from "lucide-react";
-import { Bell } from "lucide-react";
-import { MessageCircle } from "lucide-react";
 import { MicVocal } from "lucide-react";
 import { UsersRound } from "lucide-react";
 import { MapPinned } from "lucide-react";
@@ -13,7 +10,6 @@ import { FileCheck2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/custom/header";
 
-const topIcons = [MessageCircle, Bell, CircleUserRound];
 const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 const sideIcons = [
   { title: "Palestrantes", icons: MicVocal },
@@ -21,12 +17,6 @@ const sideIcons = [
   { title: "Espaço experiência", icons: MapPinned },
   { title: "Certificações do Congresso", icons: UserPen },
   { title: "Feedbacks", icons: FileCheck2 },
-];
-const navItems = [
-  { title: "Início", link: "/" },
-  { title: "Programação", link: "/" },
-  { title: "Notícias", link: "/" },
-  { title: "Fotos", link: "/" },
 ];
 const schedule = [
   {
