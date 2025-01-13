@@ -21,7 +21,7 @@ export default function Header() {
     const fetchUser = async () => {
       if (typeof window !== "undefined") {
         const userFromStorage = await JSON.parse(
-          window.localStorage.getItem("user")!,
+          window.localStorage.getItem("gtxp-user")!,
         );
         setUser(userFromStorage);
       }

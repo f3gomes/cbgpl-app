@@ -46,7 +46,7 @@ export default function Login() {
       if (res.ok) {
         const user = await res.json();
         Cookies.set("gtxp", "logged");
-        window.localStorage.setItem("user", JSON.stringify(user));
+        window.localStorage.setItem("gtxp-user", JSON.stringify(user));
         router.push("/");
       } else {
         const errorData = await res.json();

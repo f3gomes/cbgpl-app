@@ -16,6 +16,8 @@ import {
   LogOut,
   CircleUserRound,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
 interface UserMenuProps {
   name: string | null;
@@ -24,8 +26,14 @@ interface UserMenuProps {
 }
 
 const UserMenu = ({ name, email, profileImgUrl }: UserMenuProps) => {
+  const router = useRouter();
+
   const handleLogout = () => {
-    console.log("Logout clicked");
+    if (typeof window !== "undefined") {
+      window.localStorage.removeItem("gtxp-user");
+    }
+    Cookies.remove("gtxp");
+    router.push("/sign-in");
   };
 
   return (
