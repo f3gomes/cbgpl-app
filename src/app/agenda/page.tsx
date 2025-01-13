@@ -2,8 +2,6 @@ import { Instagram } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Youtube } from "lucide-react";
 import { Mail } from "lucide-react";
-import { Images } from "lucide-react";
-import { UserSearch } from "lucide-react";
 import { CircleUserRound } from "lucide-react";
 import { Bell } from "lucide-react";
 import { MessageCircle } from "lucide-react";
@@ -12,17 +10,7 @@ import { UsersRound } from "lucide-react";
 import { MapPinned } from "lucide-react";
 import { UserPen } from "lucide-react";
 import { FileCheck2 } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Menu } from "lucide-react";
 import Header from "@/components/custom/header";
 
 const topIcons = [MessageCircle, Bell, CircleUserRound];
@@ -42,7 +30,7 @@ const navItems = [
 ];
 const schedule = [
   {
-    date: "22 de Abril",
+    date: "22 DE ABRIL",
     sessions: [
       {
         time: "9h - 10h",
@@ -62,7 +50,7 @@ const schedule = [
     ],
   },
   {
-    date: "23 de Abril",
+    date: "23 DE ABRIL",
     sessions: [
       {
         time: "9h - 10h",
@@ -82,7 +70,7 @@ const schedule = [
   },
 ];
 
-export default function HomePage() {
+export default function Agenda() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-gray-50">
       <Header />
@@ -122,42 +110,57 @@ export default function HomePage() {
             {schedule.map((day, index) => (
               <div
                 key={index}
-                className="relative w-[345px] rounded-[27px] bg-white p-4 shadow-md"
+                className="relative w-[345px] rounded-[27px] bg-white py-4 pl-3 shadow-md"
               >
-                <div className="mb-4 flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500">
-                  <h2 className="font-inter p-2 text-xl text-white">
+                {/* DIV da data */}
+                <div className="mx-auto mb-4 flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500 px-4">
+                  <h2 className="text-center font-sans text-xl font-extrabold uppercase leading-6 tracking-wider text-white">
                     {day.date}
                   </h2>
                 </div>
+
                 <div className="flex flex-col gap-4">
                   {day.sessions.map((session, idx) => (
-                    <Card
+                    <div
                       key={idx}
-                      className="rounded-[27px] bg-white p-4 shadow-md"
+                      className="flex h-[240px] w-[325px] flex-col overflow-hidden rounded-[27px] bg-[#35246F] shadow-md"
                     >
-                      <div className="mb-4 flex items-center gap-4">
-                        <span
-                          className={`rounded px-3 py-1 text-sm font-bold text-white ${session.typeColor}`}
-                        >
-                          {session.type}
+                      {/* TOPO ROXO */}
+                      <div className="px-4 pt-3 text-center text-white">
+                        <span className="font-inter">
+                          {session.type} | {session.time}
                         </span>
-                        <span className="text-gray-600">{session.time}</span>
                       </div>
-                      <h3 className="mb-2 text-lg font-semibold">
-                        Tema: {session.theme}
-                      </h3>
-                      <p className="mb-4 text-gray-600">
-                        Palestrante: <strong>{session.speaker}</strong>
-                      </p>
-                      <div className="flex justify-between">
-                        <Button variant="outline" className="text-orange-500">
-                          Detalhes
-                        </Button>
-                        <Button className="bg-orange-500 text-white">
-                          Inscreva-se!
-                        </Button>
+
+                      {/* PARTE BRANCA (somente embaixo) */}
+                      <div className="mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 text-black">
+                        <h3 className="mb-2 text-lg">
+                          <span className="font-semibold">Tema:</span>{" "}
+                          {session.theme}
+                        </h3>
+
+                        <p className="mb-4 text-gray-700">
+                          <a
+                            href="https://www.linkedin.com/in/americopinto"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-black underline"
+                          >
+                            Americo Pinto
+                          </a>
+                          , Managing Director of PMO Global Alliance – PMI
+                        </p>
+
+                        <div className="flex items-center justify-between px-3">
+                          <button className="h-[33px] w-[133px] rounded-[21px] border border-[#35246F] bg-white font-semibold text-[#1B1B1B] transition-colors hover:bg-[#35246F] hover:text-white">
+                            Detalhes
+                          </button>
+                          <button className="h-[33px] w-[133px] rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600">
+                            Inscreva-se!
+                          </button>
+                        </div>
                       </div>
-                    </Card>
+                    </div>
                   ))}
                 </div>
               </div>
