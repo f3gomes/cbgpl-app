@@ -5,6 +5,7 @@
 import React, { useState } from "react";
 
 import { z } from "zod";
+import Cookies from "js-cookie";
 import { useForm } from "react-hook-form";
 
 import Link from "next/link";
@@ -34,7 +35,7 @@ export default function Login() {
   const onSubmit = async (data: LoginFormValues) => {
     setLoginError(null);
     try {
-      const res = await fetch("/api/login", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,8 +44,10 @@ export default function Login() {
       });
 
       if (res.ok) {
-        // Redireciona para a página
-        router.push("/restrict");
+        const user = await res.json();
+        Cookies.set("gtxp", "logged");
+        window.localStorage.setItem("gtxp-user", JSON.stringify(user));
+        router.push("/");
       } else {
         const errorData = await res.json();
         setLoginError(errorData.message || "E-mail ou senha incorretos");
@@ -90,9 +93,8 @@ export default function Login() {
                 type="email"
                 placeholder="seuemail@exemplo.com"
                 {...register("email")}
-                className={`mt-1 block w-full ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${errors.email ? "border-red-500" : "border-gray-300"
+                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">
@@ -111,9 +113,8 @@ export default function Login() {
                 type="password"
                 placeholder="********"
                 {...register("password")}
-                className={`mt-1 block w-full ${
-                  errors.password ? "border-red-500" : "border-gray-300"
-                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${errors.password ? "border-red-500" : "border-gray-300"
+                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.password && (
                 <p className="mt-1 text-sm text-red-600">
