@@ -1,64 +1,8 @@
-import { Instagram } from "lucide-react";
-import { Linkedin } from "lucide-react";
-import { Youtube } from "lucide-react";
-import { Mail } from "lucide-react";
-import { MicVocal } from "lucide-react";
-import { UsersRound } from "lucide-react";
-import { MapPinned } from "lucide-react";
-import { UserPen } from "lucide-react";
-import { FileCheck2 } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/custom/header";
-
-const socialIcons = [Linkedin, Instagram, Youtube, Mail];
-const sideIcons = [
-  { title: "Palestrantes", icons: MicVocal },
-  { title: "Participantes", icons: UsersRound },
-  { title: "Espaço experiência", icons: MapPinned },
-  { title: "Certificações do Congresso", icons: UserPen },
-  { title: "Feedbacks", icons: FileCheck2 },
-];
-const schedule = [
-  {
-    date: "22 DE ABRIL",
-    sessions: [
-      {
-        time: "9h - 10h",
-        type: "Workshop",
-        theme: "IA e o futuro da profissão em gestão de projetos",
-        speaker:
-          "Americo Pinto, Managing Director of PMO Global Alliance - PMI",
-        typeColor: "bg-blue-500",
-      },
-      {
-        time: "10h - 11h",
-        type: "Palestra",
-        theme: "Estratégias para gestão ágil",
-        speaker: "Mariana Lima, Especialista em Scrum - PMI",
-        typeColor: "bg-purple-500",
-      },
-    ],
-  },
-  {
-    date: "23 DE ABRIL",
-    sessions: [
-      {
-        time: "9h - 10h",
-        type: "Painel",
-        theme: "Tendências globais em gerenciamento de projetos",
-        speaker: "João Silva, Diretor de Inovação - PMO Alliance",
-        typeColor: "bg-orange-500",
-      },
-      {
-        time: "11h - 12h",
-        type: "Workshop",
-        theme: "Ferramentas tecnológicas no gerenciamento de equipes",
-        speaker: "Ana Souza, CTO da PM Tech",
-        typeColor: "bg-teal-500",
-      },
-    ],
-  },
-];
+import WorkshopCard from "@/components/custom/workshop-card";
+import { schedule, sideIcons, socialIcons } from "@/components/data/list";
 
 export default function Agenda() {
   return (
@@ -102,11 +46,16 @@ export default function Agenda() {
                 key={index}
                 className="relative w-[345px] rounded-[27px] bg-white py-4 pl-3 shadow-md"
               >
-                {/* DIV da data */}
-                <div className="mx-auto mb-4 flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500 px-4">
-                  <h2 className="text-center font-sans text-xl font-extrabold uppercase leading-6 tracking-wider text-white">
-                    {day.date}
-                  </h2>
+                <div className="mb-4 flex items-center justify-between pr-3">
+                  <div className="mx-auto mr-auto flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500 px-4">
+                    <h2 className="text-center font-sans text-xl font-extrabold uppercase leading-6 tracking-wider text-white">
+                      {day.date}
+                    </h2>
+                  </div>
+
+                  <button className="cursor-pointer">
+                    <SlidersHorizontal className="text-[#35246F]" size={22} />
+                  </button>
                 </div>
 
                 <div className="flex flex-col gap-4">
@@ -115,41 +64,13 @@ export default function Agenda() {
                       key={idx}
                       className="flex h-[240px] w-[325px] flex-col overflow-hidden rounded-[27px] bg-[#35246F] shadow-md"
                     >
-                      {/* TOPO ROXO */}
                       <div className="px-4 pt-3 text-center text-white">
                         <span className="font-inter">
                           {session.type} | {session.time}
                         </span>
                       </div>
 
-                      {/* PARTE BRANCA (somente embaixo) */}
-                      <div className="mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 text-black">
-                        <h3 className="mb-2 text-lg">
-                          <span className="font-semibold">Tema:</span>{" "}
-                          {session.theme}
-                        </h3>
-
-                        <p className="mb-4 text-gray-700">
-                          <a
-                            href="https://www.linkedin.com/in/americopinto"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-semibold text-black underline"
-                          >
-                            Americo Pinto
-                          </a>
-                          , Managing Director of PMO Global Alliance – PMI
-                        </p>
-
-                        <div className="flex items-center justify-between px-3">
-                          <button className="h-[33px] w-[133px] rounded-[21px] border border-[#35246F] bg-white font-semibold text-[#1B1B1B] transition-colors hover:bg-[#35246F] hover:text-white">
-                            Detalhes
-                          </button>
-                          <button className="h-[33px] w-[133px] rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600">
-                            Inscreva-se!
-                          </button>
-                        </div>
-                      </div>
+                      <WorkshopCard session={session} />
                     </div>
                   ))}
                 </div>
