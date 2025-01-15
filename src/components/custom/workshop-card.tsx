@@ -1,6 +1,6 @@
 import { ISession } from "../data/list";
 
-export default function WorkshopCard({ session }: any) {
+export default function WorkshopCard({ session }: ISession) {
   return (
     <div className="relative mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 text-black">
       <h3 className="mb-2 text-lg">

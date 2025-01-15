@@ -9,11 +9,13 @@ import { UserPen } from "lucide-react";
 import { FileCheck2 } from "lucide-react";
 
 export interface ISession {
-  time: string;
-  type: string;
-  theme: string;
-  speaker: string;
-  typecolor: string;
+  session: {
+    time: string;
+    type: string;
+    theme: string;
+    speaker: string;
+    typeColor: string;
+  };
 }
 
 export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
