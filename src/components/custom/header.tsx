@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   { title: "Início", link: "/" },
-  { title: "Programação", link: "/" },
+  { title: "Programação", link: "/schedule" },
   { title: "Notícias", link: "/" },
   { title: "Fotos", link: "/" },
 ];
