@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { loginSchema } from "@/schemas/login-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import Spinner from "@/components/custom/spinner";
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
@@ -53,7 +54,7 @@ export default function Login() {
         setLoginError(errorData.message || "E-mail ou senha incorretos");
       }
     } catch (error) {
-      setLoginError("Ocorreu um erro. Por favor, tente novamente.");
+      setLoginError("Ocorreu um erro. Por favor, tente novamente mais tarde");
       console.log(error);
     }
   };
@@ -123,7 +124,6 @@ export default function Login() {
               )}
             </div>
 
-            {/* Mensagem de Erro de Login */}
             {loginError && (
               <Alert variant="destructive" className="mb-4">
                 <AlertTitle>Erro de Login</AlertTitle>
@@ -131,10 +131,9 @@ export default function Login() {
               </Alert>
             )}
 
-            {/* Link "Esqueceu a senha?" */}
             <div className="mb-4 text-right">
               <Link
-                href="/recuperar-senha"
+                href="/reset-password"
                 className="text-sm text-orange-500 hover:underline"
               >
                 Esqueceu a senha?
@@ -147,7 +146,7 @@ export default function Login() {
               className="w-full bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Entrando..." : "Entrar"}
+              {isSubmitting ? <Spinner /> : "Entrar"}
             </Button>
           </form>
 

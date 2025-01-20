@@ -20,7 +20,11 @@ export const formSchema = z
     linkedin: z.string().optional(),
     instagram: z.string().optional(),
     twitter: z.string().optional(),
-    idPmi: z.string(),
+    description: z.string().optional(),
+    pmiId: z.string(),
+    visible: z.boolean(),
+    type: z.string(),
+    profileImgUrl: z.string(),
 
     password: z
       .string()
