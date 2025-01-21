@@ -64,7 +64,11 @@ export default function SignUpForm() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // eslint-disable-next-line
     const { confirmPassword, ...rest } = values;
-    const res = await createUser({ ...rest, profileImgUrl: profileImg?.path });
+    const res = await createUser({
+      ...rest,
+      profileImgUrl: profileImg?.path || "",
+    });
+
     const regex = /unique.*email|email.*unique/i;
 
     if (res?.status === 201) {
@@ -308,9 +312,7 @@ export default function SignUpForm() {
               type="submit"
               size={"lg"}
               disabled={
-                !form?.formState?.isValid ||
-                form?.formState?.isSubmitting ||
-                !profileImg
+                !form?.formState?.isValid || form?.formState?.isSubmitting
               }
               className="w-[104px] bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
             >
