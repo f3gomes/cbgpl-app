@@ -46,7 +46,7 @@ export default function ImageContainer({
       <ImageKitProvider
         publicKey={publicKey}
         urlEndpoint={urlEndpoint}
-        authenticator={authenticator}
+        authenticator={() => authenticator()}
       >
         {!isLoading && !profileImg?.profileImgUrl && (
           <Upload className="absolute text-[#e5e5e8]" size={50} />
