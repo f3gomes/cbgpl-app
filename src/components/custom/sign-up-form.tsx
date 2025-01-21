@@ -308,7 +308,9 @@ export default function SignUpForm() {
               type="submit"
               size={"lg"}
               disabled={
-                !form?.formState?.isValid || form?.formState?.isSubmitting
+                !form?.formState?.isValid ||
+                form?.formState?.isSubmitting ||
+                !profileImg
               }
               className="w-[104px] bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
             >
