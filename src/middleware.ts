@@ -4,11 +4,13 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const isAuth = request.cookies.get("gtxp");
 
+  const protectedRoutes = ["/", "/schedule"];
+
   if (isAuth && request.nextUrl.pathname === "/sign-in") {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  if (!isAuth && request.nextUrl.pathname === "/") {
+  if (!isAuth && protectedRoutes.includes(request.nextUrl.pathname)) {
     return NextResponse.redirect(new URL("/sign-in", request.url));
   }
 
@@ -16,5 +18,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/sign-in"],
+  matcher: ["/", "/sign-in", "/schedule"],
 };

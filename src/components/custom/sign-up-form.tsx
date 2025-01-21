@@ -1,9 +1,17 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { toast } from "sonner";
+import { useForm } from "react-hook-form";
+
+import Link from "next/link";
+import { phoneMask } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { createUser } from "@/actions/createUser";
+import { formSchema } from "@/schemas/form-schema";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
@@ -12,14 +20,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
-import { formSchema } from "@/schemas/form-schema";
+import Spinner from "./spinner";
 import MultiSelect from "./multi-select";
-import { phoneMask } from "@/lib/utils";
-import Link from "next/link";
 import PrivacyAgreement from "./terms-modal";
-import { toast } from "sonner";
+import ImageContainer from "./image-container";
+import { useState } from "react";
 
 const defaultValues = {
   name: "",
@@ -31,31 +37,60 @@ const defaultValues = {
   linkedin: "",
   instagram: "",
   twitter: "",
-  idPmi: "",
+  pmiId: "",
   password: "",
   confirmPassword: "",
+  visible: true,
+  type: "SPEAKER",
+  profileImgUrl: "",
 };
 
+export interface IProfileImg {
+  path: string;
+  profileImgUrl: string;
+}
+
 export default function SignUpForm() {
+  const router = useRouter();
+
+  const [profileImg, setProfileImg] = useState<IProfileImg>();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues,
     mode: "onChange",
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // eslint-disable-next-line
+    const { confirmPassword, ...rest } = values;
+    const res = await createUser({ ...rest, profileImgUrl: profileImg?.path });
+    const regex = /unique.*email|email.*unique/i;
 
-    toast.message("Cadastro realizado com sucesso!", {
-      description: "Seus dados foram enviados.",
-      position: "top-right",
-    });
-  }
+    if (res?.status === 201) {
+      form?.reset(defaultValues);
+      router.push("/sign-in");
+
+      toast.message("Cadastro realizado com sucesso!", {
+        description: "Seus dados foram enviados",
+        position: "top-right",
+      });
+    }
+
+    if (res?.error && regex.test(res?.error)) {
+      toast.error("Erro ao efetuar cadastro!", {
+        description: "Esse endereço de e-mail já foi cadastrado",
+        position: "top-right",
+      });
+    }
+  };
 
   return (
     <div className="w-[25rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
         <h1 className="mb-6 text-center text-2xl font-bold">Crie sua conta</h1>
+
+        <ImageContainer profileImg={profileImg} setProfileImg={setProfileImg} />
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
@@ -64,7 +99,7 @@ export default function SignUpForm() {
             </h1>
             <FormField
               control={form.control}
-              name="idPmi"
+              name="pmiId"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>ID PMI</FormLabel>
@@ -272,14 +307,16 @@ export default function SignUpForm() {
             <Button
               type="submit"
               size={"lg"}
-              disabled={!form?.formState?.isValid}
-              className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
+              disabled={
+                !form?.formState?.isValid || form?.formState?.isSubmitting
+              }
+              className="w-[104px] bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
             >
-              Enviar
+              {form?.formState?.isSubmitting ? <Spinner /> : "Enviar"}
             </Button>
 
             <Link
-              href="/login"
+              href="/sign-in"
               className="text-orange-500 transition duration-200 hover:underline"
             >
               Já sou cadastrado
