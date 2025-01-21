@@ -24,6 +24,8 @@ import {
 import Spinner from "./spinner";
 import MultiSelect from "./multi-select";
 import PrivacyAgreement from "./terms-modal";
+import ImageContainer from "./image-container";
+import { useState } from "react";
 
 const defaultValues = {
   name: "",
@@ -43,8 +45,15 @@ const defaultValues = {
   profileImgUrl: "",
 };
 
+export interface IProfileImg {
+  path: string;
+  profileImgUrl: string;
+}
+
 export default function SignUpForm() {
   const router = useRouter();
+
+  const [profileImg, setProfileImg] = useState<IProfileImg>();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,7 +64,7 @@ export default function SignUpForm() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // eslint-disable-next-line
     const { confirmPassword, ...rest } = values;
-    const res = await createUser(rest);
+    const res = await createUser({ ...rest, profileImgUrl: profileImg?.path });
     const regex = /unique.*email|email.*unique/i;
 
     if (res?.status === 201) {
@@ -80,6 +89,8 @@ export default function SignUpForm() {
     <div className="w-[25rem] rounded-lg bg-white p-8 shadow-lg md:w-[34rem]">
       <Form {...form}>
         <h1 className="mb-6 text-center text-2xl font-bold">Crie sua conta</h1>
+
+        <ImageContainer profileImg={profileImg} setProfileImg={setProfileImg} />
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
