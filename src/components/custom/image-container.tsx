@@ -11,6 +11,7 @@ import { IKUploadResponse } from "imagekitio-next/dist/types/components/IKUpload
 
 import Spinner from "./spinner";
 import { IProfileImg } from "./sign-up-form";
+import { cn } from "@/lib/utils";
 
 interface ImageContainerProps {
   profileImg: IProfileImg | undefined;
@@ -53,11 +54,14 @@ export default function ImageContainer({
 
         <IKUpload
           fileName="gtxp-user.png"
-          className="absolute h-[150px] w-[150px] cursor-pointer opacity-0"
+          className={cn(
+            "absolute h-[150px] w-[150px] opacity-0",
+            profileImg !== undefined ? "cursor-default" : "cursor-pointer",
+          )}
           onError={onError}
           onSuccess={onSuccess}
+          disabled={profileImg !== undefined}
           onChange={() => {
-            setProfileImg(undefined);
             setIsLoaindg(true);
           }}
         />
