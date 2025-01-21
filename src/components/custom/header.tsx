@@ -74,7 +74,7 @@ export default function Header() {
         <UserMenu
           name={user?.name}
           email={user?.email}
-          profileImgUrl={user?.profileImgUrl}
+          imgPath={user?.profileImgUrl}
         />
       </div>
     </header>

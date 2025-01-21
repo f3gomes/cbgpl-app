@@ -1,5 +1,18 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+import Cookies from "js-cookie";
+import {
+  CircleUserRound,
+  HelpCircle,
+  LogOut,
+  Settings,
+  User,
+} from "lucide-react";
+
+import { useRouter } from "next/navigation";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Menubar,
   MenubarContent,
@@ -8,25 +21,17 @@ import {
   MenubarSeparator,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  User,
-  Settings,
-  HelpCircle,
-  LogOut,
-  CircleUserRound,
-} from "lucide-react";
-import { useRouter } from "next/navigation";
-import Cookies from "js-cookie";
 
 interface UserMenuProps {
   name: string | null;
   email: string;
-  profileImgUrl: string;
+  imgPath: string;
 }
 
-const UserMenu = ({ name, email, profileImgUrl }: UserMenuProps) => {
+const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
   const router = useRouter();
+
+  const [profileImg, setProfileImg] = useState("");
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -36,17 +41,23 @@ const UserMenu = ({ name, email, profileImgUrl }: UserMenuProps) => {
     router.push("/sign-in");
   };
 
+  useEffect(() => {
+    const path = imgPath;
+    const baseUrl = `${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face`;
+    setProfileImg(`${baseUrl}${path}`);
+  }, [imgPath]);
+
   return (
     <Menubar className="flex h-10 w-10 justify-center rounded-full border-0">
       <MenubarMenu>
         <MenubarTrigger className="cursor-pointer p-0">
           <Avatar className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
-            <AvatarImage src={profileImgUrl} alt="User avatar" />
+            <AvatarImage src={profileImg} alt="User avatar" />
             <CircleUserRound size={20} className="text-[#FFFFFF]" />
           </Avatar>
         </MenubarTrigger>
 
-        <MenubarContent className="mr-2 min-w-[200px]">
+        <MenubarContent className="mr-8 min-w-[200px]">
           <div className="flex items-center gap-2 p-2">
             <Avatar className="h-10 w-10">
               <AvatarImage src="/api/placeholder/40/40" alt="User avatar" />
