@@ -2,7 +2,8 @@ import axios from "axios";
 
 export const authenticator = async () => {
   try {
-    const response = await axios.get("/api/auth");
+    const instance = axios.create();
+    const response = await instance.get(`/api/auth?t=${Date.now()}`);
 
     if (!response.data) {
       const errorText = await response.data.text();
