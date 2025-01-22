@@ -11,7 +11,6 @@ import { IKUploadResponse } from "imagekitio-next/dist/types/components/IKUpload
 
 import Spinner from "./spinner";
 import { IProfileImg } from "./sign-up-form";
-import { cn } from "@/lib/utils";
 
 interface ImageContainerProps {
   profileImg: IProfileImg | undefined;
@@ -25,11 +24,12 @@ export default function ImageContainer({
   profileImg,
   setProfileImg,
 }: ImageContainerProps) {
-  const [isLoading, setIsLoaindg] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // eslint-disable-next-line
   const onError = (err: any) => {
     console.log("Error", err);
+    setIsLoading(false);
   };
 
   const onSuccess = (res: IKUploadResponse) => {
@@ -38,11 +38,15 @@ export default function ImageContainer({
       path: res?.filePath,
       profileImgUrl,
     });
-    setIsLoaindg(false);
+
+    setIsLoading(false);
   };
 
   const handleAuth = async () => {
+    setIsLoading(true);
+    setProfileImg(undefined);
     const res = await authenticator();
+
     return res;
   };
 
@@ -59,16 +63,11 @@ export default function ImageContainer({
 
         <IKUpload
           fileName="gtxp-user.png"
-          className={cn(
-            "absolute h-[150px] w-[150px] opacity-0",
-            profileImg !== undefined ? "cursor-default" : "cursor-pointer",
-          )}
+          className={"absolute h-[150px] w-[150px] cursor-pointer opacity-0"}
           onError={onError}
           onSuccess={onSuccess}
-          disabled={profileImg !== undefined}
-          onChange={() => {
-            setIsLoaindg(true);
-          }}
+          onChange={handleAuth}
+        // disabled={profileImg !== undefined}
         />
 
         <div className="flex justify-center">
