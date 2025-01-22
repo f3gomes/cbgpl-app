@@ -1,6 +1,7 @@
 import { Upload } from "lucide-react";
 import Image from "next/image";
 import { IProfileImg } from "./sign-up-form";
+import { toast } from "sonner";
 
 interface ImageContainerProps {
   profileImg: IProfileImg | undefined;
@@ -13,14 +14,20 @@ export default function ImageContainer({
 }: ImageContainerProps) {
   // eslint-disable-next-line
   const handleImageChange = (event: any) => {
-    if (event.target.files.length > 0) {
-      const path = event.target.files[0];
-      const profileImgUrl = URL.createObjectURL(event.target.files[0]);
+    const file = event?.target?.files;
 
-      setProfileImg({
-        path,
-        profileImgUrl,
+    if (!file[0]?.type.match("image/*")) {
+      toast.message("Formato inválido!", {
+        description: "Somente arquivos de imagens são aceitos",
+        position: "top-right",
       });
+    }
+
+    if (file?.length > 0 && file[0]?.type?.match("image/*")) {
+      const path = file[0];
+      const profileImgUrl = URL.createObjectURL(file[0]);
+
+      setProfileImg({ path, profileImgUrl });
     }
   };
 
