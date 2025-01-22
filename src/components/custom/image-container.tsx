@@ -34,6 +34,7 @@ export default function ImageContainer({
 
   const onSuccess = (res: IKUploadResponse) => {
     const profileImgUrl = `${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face/${res?.filePath}`;
+
     setProfileImg({
       path: res?.filePath,
       profileImgUrl,
@@ -42,20 +43,12 @@ export default function ImageContainer({
     setIsLoading(false);
   };
 
-  const handleAuth = async () => {
-    setIsLoading(true);
-    setProfileImg(undefined);
-    const res = await authenticator();
-
-    return res;
-  };
-
   return (
     <div className="mb-4 flex items-center justify-center">
       <ImageKitProvider
         publicKey={publicKey}
         urlEndpoint={urlEndpoint}
-        authenticator={handleAuth}
+        authenticator={authenticator}
       >
         {!isLoading && !profileImg?.profileImgUrl && (
           <Upload className="absolute text-[#e5e5e8]" size={50} />
@@ -66,8 +59,10 @@ export default function ImageContainer({
           className={"absolute h-[150px] w-[150px] cursor-pointer opacity-0"}
           onError={onError}
           onSuccess={onSuccess}
-          onChange={handleAuth}
-        // disabled={profileImg !== undefined}
+          onChange={() => {
+            setIsLoading(true);
+            setProfileImg(undefined);
+          }}
         />
 
         <div className="flex justify-center">
