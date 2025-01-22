@@ -41,12 +41,17 @@ export default function ImageContainer({
     setIsLoaindg(false);
   };
 
+  const handleAuth = async () => {
+    const res = await authenticator();
+    return res;
+  };
+
   return (
     <div className="mb-4 flex items-center justify-center">
       <ImageKitProvider
         publicKey={publicKey}
         urlEndpoint={urlEndpoint}
-        authenticator={() => authenticator()}
+        authenticator={handleAuth}
       >
         {!isLoading && !profileImg?.profileImgUrl && (
           <Upload className="absolute text-[#e5e5e8]" size={50} />
