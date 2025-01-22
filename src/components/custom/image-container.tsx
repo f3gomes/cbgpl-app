@@ -13,13 +13,15 @@ export default function ImageContainer({
 }: ImageContainerProps) {
   // eslint-disable-next-line
   const handleImageChange = (event: any) => {
-    const path = event.target.files[0];
-    const profileImgUrl = URL.createObjectURL(event.target.files[0]);
+    if (event.target.files.length > 0) {
+      const path = event.target.files[0];
+      const profileImgUrl = URL.createObjectURL(event.target.files[0]);
 
-    setProfileImg({
-      path,
-      profileImgUrl,
-    });
+      setProfileImg({
+        path,
+        profileImgUrl,
+      });
+    }
   };
 
   return (
@@ -39,11 +41,11 @@ export default function ImageContainer({
       <div className="flex h-[150px] w-[150px] items-center justify-center rounded-full border">
         {profileImg?.profileImgUrl && (
           <Image
-            src={profileImg?.profileImgUrl}
             width={150}
             height={150}
             alt="Profile Image"
-            className="max-h-[150px] max-w-[150px] rounded-full"
+            src={profileImg?.profileImgUrl}
+            className="h-[150px] w-[150px] rounded-full object-cover"
           />
         )}
       </div>
