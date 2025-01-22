@@ -26,6 +26,7 @@ import MultiSelect from "./multi-select";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
 import { useState } from "react";
+import { uploadImage } from "@/actions/imageKitUpload";
 
 const defaultValues = {
   name: "",
@@ -46,8 +47,8 @@ const defaultValues = {
 };
 
 export interface IProfileImg {
-  path: string;
-  profileImgUrl: string;
+  path: string | undefined;
+  profileImgUrl: string | undefined;
 }
 
 export default function SignUpForm() {
@@ -62,12 +63,13 @@ export default function SignUpForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const image = await uploadImage(profileImg?.path);
+
     // eslint-disable-next-line
     const { confirmPassword, ...rest } = values;
-    const res = await createUser({
-      ...rest,
-      profileImgUrl: profileImg?.path || "",
-    });
+    const data = { ...rest, profileImgUrl: image?.filePath };
+
+    const res = await createUser(data);
 
     const regex = /unique.*email|email.*unique/i;
 
