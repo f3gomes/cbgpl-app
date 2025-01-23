@@ -17,16 +17,16 @@ export default function Header() {
   // eslint-disable-next-line
   const [user, setUser] = useState<any>(null);
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      if (typeof window !== "undefined") {
-        const userFromStorage = await JSON.parse(
-          window.localStorage.getItem("gtxp-user")!,
-        );
-        setUser(userFromStorage);
-      }
-    };
+  const fetchUser = async () => {
+    if (typeof window !== "undefined") {
+      const userFromStorage = await JSON.parse(
+        window.localStorage.getItem("gtxp-user")!,
+      );
+      setUser(userFromStorage);
+    }
+  };
 
+  useEffect(() => {
     fetchUser();
   }, []);
 

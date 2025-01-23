@@ -25,16 +25,19 @@ export default function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
   });
 
   const [loginError, setLoginError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const onSubmit = async (data: LoginFormValues) => {
     setLoginError(null);
+    setIsLoading(true);
+
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
@@ -144,9 +147,9 @@ export default function Login() {
             <Button
               type="submit"
               className="w-full bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
-              disabled={isSubmitting}
+              disabled={isLoading}
             >
-              {isSubmitting ? <Spinner /> : "Entrar"}
+              {isLoading ? <Spinner /> : "Entrar"}
             </Button>
           </form>
 
