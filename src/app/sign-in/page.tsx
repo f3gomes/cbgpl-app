@@ -35,10 +35,10 @@ export default function Login() {
   const router = useRouter();
 
   const onSubmit = async (data: LoginFormValues) => {
-    setLoginError(null);
-    setIsLoading(true);
-
     try {
+      setLoginError(null);
+      setIsLoading(true);
+
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
         headers: {
@@ -59,6 +59,8 @@ export default function Login() {
     } catch (error) {
       setLoginError("Ocorreu um erro. Por favor, tente novamente mais tarde");
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
