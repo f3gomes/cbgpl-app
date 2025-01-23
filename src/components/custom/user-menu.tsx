@@ -63,7 +63,6 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
         <MenubarContent className="mr-8 min-w-[200px]">
           <div className="flex items-center gap-2 p-2">
             <Avatar className="h-10 w-10">
-              <AvatarImage src="/api/placeholder/40/40" alt="User avatar" />
               <AvatarFallback>{name?.substring(0, 1)}</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
