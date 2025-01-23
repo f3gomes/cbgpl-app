@@ -5,7 +5,6 @@ import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 
 import Link from "next/link";
-import { phoneMask } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -22,11 +21,11 @@ import {
 } from "@/components/ui/form";
 
 import Spinner from "./spinner";
-import MultiSelect from "./multi-select";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
 import { useState } from "react";
 import { uploadImage } from "@/actions/imageKitUpload";
+import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
 
 const defaultValues = {
   name: "",
@@ -100,121 +99,32 @@ export default function SignUpForm() {
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold text-cbgpl-tangerine">
-              Dados Pessoais
-            </h1>
-            <FormField
-              control={form.control}
-              name="pmiId"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>ID PMI</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Identificação do PMI" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* eslint-disable-next-line */}
+            {formFieldsPersonalData.map((field: any) => (
+              <FormField
+                key={field.name}
+                control={form.control}
+                name={field.name}
+                render={({ field: formFieldProps }) => (
+                  <FormItem className={field.className}>
+                    <FormLabel>
+                      {field.label}
+                      {field.required && (
+                        <span className="text-red-600">*</span>
+                      )}
+                    </FormLabel>
 
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    Nome Completo<span className="text-red-600">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder="João da Silva" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    E-mail<span className="text-red-600">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder="joao@exemplo.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    Número de Telefone<span className="text-red-600">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="(11) 98765-4321"
-                      onChange={(e) =>
-                        field.onChange(phoneMask(e.target.value))
-                      }
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="role"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Cargo</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Gerente" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="company"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Organização</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Empresa XYZ" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="areas"
-              render={({ field }) => (
-                <FormItem className="relative z-10">
-                  <FormLabel>
-                    Áreas de Interesse<span className="text-red-600">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <MultiSelect {...field} />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                    <FormControl>
+                      <field.component
+                        placeholder={field.props.placeholder}
+                        {...formFieldProps}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            ))}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -222,53 +132,27 @@ export default function SignUpForm() {
               Redes Sociais
             </h1>
 
-            <FormField
-              control={form.control}
-              name="linkedin"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Linkedin</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="https://www.linkedin.com/in/"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            {/* eslint-disable-next-line */}
+            {formFieldsSocialLinks.map((field: any) => (
+              <FormField
+                key={field.name}
+                control={form.control}
+                name={field.name}
+                render={({ field: formFieldProps }) => (
+                  <FormItem className={field.className}>
+                    <FormLabel>{field.label}</FormLabel>
 
-            <FormField
-              control={form.control}
-              name="instagram"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Instagram</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="https://www.instagram.com/"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="twitter"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Twitter</FormLabel>
-                  <FormControl>
-                    <Input placeholder="https://x.com/" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                    <FormControl>
+                      <field.component
+                        placeholder={field.props.placeholder}
+                        {...formFieldProps}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            ))}
           </div>
 
           <div className="flex flex-col gap-2">

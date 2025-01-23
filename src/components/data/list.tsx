@@ -7,6 +7,10 @@ import { UsersRound } from "lucide-react";
 import { MapPinned } from "lucide-react";
 import { UserPen } from "lucide-react";
 import { FileCheck2 } from "lucide-react";
+import { Input } from "../ui/input";
+import MultiSelect from "../custom/multi-select";
+
+export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 
 export interface ISession {
   session: {
@@ -17,8 +21,6 @@ export interface ISession {
     typeColor: string;
   };
 }
-
-export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 
 export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal },
@@ -67,5 +69,104 @@ export const schedule = [
         typeColor: "bg-teal-500",
       },
     ],
+  },
+];
+
+export const formFieldsPersonalData = [
+  {
+    title: "Dados Pessoais",
+    name: "pmiId",
+    label: "ID PMI",
+    component: Input,
+    props: {
+      placeholder: "Identificação do PMI",
+    },
+    className: "",
+  },
+  {
+    name: "name",
+    label: "Nome Completo",
+    component: Input,
+    props: {
+      placeholder: "João da Silva",
+    },
+    className: "",
+    required: true,
+  },
+  {
+    name: "email",
+    label: "E-mail",
+    component: Input,
+    props: {
+      placeholder: "joao@exemplo.com",
+    },
+    className: "",
+    required: true,
+  },
+  {
+    name: "phone",
+    label: "Número de Telefone",
+    component: Input,
+    props: {
+      placeholder: "(11) 98765-4321",
+    },
+    className: "",
+    required: true,
+  },
+  {
+    name: "role",
+    label: "Cargo",
+    component: Input,
+    props: {
+      placeholder: "Gerente",
+    },
+    className: "",
+  },
+  {
+    name: "company",
+    label: "Organização",
+    component: Input,
+    props: {
+      placeholder: "Identificação do PMI",
+    },
+    className: "",
+  },
+  {
+    name: "areas",
+    label: "Áreas de Interesse",
+    component: MultiSelect,
+    props: {},
+    className: "relative z-10",
+    required: true,
+  },
+];
+
+export const formFieldsSocialLinks = [
+  {
+    name: "linkedin",
+    label: "Linkedin",
+    component: Input,
+    props: {
+      placeholder: "https://www.linkedin.com/in/",
+    },
+    className: "",
+  },
+  {
+    name: "instagram",
+    label: "Instagram",
+    component: Input,
+    props: {
+      placeholder: "https://www.instagram.com/",
+    },
+    className: "",
+  },
+  {
+    name: "twitter",
+    label: "Twitter",
+    component: Input,
+    props: {
+      placeholder: "https://x.com/",
+    },
+    className: "",
   },
 ];

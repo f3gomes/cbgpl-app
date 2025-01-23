@@ -8,6 +8,6 @@ export const createUser = async (data: any) => {
 
     // eslint-disable-next-line
   } catch (err: any) {
-    return err.response.data;
+    return err;
   }
 };

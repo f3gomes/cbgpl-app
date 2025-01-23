@@ -37,14 +37,17 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
     if (typeof window !== "undefined") {
       window.localStorage.removeItem("gtxp-user");
     }
+
     Cookies.remove("gtxp");
     router.push("/sign-in");
   };
 
   useEffect(() => {
-    const path = imgPath;
-    const baseUrl = `${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face`;
-    setProfileImg(`${baseUrl}${path}`);
+    if (imgPath) {
+      const path = imgPath;
+      const baseUrl = `${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face`;
+      setProfileImg(`${baseUrl}/${path}`);
+    }
   }, [imgPath]);
 
   return (
