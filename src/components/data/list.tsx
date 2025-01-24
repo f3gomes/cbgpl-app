@@ -10,8 +10,6 @@ import { FileCheck2 } from "lucide-react";
 import { Input } from "../ui/input";
 import MultiSelect from "../custom/multi-select";
 
-export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
-
 export interface ISession {
   session: {
     time: string;
@@ -21,6 +19,8 @@ export interface ISession {
     typeColor: string;
   };
 }
+
+export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 
 export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal },
