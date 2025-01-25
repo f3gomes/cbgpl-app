@@ -60,7 +60,9 @@ export default function Login() {
       setLoginError("Ocorreu um erro. Por favor, tente novamente mais tarde");
       console.log(error);
     } finally {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
     }
   };
 
