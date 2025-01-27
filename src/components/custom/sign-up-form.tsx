@@ -26,6 +26,7 @@ import ImageContainer from "./image-container";
 import { useState } from "react";
 import { uploadImage } from "@/actions/imageKitUpload";
 import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
+import { phoneMask } from "@/lib/utils";
 
 const defaultValues = {
   name: "",
@@ -101,29 +102,56 @@ export default function SignUpForm() {
           <div className="flex flex-col gap-2">
             {/* eslint-disable-next-line */}
             {formFieldsPersonalData.map((field: any) => (
-              <FormField
-                key={field.name}
-                control={form.control}
-                name={field.name}
-                render={({ field: formFieldProps }) => (
-                  <FormItem className={field.className}>
-                    <FormLabel>
-                      {field.label}
-                      {field.required && (
-                        <span className="text-red-600">*</span>
-                      )}
-                    </FormLabel>
+              <div key={field.name}>
+                {field.name === "phone" ? (
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>
+                          Número de Telefone
+                          <span className="text-red-600">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            placeholder="(11) 98765-4321"
+                            onChange={(e) =>
+                              field.onChange(phoneMask(e.target.value))
+                            }
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                ) : (
+                  <FormField
+                    key={field.name}
+                    control={form.control}
+                    name={field.name}
+                    render={({ field: formFieldProps }) => (
+                      <FormItem className={field.className}>
+                        <FormLabel>
+                          {field.label}
+                          {field.required && (
+                            <span className="text-red-600">*</span>
+                          )}
+                        </FormLabel>
 
-                    <FormControl>
-                      <field.component
-                        placeholder={field.props.placeholder}
-                        {...formFieldProps}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
+                        <FormControl>
+                          <field.component
+                            placeholder={field.props.placeholder}
+                            {...formFieldProps}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                 )}
-              />
+              </div>
             ))}
           </div>
 
