@@ -63,11 +63,18 @@ export default function SignUpForm() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const image = await uploadImage(profileImg?.path);
+    let data = null;
+    let image = null;
 
     // eslint-disable-next-line
     const { confirmPassword, ...rest } = values;
-    const data = { ...rest, profileImgUrl: image?.filePath };
+
+    if (profileImg) {
+      image = await uploadImage(profileImg?.path);
+      data = { ...rest, profileImgUrl: image?.filePath };
+    } else {
+      data = { ...rest };
+    }
 
     const res = await createUser(data);
 
@@ -83,7 +90,7 @@ export default function SignUpForm() {
       });
     }
 
-    if (res?.error && regex.test(res?.error)) {
+    if (res?.status === 500 && regex.test(res?.response?.data?.error)) {
       toast.error("Erro ao efetuar cadastro!", {
         description: "Esse endereço de e-mail já foi cadastrado",
         position: "top-right",
