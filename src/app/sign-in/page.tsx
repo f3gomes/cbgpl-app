@@ -133,7 +133,6 @@ export default function Login() {
 
             {loginError && (
               <Alert variant="destructive" className="mb-4">
-                <AlertTitle>Erro de Login</AlertTitle>
                 <AlertDescription>{loginError}</AlertDescription>
               </Alert>
             )}
