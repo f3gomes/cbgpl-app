@@ -34,7 +34,7 @@ export default function Section() {
         </div>
       </Card>
 
-      <Card className="mt-6 w-full flex-grow rounded-2xl bg-[#F3F3F3] p-4 shadow-inner">
+      <Card className="mt-6 w-full flex-grow rounded-2xl bg-[#FFFFFF] p-4 shadow-inner">
         <CardHeader>
           <CardTitle>Postagens Recentes</CardTitle>
           <CardDescription>

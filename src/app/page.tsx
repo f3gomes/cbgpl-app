@@ -7,7 +7,7 @@ import { sideIcons, socialIcons } from "@/components/data/list";
 export default function HomePage() {
   return (
     <>
-      <div className="flex w-full flex-col bg-gray-50">
+      <div className="flex min-h-screen w-full flex-col bg-gray-50">
         <Header />
 
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-4 xl:flex-row">
