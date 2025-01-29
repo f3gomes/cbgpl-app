@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { loginSchema } from "@/schemas/login-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import Spinner from "@/components/custom/spinner";
 
 type LoginFormValues = z.infer<typeof loginSchema>;
