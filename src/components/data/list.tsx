@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 import { MicVocal } from "lucide-react";
 import { UsersRound } from "lucide-react";
 import { MapPinned } from "lucide-react";
-import { UserPen } from "lucide-react";
+import { MessageSquareText } from "lucide-react";
 import { FileCheck2 } from "lucide-react";
 import { Input } from "../ui/input";
 import MultiSelect from "../custom/multi-select";
@@ -26,8 +26,8 @@ export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal },
   { title: "Participantes", icons: UsersRound },
   { title: "Espaço experiência", icons: MapPinned },
-  { title: "Certificações do Congresso", icons: UserPen },
-  { title: "Feedbacks", icons: FileCheck2 },
+  { title: "Certificações do Congresso", icons: FileCheck2 },
+  { title: "Feedbacks", icons: MessageSquareText },
 ];
 
 export const schedule = [
