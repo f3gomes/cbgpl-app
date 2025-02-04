@@ -1,8 +1,9 @@
 import { ISession } from "../data/list";
+import Link from "next/link";
 
 export default function WorkshopCard({ session }: ISession) {
   return (
-    <div className="relative mx-1 mb-1 mt-1 flex-1 rounded-b-[27px] bg-white p-2 text-black">
+    <div className="relative mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 text-black">
       <h3 className="mb-2 text-lg">
         <span className="font-semibold">Tema:</span> {session.theme}
       </h3>
@@ -20,9 +21,12 @@ export default function WorkshopCard({ session }: ISession) {
       </p>
 
       <div className="absolute bottom-4 flex items-center justify-between gap-3 px-3">
-        <button className="h-[33px] w-[133px] rounded-[21px] border border-orange-500 bg-white font-semibold text-[#1B1B1B]">
+        <Link
+          href={`/details`}
+          className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] border border-[#35246F] bg-white font-semibold text-[#1B1B1B] transition-colors hover:bg-[#35246F] hover:text-white"
+        >
           Detalhes
-        </button>
+        </Link>
         <button className="h-[33px] w-[133px] rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600">
           Inscreva-se!
         </button>

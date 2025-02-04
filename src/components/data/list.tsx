@@ -12,6 +12,7 @@ import MultiSelect from "../custom/multi-select";
 
 export interface ISession {
   session: {
+    id: string;
     time: string;
     type: string;
     theme: string;
@@ -35,6 +36,7 @@ export const schedule = [
     date: "22 DE ABRIL",
     sessions: [
       {
+        id: "ia-futuro-profissao",
         time: "9h - 10h",
         type: "Workshop",
         theme: "IA e o futuro da profissão em gestão de projetos",
@@ -43,6 +45,7 @@ export const schedule = [
         typeColor: "bg-blue-500",
       },
       {
+        id: "estrategias-gestao-agil",
         time: "10h - 11h",
         type: "Palestra",
         theme: "Estratégias para gestão ágil",
@@ -55,6 +58,7 @@ export const schedule = [
     date: "23 DE ABRIL",
     sessions: [
       {
+        id: "tendencias-globais-gerenciamento-projetos",
         time: "9h - 10h",
         type: "Painel",
         theme: "Tendências globais em gerenciamento de projetos",
@@ -62,6 +66,7 @@ export const schedule = [
         typeColor: "bg-orange-500",
       },
       {
+        id: "ferramentas-tecnologias-gerenciamento-equipes",
         time: "11h - 12h",
         type: "Workshop",
         theme: "Ferramentas tecnológicas no gerenciamento de equipes",
