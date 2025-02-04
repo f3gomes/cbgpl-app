@@ -1,7 +1,7 @@
 import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
-import { schedule, sideIcons, socialIcons } from "@/components/data/list";
+import { sideIcons, socialIcons } from "@/components/data/list";
 
 export default function Details() {
   return (
