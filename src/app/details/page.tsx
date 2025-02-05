@@ -2,6 +2,7 @@ import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import { sideIcons, socialIcons } from "@/components/data/list";
+import { CircleX } from "lucide-react";
 
 export default function Details() {
   return (
@@ -12,62 +13,88 @@ export default function Details() {
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-4 xl:flex-row">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
-          <div className="w-full rounded-lg bg-white p-6">
-            {/* Título (tipo + tema) */}
-            <div className="h-[120px] rounded-2xl bg-[#35246F] p-3">
-              <h2 className="mb-2 text-xl font-bold text-white">
-                Workshop: IA e o futuro da profissão em gestão de projetos
+          <div className="flex=col w-full rounded-md bg-white p-6 shadow-lg">
+            <div className="relative flex h-[120px] w-[664px] items-center justify-center rounded-[27px] bg-[#35246F] px-4 py-2">
+              <button
+                type="button"
+                className="absolute right-4 top-2 text-gray-400 transition-colors hover:text-gray-200"
+                aria-label="Fechar"
+              >
+                <CircleX />
+              </button>
+              {/* Texto centralizado */}
+              <h2 className="text-[25px] font-bold text-white">
+                Palestra: IA e o futuro da profissão em gestão de projetos
               </h2>
             </div>
-            {/* Informações (Data, Horário, Local) */}
-            <div className="mb-4 text-sm text-gray-600">
-              <span className="mr-4">Data: 22/04/2025</span>
-              <span className="mr-4">Horário: 9h - 10h</span>
-              <span className="mr-4">Local: Sala 2</span>
+
+            {/* Informações de data, horário e local */}
+            <div className="mt-4 space-y-1 text-sm">
+              <p>
+                <span className="font-semibold">Data:</span> 22/04/2025
+              </p>
+              <p>
+                <span className="font-semibold">Horário:</span> 9h - 10h
+              </p>
+              <p>
+                <span className="font-semibold">Local:</span> Sala 2
+              </p>
             </div>
 
-            {/* Descrição fixa ou genérica */}
-            <p className="mb-6 text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            {/* Descrição */}
+            <div className="mt-3 text-sm">
+              <p>
+                Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea.
+              </p>
+            </div>
 
-            {/* Palestrante(s) */}
-            <div className="mb-6 space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="h-10 w-10 rounded-full bg-gray-200" />
+            {/* Espaço para palestrantes */}
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="flex h-[70px] w-[90px] items-center justify-center rounded-full bg-[#D9D9D9]" />
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">
-                    Palestrante
-                  </h3>
+                  <p className="font-semibold">Palestrante</p>
                   <p className="text-sm text-gray-500">
-                    Nome do palestrante (Ex: Americo Pinto)
-                  </p>
-                  <p className="mt-1 text-xs text-gray-500">
-                    Pequena bio ou descrição adicional.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
                 </div>
               </div>
-              {/* Caso tenha mais palestrantes, você pode replicar esse bloco. */}
+
+              <div className="flex items-center space-x-3">
+                <div className="h-12 w-12 rounded-full bg-gray-200" />
+                <div>
+                  <p className="font-semibold">Nome</p>
+                  <p className="text-sm text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Botões de ação */}
-            <div className="flex space-x-2">
+            {/* Botões: Feedback, Material e Inscreva-se */}
+            <div className="mt-6 flex flex-wrap gap-3">
               <button
                 type="button"
-                className="rounded-md bg-gray-200 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300"
+                className="rounded border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
               >
                 Feedback
               </button>
               <button
                 type="button"
-                className="rounded-md bg-gray-200 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-300"
+                className="rounded border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
               >
                 Material
               </button>
               <button
                 type="button"
-                className="rounded-md bg-orange-500 px-4 py-2 font-semibold text-white transition-colors hover:bg-orange-600"
+                className="rounded bg-orange-500 px-4 py-2 text-sm font-medium text-white hover:bg-orange-600"
               >
                 Inscreva-se!
               </button>

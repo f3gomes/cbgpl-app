@@ -35,7 +35,7 @@ export default function ScheduleSection({ schedule }: ScheduleSectionProps) {
                   className="flex h-[240px] w-[325px] flex-col overflow-hidden rounded-[27px] bg-[#35246F] shadow-md"
                 >
                   <div className="px-4 pt-3 text-center text-white">
-                    <span className="font-inter">
+                    <span className="font-semibold">
                       {session.type} | {session.time}
                     </span>
                   </div>
