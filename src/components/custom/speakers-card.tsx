@@ -20,7 +20,7 @@ export default function SpeakerCard({ name, role, image }: SpeakerCardProps) {
             className="absolute left-0 top-0 h-[156px] rounded-t-xl object-cover"
           />
         </CardHeader>
-        <CardContent className="flex text-sm h-[84px] flex-col justify-center gap-1 rounded-b-xl bg-[#35246F] px-2 py-0 text-white">
+        <CardContent className="flex text-sm h-[84px] flex-col justify-center gap-1 rounded-b-xl bg-[#35246F] px-2 py-0 text-white text-center">
           <span className="font-bold">{name}</span>
           <span>{role}</span>
         </CardContent>

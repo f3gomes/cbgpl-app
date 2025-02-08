@@ -61,11 +61,6 @@ export const speakersList = [
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
   },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-  },
 ];
 
 export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
