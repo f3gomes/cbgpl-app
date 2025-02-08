@@ -20,14 +20,62 @@ export interface ISession {
   };
 }
 
+export const speakersList = [
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Neudson Barroso",
+    role: "Gerente de Projetos",
+    image: "/assets/profile.jpeg",
+  },
+];
+
 export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 
 export const sideIcons = [
-  { title: "Palestrantes", icons: MicVocal },
-  { title: "Participantes", icons: UsersRound },
-  { title: "Espaço experiência", icons: MapPinned },
-  { title: "Certificações do Congresso", icons: FileCheck2 },
-  { title: "Feedbacks", icons: MessageSquareText },
+  { title: "Palestrantes", icons: MicVocal, href: "/speakers" },
+  { title: "Participantes", icons: UsersRound, href: "/" },
+  { title: "Espaço experiência", icons: MapPinned, href: "/" },
+  { title: "Certificações do Congresso", icons: FileCheck2, href: "/" },
+  { title: "Feedbacks", icons: MessageSquareText, href: "/" },
 ];
 
 export const schedule = [
