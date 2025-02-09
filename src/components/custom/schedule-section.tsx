@@ -9,8 +9,8 @@ interface ScheduleSectionProps {
 
 export default function ScheduleSection({ schedule }: ScheduleSectionProps) {
   return (
-    <section className="flex h-full flex-row">
-      <div className="relative z-10 flex h-full flex-row gap-4">
+    <section className="flex h-full w-[700px] flex-row">
+      <div className="relative z-10 flex h-full flex-row flex-wrap justify-center gap-2">
         {schedule.map((day, index) => (
           <div
             key={index}
