@@ -5,13 +5,7 @@ import { Bell } from "lucide-react";
 import { MessageCircle } from "lucide-react";
 import UserMenu from "./user-menu";
 import { useEffect, useState } from "react";
-
-const navItems = [
-  { title: "Início", link: "/" },
-  { title: "Programação", link: "/schedule" },
-  { title: "Notícias", link: "/" },
-  { title: "Fotos", link: "/" },
-];
+import NavMenu from "./nav-items-menu";
 
 export default function Header() {
   // eslint-disable-next-line
@@ -44,17 +38,7 @@ export default function Header() {
         </div>
       </div>
 
-      <nav className="flex h-[25px] w-[586px] items-center justify-around xl:justify-between">
-        {navItems.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            className="text-base font-medium text-black transition duration-200 hover:text-slate-700"
-          >
-            {item.title}
-          </a>
-        ))}
-      </nav>
+      <NavMenu />
 
       <div className="flex items-center space-x-4 p-4">
         <button
