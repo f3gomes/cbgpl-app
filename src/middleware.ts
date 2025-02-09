@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const isAuth = request.cookies.get("gtxp");
 
-  const protectedRoutes = ["/", "/schedule"];
+  const protectedRoutes = ["/", "/schedule", "/speakers"];
 
   if (isAuth && request.nextUrl.pathname === "/sign-in") {
     return NextResponse.redirect(new URL("/", request.url));
@@ -18,5 +18,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/sign-in", "/schedule"],
+  matcher: ["/sign-in", "/", "/schedule", "/speakers"],
 };

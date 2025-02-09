@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { sideIcons, socialIcons } from "../data/list";
 import { Button } from "../ui/button";
 
@@ -25,13 +26,15 @@ export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
         {sideIcons.map((Item, index) => (
           <div key={index}>
             <hr className="my-4 border-gray-300" />
-            <Button
-              variant="ghost"
-              className="flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6"
-            >
-              <Item.icons size={50} className="text-[#35246F]" />
-              <span className="font-inter text-lg">{Item.title}</span>
-            </Button>
+            <Link href={Item.href}>
+              <Button
+                variant="ghost"
+                className="flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6"
+              >
+                <Item.icons size={50} className="text-[#35246F]" />
+                <span className="font-inter text-lg">{Item.title}</span>
+              </Button>
+            </Link>
           </div>
         ))}
       </div>
