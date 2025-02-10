@@ -9,12 +9,12 @@ export default function WorkshopDetails() {
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
           <button
             type="button"
-            className="absolute right-4 top-4 text-gray-300 transition-colors hover:text-gray-100"
+            className="absolute right-4 top-2 text-gray-300 transition-colors hover:text-gray-100"
             aria-label="Fechar"
           >
             <CircleX />
           </button>
-          <h2 className="ml-1 text-start text-[25px] font-bold text-white">
+          <h2 className="ml-1 w-[572px] p-1 text-start text-[25px] font-bold text-white">
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
