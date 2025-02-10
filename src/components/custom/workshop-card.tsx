@@ -23,7 +23,7 @@ export default function WorkshopCard({ session }: ISession) {
       <div className="absolute bottom-4 flex items-center justify-between gap-3 px-3">
         <Link
           href={`/details`}
-          className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] border border-[#35246F] bg-white font-semibold text-[#1B1B1B] transition-colors hover:bg-[#35246F] hover:text-white"
+          className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] border border-orange-400 bg-white font-semibold text-[#1B1B1B]"
         >
           Detalhes
         </Link>
