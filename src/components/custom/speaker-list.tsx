@@ -7,7 +7,7 @@ export default function SpeakerList({ speakers }: any) {
     <div className="flex h-full min-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-2">
       <div className="mt-2 h-10 w-52 rounded-full bg-[#35246F]">
         <h1 className="p-1 text-center text-2xl font-bold text-white">
-          Palestrantes
+          Speakers
         </h1>
       </div>
 
