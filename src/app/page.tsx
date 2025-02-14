@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className="flex min-h-screen w-full flex-col bg-gray-50">
         <Header />
 
-        <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-4 p-4 xl:flex-row">
+        <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
           <Section />
