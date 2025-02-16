@@ -31,7 +31,7 @@ const NavMenu = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="absolute right-52 lg:hidden top-12">
+      <div className="absolute right-48 lg:hidden top-12">
         <button
           onClick={toggleMenu}
           className="p-2 text-black focus:outline-none"
