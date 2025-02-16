@@ -12,7 +12,7 @@ import {
 
 export default function Section() {
   return (
-    <section className="flex min-w-[700px] flex-col items-center">
+    <section className="flex xl:max-w-[700px] flex-col items-center w-full">
       <Card className="h-[160px] w-full rounded-2xl p-4 shadow-md">
         <div className="mt-1 flex items-center gap-4">
           <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]"></div>
