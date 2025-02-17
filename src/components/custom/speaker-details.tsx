@@ -10,15 +10,15 @@ export default function SpeakerDetails({
   image,
 }: SpeakerCardProps) {
   return (
-    <div className="flex w-full max-w-[700px] flex-col gap-1">
+    <div className="flex w-full max-w-[700px] flex-col gap-1 bg-white">
       <div className="flex gap-3 p-4">
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex min-w-[270px] flex-col items-center gap-4">
           <Image
             width={350}
             height={350}
             src={"/assets/profile.jpeg"}
             alt={image}
-            className="h-36 w-64 rounded-xl object-cover"
+            className="h-[350px] w-[270px] rounded-xl object-cover"
           />
 
           <Link href={"/speakers"} className="w-full">
@@ -28,7 +28,7 @@ export default function SpeakerDetails({
           </Link>
         </div>
 
-        <div className="bg-blue-gray-50 relative flex w-full flex-col gap-2 rounded-xl">
+        <div className="bg-blue-gray-50 relative flex w-full flex-col gap-2 rounded-xl bg-[#F3F3F3] p-3">
           <Link href={"/"} target="_blank" className="absolute right-2 top-2">
             <Button>
               <LinkedinIcon size={22} />
@@ -43,7 +43,11 @@ export default function SpeakerDetails({
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
             earum nihil officiis quam accusantium provident ipsum deserunt
             veritatis fuga sapiente rem perspiciatis hic blanditiis eaque, ipsa,
-            debitis esse veniam obcaecati.
+            debitis esse veniam obcaecati. Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Voluptatum earum nihil officiis quam
+            accusantium provident ipsum deserunt veritatis fuga sapiente rem
+            perspiciatis hic blanditiis eaque, ipsa, debitis esse veniam
+            obcaecati.
           </div>
         </div>
       </div>

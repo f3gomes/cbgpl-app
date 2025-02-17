@@ -20,10 +20,15 @@ interface MultiSelectProps {
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options = [
-    { label: "Inteligência Artificial", value: "ia" },
-    { label: "Gestão de Projetos", value: "gp" },
-    { label: "Metodologias Ágeis", value: "ma" },
+    { label: "Gestão Ágil", value: "ga" },
+    { label: "Setor Público", value: "sp" },
+    { label: "PMO / VMO", value: "pm" },
+    { label: "Inteligência Artificial em Projetos", value: "ia" },
+    { label: "Carreira e Certificações", value: "cc" },
+    { label: "Liderança e Gestão de Equipes", value: "ge" },
+    { label: "Sustentabilidade e Projetos Verdes", value: "pv" },
   ],
+
   placeholder = "Selecione...",
   onChange = () => { },
   className = "",
