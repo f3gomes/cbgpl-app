@@ -64,11 +64,62 @@ export const speakersList = [
   },
 ];
 
+export const participantsList = [
+  {
+    name: "Maria Silva",
+    role: "Analista de Projetos",
+    funcao: "Planejamento",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "João Santos",
+    role: "Coordenador de Projetos",
+    funcao: "Coordenação",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Ana Paula",
+    role: "Scrum Master",
+    funcao: "Facilitação",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Carlos Andrade",
+    role: "Gerente de Portfólio",
+    funcao: "Gestão de Portfólio",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Renata Oliveira",
+    role: "Product Owner",
+    funcao: "Definição de Backlog",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Eduardo Ferreira",
+    role: "Consultor de Projetos",
+    funcao: "Consultoria",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Beatriz Carvalho",
+    role: "Especialista em Riscos",
+    funcao: "Mitigação de Riscos",
+    image: "/assets/profile.jpeg",
+  },
+  {
+    name: "Gabriel Souza",
+    role: "PMO",
+    funcao: "Monitoramento",
+    image: "/assets/profile.jpeg",
+  },
+];
+
 export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
 
 export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal, href: "/speakers" },
-  { title: "Participantes", icons: UsersRound, href: "/" },
+  { title: "Participantes", icons: UsersRound, href: "/participants" },
   { title: "Espaço experiência", icons: MapPinned, href: "/" },
   { title: "Certificações do Congresso", icons: FileCheck2, href: "/" },
   { title: "Feedbacks", icons: MessageSquareText, href: "/" },
