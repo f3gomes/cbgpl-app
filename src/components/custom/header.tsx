@@ -33,7 +33,7 @@ export default function Header() {
             height={78}
             src="/assets/Design_sem_nome-removebg-preview.png"
             alt="Congresso Logo"
-            className="object-contain"
+            className="w-[70%] sm:w-[80%] md:w-full object-contain max-w-[215px]"
           />
         </div>
       </div>
