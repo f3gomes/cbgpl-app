@@ -11,7 +11,7 @@ export default function ParticipantsList({ participants }: any) {
         </h1>
       </div>
 
-      <div className="grid-flow-cols-2 grid items-center justify-center gap-4">
+      <div className="flex flex-wrap items-center justify-center gap-4">
         {
           // eslint-disable-next-line
           participants.map((item: any, index: number) => (

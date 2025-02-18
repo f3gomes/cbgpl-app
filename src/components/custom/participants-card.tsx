@@ -16,19 +16,19 @@ export default function ParticipantCard({
 }: ParticipantCardProps) {
   return (
     <>
-      <Card className="flex h-[120px] w-[300px] items-center justify-center rounded-[21px] bg-[#F3F3F3] p-2">
+      <Card className="flex h-[120px] w-[310px] items-center justify-center rounded-[21px] bg-[#F3F3F3] p-2">
         <div className="items-center justify-center">
           <Image
             alt="Imagem de Perfil"
             src={image}
             height={200}
             width={200}
-            className="h-[90px] w-[90px] shrink-0 rounded-full"
+            className="h-[100px] w-[100px] shrink-0 rounded-full"
           />
         </div>
         <CardContent className="ml-[10px] flex h-[100px] w-[200px] flex-col items-start justify-center gap-1 rounded-[15px] bg-white p-2 text-left text-sm">
-          <span className="font-bold">{name}</span>
-          <span>{role}</span>
+          <span className="text-base font-bold">{name}</span>
+          <span className="text-sm">{role}</span>
           <span>{funcao}</span>
         </CardContent>
       </Card>
