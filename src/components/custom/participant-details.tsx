@@ -31,7 +31,7 @@ export default function ParticipantDetails({
           <Card className="flex h-[350px] w-[390px] flex-col items-start gap-3 bg-[#F3F3F3]">
             <div className="h-[300px] w-[360px] p-4">
               <h1 className="text-3xl font-bold lg:text-xl">{name}</h1>
-              <div className="text-sm font-medium md:text-base">
+              <div className="text-justify text-sm font-medium md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris

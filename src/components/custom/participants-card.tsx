@@ -4,14 +4,14 @@ import { Card, CardContent } from "../ui/card";
 export interface ParticipantCardProps {
   name: string;
   role: string;
-  funcao: string;
+  activities: string;
   image: string;
 }
 
 export default function ParticipantCard({
   name,
   role,
-  funcao,
+  activities,
   image,
 }: ParticipantCardProps) {
   return (
@@ -23,13 +23,13 @@ export default function ParticipantCard({
             src={image}
             height={200}
             width={200}
-            className="h-[100px] w-[100px] shrink-0 rounded-full"
+            className="h-[100px] w-[100px] rounded-full object-cover"
           />
         </div>
         <CardContent className="ml-[10px] flex h-[100px] w-[200px] flex-col items-start justify-center gap-1 rounded-[15px] bg-white p-2 text-left text-sm">
           <span className="text-base font-bold">{name}</span>
           <span className="text-sm">{role}</span>
-          <span>{funcao}</span>
+          <span>{activities}</span>
         </CardContent>
       </Card>
     </>

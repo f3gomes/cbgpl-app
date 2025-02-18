@@ -23,7 +23,7 @@ const ParticipantPage = ({ params: { id } }: ParticipantPageProps) => {
             image={id}
             name="Maria Silva"
             role="Analista de Projetos"
-            funcao="Planejamento"
+            activities="Planejamento"
           />
 
           <AsideRight />

@@ -19,7 +19,7 @@ export default function ParticipantsList({ participants }: any) {
               <ParticipantCard
                 name={item.name}
                 role={item.role}
-                funcao={item.funcao}
+                activities={item.activities}
                 image={item.image}
               />
             </Link>
