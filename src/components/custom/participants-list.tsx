@@ -7,7 +7,7 @@ export default function ParticipantsList({ participants }: any) {
     <div className="flex h-full max-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-4">
       <div className="mt-2 h-10 w-52 rounded-full bg-[#35246F]">
         <h1 className="p-1 text-center text-2xl font-bold text-white">
-          Participants
+          Participantes
         </h1>
       </div>
 

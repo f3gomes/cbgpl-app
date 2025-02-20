@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { title: "Início", link: "/" },
-  { title: "Programação", link: "/schedule" },
-  { title: "Notícias", link: "/" },
-  { title: "Fotos", link: "/" },
-];
+import { navItems, navItemsMobile } from "../data/list";
 
 const NavMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,25 +25,30 @@ const NavMenu = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="absolute right-48 lg:hidden top-12">
+      <div className="absolute right-[12.5rem] top-12 lg:hidden">
         <button
           onClick={toggleMenu}
-          className="p-2 text-black focus:outline-none"
+          type="button"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? (
+            <X size={20} className="text-[#FFFFFF]" />
+          ) : (
+            <Menu size={20} className="text-[#FFFFFF]" />
+          )}
         </button>
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="absolute right-0 top-full rounded-b-lg bg-white shadow-lg">
+          <div className="absolute right-0 top-full z-20 rounded-b-lg bg-white shadow-lg">
             <div className="flex flex-col py-2">
-              {navItems.map((item, index) => (
+              {navItemsMobile.map((item, index) => (
                 <a
                   key={index}
                   href={item.link}
-                  className="px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-slate-100"
                   onClick={() => setIsMenuOpen(false)}
+                  className="cursor-pointer px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-slate-100"
                 >
                   {item.title}
                 </a>

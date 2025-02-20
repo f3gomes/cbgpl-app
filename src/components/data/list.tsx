@@ -21,6 +21,25 @@ export interface ISession {
   };
 }
 
+export const navItems = [
+  { title: "Início", link: "/" },
+  { title: "Programação", link: "/schedule" },
+  { title: "Notícias", link: "/" },
+  { title: "Fotos", link: "/" },
+];
+
+export const navItemsMobile = [
+  { title: "Início", link: "/" },
+  { title: "Programação", link: "/schedule" },
+  { title: "Notícias", link: "/" },
+  { title: "Fotos", link: "/" },
+  { title: "Palestrantes", link: "/speakers" },
+  { title: "Participantes", link: "/participants" },
+  { title: "Experiência", link: "/" },
+  { title: "Certificações", link: "/" },
+  { title: "Feedbacks", link: "/" },
+];
+
 export const speakersList = [
   {
     name: "Neudson Barroso",

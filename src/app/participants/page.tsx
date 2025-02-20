@@ -15,7 +15,7 @@ export default function ParticipantsPage() {
       <div className="flex min-h-screen w-full flex-col bg-gray-50">
         <Header />
 
-        <main className="mx-auto flex w-full flex-grow flex-col items-center justify-center gap-2 p-4 xl:flex-row xl:items-start">
+        <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row xl:items-start">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
           <ParticipantsList participants={participantsList} />
