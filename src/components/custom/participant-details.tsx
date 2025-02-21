@@ -9,7 +9,7 @@ export default function ParticipantDetails({
   image,
 }: ParticipantCardProps) {
   return (
-    <div className="flex h-full max-w-[700px] flex-col items-center justify-center rounded-xl bg-white">
+    <Card className="flex h-full max-w-[700px] flex-col items-center justify-center rounded-xl bg-white">
       <div className="flex gap-3 p-4">
         <div className="flex flex-col items-center gap-4">
           <Image
@@ -47,6 +47,6 @@ export default function ParticipantDetails({
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

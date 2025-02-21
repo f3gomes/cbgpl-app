@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 export default function WorkshopDetails() {
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md">
-      <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
+      <div className="rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
           <button
             type="button"
@@ -18,9 +18,8 @@ export default function WorkshopDetails() {
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
-        {/* Descrição, palestrantes etc. */}
+
         <div className="p-6 text-xl">
-          {/* Bloco com Data, Horário à esquerda e Local à direita */}
           <div className="flex w-full items-start justify-between">
             <div>
               <p>
@@ -40,7 +39,6 @@ export default function WorkshopDetails() {
             </div>
           </div>
 
-          {/* Descrição embaixo */}
           <p className="mt-6">
             <span className="font-semibold">Descrição:</span>{" "}
             <span className="font-inter">
@@ -78,7 +76,6 @@ export default function WorkshopDetails() {
           </div>
         </div>
 
-        {/* Palestrantes, botões etc. */}
         <div className="flex justify-center gap-3 p-6 align-middle">
           <Link
             href={`/details`}
