@@ -77,7 +77,8 @@ export default function SignUpForm() {
       data = { ...rest };
     }
 
-    const res = await createUser(data);
+    // eslint-disable-next-line
+    const res: any = await createUser(data);
 
     const regex = /unique.*email|email.*unique/i;
 
