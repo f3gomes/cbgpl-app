@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 export interface ParticipantCardProps {
-  index: number;
+  index?: number;
   name: string;
   role: string;
   image: string;
