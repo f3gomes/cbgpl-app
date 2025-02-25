@@ -1,16 +1,20 @@
 "use client";
 
+import { useState } from "react";
+
 import * as z from "zod";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 
 import Link from "next/link";
+import { phoneMask } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { createUser } from "@/actions/createUser";
 import { formSchema } from "@/schemas/form-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { uploadImage } from "@/actions/imageKitUpload";
 import {
   Form,
   FormControl,
@@ -23,10 +27,7 @@ import {
 import Spinner from "./spinner";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
-import { useState } from "react";
-import { uploadImage } from "@/actions/imageKitUpload";
 import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
-import { phoneMask } from "@/lib/utils";
 
 const defaultValues = {
   name: "",
@@ -42,7 +43,7 @@ const defaultValues = {
   password: "",
   confirmPassword: "",
   visible: true,
-  type: "SPEAKER",
+  type: "CONGRESSMAN",
   profileImgUrl: "",
 };
 
