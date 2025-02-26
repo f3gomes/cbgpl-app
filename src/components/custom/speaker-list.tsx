@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SpeakerCard from "./speakers-card";
 
-// eslint-disable-next-line
 export default function SpeakerList({ speakers }: any) {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-6 rounded-xl bg-white p-2 xl:min-w-[700px] xl:max-w-[700px]">
@@ -13,7 +12,7 @@ export default function SpeakerList({ speakers }: any) {
 
       <div className="flex flex-row flex-wrap justify-center gap-2">
         {
-          // eslint-disable-next-line
+
           speakers.map((item: any, index: number) => (
             <Link href={`/speakers/${index}`} key={index}>
               <SpeakerCard

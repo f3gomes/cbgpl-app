@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import NavMenu from "./nav-items-menu";
 
 export default function Header() {
-  // eslint-disable-next-line
   const [user, setUser] = useState<any>(null);
 
   const fetchUser = async () => {
