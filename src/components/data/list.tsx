@@ -9,6 +9,7 @@ import { MessageSquareText } from "lucide-react";
 import { FileCheck2 } from "lucide-react";
 import { Input } from "../ui/input";
 import MultiSelect from "../custom/multi-select";
+import RoleSelect from "../custom/role-select";
 
 export interface ISession {
   session: {
@@ -234,9 +235,9 @@ export const formFieldsPersonalData = [
   {
     name: "role",
     label: "Cargo",
-    component: Input,
+    component: RoleSelect,
     props: {
-      placeholder: "Gerente",
+      placeholder: "Cargo",
     },
     className: "",
   },
