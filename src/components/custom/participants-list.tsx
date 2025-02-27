@@ -4,14 +4,13 @@ import { listUsers } from "@/actions/listUsers";
 import ParticipantCard from "./participants-card";
 import { useEffect, useState } from "react";
 
-// eslint-disable-next-line
+
 export default function ParticipantsList() {
   const [isLoading, setIsLoading] = useState(true);
   const [participantsList, setParticipantsList] = useState([]);
 
   useEffect(() => {
     const fetchList = async () => {
-      // eslint-disable-next-line
       const list: any = await listUsers();
       setParticipantsList(list?.data?.updatedList);
       setIsLoading(false);
@@ -32,7 +31,7 @@ export default function ParticipantsList() {
         {!isLoading ? (
           <>
             {
-              // eslint-disable-next-line
+
               participantsList.map((item: any, index: number) => (
                 <ParticipantCard
                   key={index}
