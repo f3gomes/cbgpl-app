@@ -4,16 +4,16 @@ import { Card } from "@/components/ui/card";
 
 export default function WorkshopDetails() {
   return (
-    <div className="flex h-full max-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-2">
+    <div className="flex h-full max-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-5 xl:min-w-[700px] xl:max-w-[700px]">
       <div className="h-[665px] w-[665px] rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
-          <button
-            type="button"
-            className="absolute right-4 top-2 text-gray-300 transition-colors hover:text-gray-100"
+          <Link
+            href={"/schedule"}
+            className="absolute right-4 top-2 rounded-full bg-white text-[#35246F] transition-colors hover:text-gray-100"
             aria-label="Fechar"
           >
             <CircleX />
-          </button>
+          </Link>
           <h2 className="ml-1 w-[572px] p-1 text-start text-[25px] font-bold text-white">
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
