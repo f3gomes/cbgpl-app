@@ -14,13 +14,13 @@ export default function WorkshopDetails() {
           >
             <CircleX />
           </Link>
-          <h2 className="ml-1 w-[572px] p-1 text-start text-[25px] font-bold text-white">
+          <h2 className="w-[572px] p-2 text-start text-[25px] font-bold text-white">
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
 
         <div className="p-6 text-xl">
-          <div className="flex w-full items-start justify-between">
+          <div className="flex w-full items-start gap-8">
             <div>
               <p>
                 <span className="font-semibold">Data:</span>{" "}
@@ -31,7 +31,7 @@ export default function WorkshopDetails() {
                 <span className="font-inter">Sala 2</span>
               </p>
             </div>
-            <div className="mr-12">
+            <div className="">
               <p>
                 <span className="font-semibold">Horário:</span>{" "}
                 <span className="font-inter">9h - 10h</span>
