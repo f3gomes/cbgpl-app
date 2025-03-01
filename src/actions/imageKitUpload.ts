@@ -6,7 +6,6 @@ const imagekit = new ImageKit({
   urlEndpoint: process.env.NEXT_PUBLIC_URL_ENDPOINT as string,
 });
 
-// eslint-disable-next-line
 export const uploadImage = async (file: any) => {
   try {
     const res = await imagekit.upload({ file, fileName: "gtxp-user" });

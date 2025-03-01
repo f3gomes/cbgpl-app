@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 
 export default function WorkshopDetails() {
   return (
-    <Card className="w-full rounded-2xl bg-white p-3 shadow-md">
-      <div className="rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
+    <div className="flex h-full max-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-2">
+      <div className="h-[665px] w-[665px] rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
           <button
             type="button"
@@ -76,7 +76,7 @@ export default function WorkshopDetails() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-3 p-6 align-middle">
+        <div className="flex justify-center gap-3 p-2 align-middle">
           <Link
             href={`/details`}
             className="flex h-[39px] w-[188px] items-center justify-center rounded-[21px] border border-orange-400 bg-white text-[21px] font-semibold text-[#1B1B1B]"
@@ -94,6 +94,6 @@ export default function WorkshopDetails() {
           </button>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }

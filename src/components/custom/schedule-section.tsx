@@ -9,7 +9,7 @@ interface ScheduleSectionProps {
 
 export default function ScheduleSection({ schedule }: ScheduleSectionProps) {
   return (
-    <section className="flex h-full max-w-[700px] flex-row">
+    <section className="flex h-full w-full flex-row justify-center rounded-3xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
       <div className="relative z-10 flex h-full flex-row flex-wrap justify-center gap-2">
         {schedule.map((day, index) => (
           <div

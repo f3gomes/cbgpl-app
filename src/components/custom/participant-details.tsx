@@ -9,8 +9,13 @@ export default function ParticipantDetails({
   image,
 }: ParticipantCardProps) {
   return (
+<<<<<<< HEAD
     <Card className="flex h-full max-w-[700px] flex-col items-center justify-center rounded-xl bg-white">
       <div className="flex gap-3 p-4">
+=======
+    <div className="flex h-full flex-col items-center justify-center rounded-xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
+      <div className="flex flex-col gap-3 p-4 sm:flex-row">
+>>>>>>> 6e0b00ca342892739cc662c6396b16bd70b88dfb
         <div className="flex flex-col items-center gap-4">
           <Image
             width={350}
