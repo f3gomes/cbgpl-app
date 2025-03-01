@@ -1,16 +1,20 @@
 "use client";
 
+import { useState } from "react";
+
 import * as z from "zod";
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 
 import Link from "next/link";
+import { phoneMask } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { createUser } from "@/actions/createUser";
 import { formSchema } from "@/schemas/form-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { uploadImage } from "@/actions/imageKitUpload";
 import {
   Form,
   FormControl,
@@ -23,10 +27,7 @@ import {
 import Spinner from "./spinner";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
-import { useState } from "react";
-import { uploadImage } from "@/actions/imageKitUpload";
 import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
-import { phoneMask } from "@/lib/utils";
 
 const defaultValues = {
   name: "",
@@ -42,7 +43,7 @@ const defaultValues = {
   password: "",
   confirmPassword: "",
   visible: true,
-  type: "SPEAKER",
+  type: "CONGRESSMAN",
   profileImgUrl: "",
 };
 
@@ -76,7 +77,7 @@ export default function SignUpForm() {
       data = { ...rest };
     }
 
-    const res = await createUser(data);
+    const res: any = await createUser(data);
 
     const regex = /unique.*email|email.*unique/i;
 
@@ -107,7 +108,6 @@ export default function SignUpForm() {
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <div className="flex flex-col gap-2">
-            {/* eslint-disable-next-line */}
             {formFieldsPersonalData.map((field: any) => (
               <div key={field.name}>
                 {field.name === "phone" ? (

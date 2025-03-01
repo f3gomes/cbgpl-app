@@ -12,7 +12,7 @@ export default function ImageContainer({
   profileImg,
   setProfileImg,
 }: ImageContainerProps) {
-  // eslint-disable-next-line
+
   const handleImageChange = (event: any) => {
     const file = event?.target?.files;
 

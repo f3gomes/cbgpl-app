@@ -10,8 +10,8 @@ export default function SpeakerDetails({
   image,
 }: SpeakerCardProps) {
   return (
-    <div className="flex w-full max-w-[700px] flex-col gap-1 bg-white">
-      <div className="flex gap-3 p-4">
+    <div className="flex w-full flex-col gap-1 rounded-3xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
+      <div className="flex flex-col gap-3 p-4 sm:flex-row">
         <div className="flex min-w-[270px] flex-col items-center gap-4">
           <Image
             width={350}
