@@ -4,23 +4,23 @@ import { Card } from "@/components/ui/card";
 
 export default function WorkshopDetails() {
   return (
-    <Card className="w-full rounded-2xl bg-white p-3 shadow-md">
-      <div className="rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
+    <div className="flex h-full max-w-[700px] flex-col items-center justify-center gap-6 rounded-xl bg-white p-5 xl:min-w-[700px] xl:max-w-[700px]">
+      <div className="h-[665px] w-[665px] rounded-[30px] border-2 border-[#C6C6C6] border-t-white bg-[#FAFAFA]">
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
-          <button
-            type="button"
-            className="absolute right-4 top-2 text-gray-300 transition-colors hover:text-gray-100"
+          <Link
+            href={"/schedule"}
+            className="absolute right-4 top-2 rounded-full bg-white text-[#35246F] transition-colors hover:text-gray-100"
             aria-label="Fechar"
           >
             <CircleX />
-          </button>
-          <h2 className="ml-1 w-[572px] p-1 text-start text-[25px] font-bold text-white">
+          </Link>
+          <h2 className="w-[572px] p-2 text-start text-[25px] font-bold text-white">
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
 
         <div className="p-6 text-xl">
-          <div className="flex w-full items-start justify-between">
+          <div className="flex w-full items-start gap-8">
             <div>
               <p>
                 <span className="font-semibold">Data:</span>{" "}
@@ -31,7 +31,7 @@ export default function WorkshopDetails() {
                 <span className="font-inter">Sala 2</span>
               </p>
             </div>
-            <div className="mr-12">
+            <div className="">
               <p>
                 <span className="font-semibold">Horário:</span>{" "}
                 <span className="font-inter">9h - 10h</span>
@@ -76,7 +76,7 @@ export default function WorkshopDetails() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-3 p-6 align-middle">
+        <div className="flex justify-center gap-3 p-2 align-middle">
           <Link
             href={`/details`}
             className="flex h-[39px] w-[188px] items-center justify-center rounded-[21px] border border-orange-400 bg-white text-[21px] font-semibold text-[#1B1B1B]"
@@ -94,6 +94,6 @@ export default function WorkshopDetails() {
           </button>
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
