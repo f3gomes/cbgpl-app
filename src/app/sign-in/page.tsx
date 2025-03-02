@@ -18,6 +18,9 @@ import { loginSchema } from "@/schemas/login-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Spinner from "@/components/custom/spinner";
+import { Dialog } from "@radix-ui/react-dialog";
+import { DialogTrigger } from "@/components/ui/dialog";
+import ResetModal from "@/components/custom/reset-modal";
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
@@ -101,8 +104,9 @@ export default function Login() {
                 type="email"
                 placeholder="seuemail@exemplo.com"
                 {...register("email")}
-                className={`mt-1 block w-full ${errors.email ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">
@@ -121,8 +125,9 @@ export default function Login() {
                 type="password"
                 placeholder="********"
                 {...register("password")}
-                className={`mt-1 block w-full ${errors.password ? "border-red-500" : "border-gray-300"
-                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.password && (
                 <p className="mt-1 text-sm text-red-600">
@@ -138,12 +143,12 @@ export default function Login() {
             )}
 
             <div className="mb-4 text-right">
-              <Link
-                href="/reset-password"
-                className="text-sm text-orange-500 hover:underline"
-              >
-                Esqueceu a senha?
-              </Link>
+              <Dialog>
+                <DialogTrigger className="text-sm text-orange-500 hover:underline">
+                  Esqueceu a senha?
+                </DialogTrigger>
+                <ResetModal />
+              </Dialog>
             </div>
 
             {/* Botão de Login */}
