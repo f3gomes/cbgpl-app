@@ -3,24 +3,11 @@
 import { useEffect, useState } from "react";
 
 import Cookies from "js-cookie";
-import {
-  CircleUserRound,
-  HelpCircle,
-  LogOut,
-  Settings,
-  User,
-} from "lucide-react";
+import { CircleUserRound, HelpCircle, LogOut, User } from "lucide-react";
 
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarTrigger,
-} from "@/components/ui/menubar";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from "@/components/ui/menubar";
 
 interface UserMenuProps {
   name: string | null;
@@ -76,11 +63,6 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
           <MenubarItem className="flex cursor-pointer items-center gap-2">
             <User className="h-4 w-4" />
             <span>Perfil</span>
-          </MenubarItem>
-
-          <MenubarItem className="flex cursor-pointer items-center gap-2">
-            <Settings className="h-4 w-4" />
-            <span>Configurações</span>
           </MenubarItem>
 
           <MenubarItem className="flex cursor-pointer items-center gap-2">
