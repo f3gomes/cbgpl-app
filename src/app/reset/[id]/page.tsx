@@ -88,7 +88,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
 
   return (
     <>
-      <div className="flex min-h-screen w-full bg-gray-50">
+      <div className="flex min-h-screen w-full bg-gray-50 items-center md:items-start md:mt-4">
         <main className="mx-auto flex w-full flex-grow justify-center gap-2 p-4 xl:flex-row">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -97,7 +97,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
                   Digite uma nova senha
                 </h1>
 
-                <div className="flex flex-col gap-6">
+                <div className="mt-2 flex flex-col gap-8">
                   <FormField
                     control={form.control}
                     name="password"
@@ -114,7 +114,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
                             {...field}
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="absolute" />
                       </FormItem>
                     )}
                   />
@@ -135,7 +135,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
                             {...field}
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="absolute" />
                       </FormItem>
                     )}
                   />
