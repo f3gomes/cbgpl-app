@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { toast } from "sonner";
 import { createPost } from "@/actions/createPost";
+import Spinner from "./spinner";
 
 export default function PostForm() {
   // eslint-disable-next-line
@@ -61,7 +62,6 @@ export default function PostForm() {
     try {
       setIsLoading(true);
       const res: any = await createPost({ name, email, message, imgUrl });
-      console.log(res);
 
       if (res?.data?.post) {
         toast.message("Mensagem enviada com sucesso!", {
@@ -121,26 +121,30 @@ export default function PostForm() {
           <Button
             type="button"
             variant="outline"
-            className="[&_svg]:h-6 [&_svg]:w-6"
+            className="relative cursor-default [&_svg]:h-6 [&_svg]:w-6"
           >
-            <Input
-              id="file"
-              name="file"
-              type="file"
-              className="absolute h-9 w-[100px] opacity-0"
-              onChange={handleImageChange}
-            />
-            <Images size={16} className="text-[#35246F]" />
-            <span>Mídia</span>
+            <div className="flex items-center gap-2">
+              <Input
+                id="file"
+                name="file"
+                type="file"
+                className="absolute left-0 h-9 w-full opacity-0"
+                onChange={handleImageChange}
+              />
+              <Images size={16} className="text-[#35246F]" />
+              {imgUrl ? <span>{imgUrl?.path?.name}</span> : <span>Mídia</span>}
+            </div>
           </Button>
 
           <Button
             type="submit"
             variant="outline"
             disabled={isLoading || !message}
-            className="bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover [&_svg]:h-6 [&_svg]:w-6"
+            className="w-[100px] bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover [&_svg]:h-6 [&_svg]:w-6"
           >
-            <span className="text-slate-100">Publicar</span>
+            <span className="text-slate-100">
+              {isLoading ? <Spinner /> : "Enviar"}
+            </span>
           </Button>
         </div>
       </form>
