@@ -7,23 +7,32 @@ interface PostCardProps {
   name: string;
   message: string;
   imgUrl?: string;
+  profileImg?: string;
   createdAt: Date;
 }
 
 const PostCard: React.FC<PostCardProps> = ({
   name,
-  message,
   imgUrl,
+  message,
   createdAt,
+  profileImg,
 }) => {
   return (
     <Card className="w-full space-y-4 rounded-2xl p-4 shadow-md">
       <div className="flex items-center space-x-3">
         <Avatar className="bg-slate-300">
-          <AvatarImage
-            src={`https://api.dicebear.com/7.x/identicon/svg?seed=${name}`}
-            alt={name}
-          />
+          {profileImg ? (
+            <AvatarImage
+              src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face${profileImg}`}
+              alt={name}
+            />
+          ) : (
+            <AvatarImage
+              src={`https://api.dicebear.com/7.x/identicon/svg?seed=${name}`}
+              alt={name}
+            />
+          )}
         </Avatar>
         <div>
           <p className="text-lg font-semibold">{name}</p>
@@ -36,8 +45,8 @@ const PostCard: React.FC<PostCardProps> = ({
         <div className="h-48 w-full overflow-hidden">
           {imgUrl && (
             <Image
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               alt="Post Image"
               src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
               className="h-auto w-auto object-cover"

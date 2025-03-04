@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import PostForm from "./post-form";
 import { listPosts } from "@/actions/listPosts";
 import PostCard from "./post-card";
@@ -17,7 +23,6 @@ export default function Section() {
       try {
         setIsLoading(true);
         const data: any = await listPosts();
-        console.log(data?.data);
 
         if (data?.data) {
           setPosts(data?.data?.posts);
@@ -38,7 +43,7 @@ export default function Section() {
 
       <Card className="mt-2 w-full flex-grow rounded-2xl bg-[#FFFFFF] shadow-inner">
         <CardHeader>
-          {posts ? (
+          {posts.length > 0 ? (
             !isLoading ? (
               <div className="flex flex-col gap-3">
                 {posts
@@ -52,6 +57,7 @@ export default function Section() {
                         message={item.message}
                         imgUrl={item.imgUrl}
                         createdAt={item.createdAt}
+                        profileImg={item.profileImg}
                       />
                     );
                   })}
@@ -60,9 +66,12 @@ export default function Section() {
               <Spinner />
             )
           ) : (
-            <CardDescription>
-              Aqui você encontrará as últimas atualizações do Congresso.
-            </CardDescription>
+            <>
+              <CardTitle>Postagens Recentes</CardTitle>
+              <CardDescription>
+                Aqui você encontrará as últimas atualizações do Congresso.
+              </CardDescription>
+            </>
           )}
         </CardHeader>
         <CardContent></CardContent>
