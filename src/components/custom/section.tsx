@@ -1,7 +1,6 @@
-import { Images, UserSearch } from "lucide-react";
+"use client";
 
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -9,37 +8,71 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import PostForm from "./post-form";
+import { listPosts } from "@/actions/listPosts";
+import PostCard from "./post-card";
+import Spinner from "./spinner";
 
 export default function Section() {
+  const [posts, setPosts] = useState([]);
+  const [newPost, setNewPost] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        setIsLoading(true);
+        const data: any = await listPosts();
+
+        if (data?.data) {
+          setPosts(data?.data?.posts);
+        }
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, [newPost]);
+
   return (
-    <section className="flex xl:max-w-[700px] flex-col items-center w-full">
-      <Card className="h-[160px] w-full rounded-2xl p-4 shadow-md">
-        <div className="mt-1 flex items-center gap-4">
-          <div className="flex h-[72px] min-w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]"></div>
-          <Input
-            placeholder="Compartilhe uma publicação"
-            className="h-[72px] w-[537px] flex-grow rounded-3xl bg-[#F3F3F3]"
-          />
-        </div>
+    <section className="flex w-full flex-col items-center xl:max-w-[700px]">
+      <PostForm newPost={newPost} setNewPost={setNewPost} />
 
-        <div className="mt-4 flex justify-end gap-2">
-          <Button variant="outline" className="[&_svg]:h-6 [&_svg]:w-6">
-            <Images size={16} className="text-[#35246F]" />
-            Mídia
-          </Button>
-          <Button variant="outline" className="[&_svg]:h-6 [&_svg]:w-6">
-            <UserSearch size={16} className="text-[#35246F]" />
-            Marcar pessoas
-          </Button>
-        </div>
-      </Card>
-
-      <Card className="mt-6 w-full flex-grow rounded-2xl bg-[#FFFFFF] p-4 shadow-inner">
+      <Card className="mt-2 w-full flex-grow rounded-2xl bg-[#FFFFFF] shadow-inner">
         <CardHeader>
-          <CardTitle>Postagens Recentes</CardTitle>
-          <CardDescription>
-            Aqui você encontrará as últimas atualizações do Congresso.
-          </CardDescription>
+          {posts.length > 0 ? (
+            !isLoading ? (
+              <div className="flex flex-col gap-3">
+                {posts
+                  .slice()
+                  .reverse()
+                  .map((item: any) => {
+                    return (
+                      <PostCard
+                        key={item.id}
+                        name={item.name}
+                        message={item.message}
+                        imgUrl={item.imgUrl}
+                        createdAt={item.createdAt}
+                        profileImg={item.profileImg}
+                      />
+                    );
+                  })}
+              </div>
+            ) : (
+              <Spinner />
+            )
+          ) : (
+            <>
+              <CardTitle>Postagens Recentes</CardTitle>
+              <CardDescription>
+                Aqui você encontrará as últimas atualizações do Congresso.
+              </CardDescription>
+            </>
+          )}
         </CardHeader>
         <CardContent></CardContent>
       </Card>

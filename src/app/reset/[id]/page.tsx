@@ -1,8 +1,16 @@
 "use client";
 
-import { resetUserPassword } from "@/actions/resetUserPass";
-import Spinner from "@/components/custom/spinner";
+import { z } from "zod";
+import { toast } from "sonner";
+import { useForm } from "react-hook-form";
+
+import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Spinner from "@/components/custom/spinner";
+import { resetSchema } from "@/schemas/reseet-schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { resetUserPassword } from "@/actions/resetUserPass";
 import {
   Form,
   FormControl,
@@ -11,13 +19,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { resetSchema } from "@/schemas/reseet-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import { z } from "zod";
+import { useEffect, useState } from "react";
+import { getUserById } from "@/actions/getUserById";
 
 interface ResetPageProps {
   params: {
@@ -32,6 +35,7 @@ const defaultValues = {
 
 const ResetPage = ({ params: { id } }: ResetPageProps) => {
   const router = useRouter();
+  const [token, setToken] = useState("");
 
   const form = useForm<z.infer<typeof resetSchema>>({
     resolver: zodResolver(resetSchema),
@@ -42,8 +46,9 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
   const onSubmit = async (values: z.infer<typeof resetSchema>) => {
     // eslint-disable-next-line
     const { confirmPassword, ...rest } = values;
+    const { password } = rest;
 
-    const res: any = await resetUserPassword(id, rest);
+    const res: any = await resetUserPassword(id, { password, token });
 
     if (res?.status === 201) {
       form?.reset(defaultValues);
@@ -61,9 +66,29 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
     }
   };
 
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        const data: any = await getUserById(id);
+
+        if (data?.response?.data?.message) {
+          console.log(data?.response?.data?.message);
+        }
+
+        if (data?.data?.updatedUser) {
+          setToken(data?.data?.updatedUser?.resetToken);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchToken();
+  }, [id]);
+
   return (
     <>
-      <div className="flex min-h-screen w-full bg-gray-50">
+      <div className="flex min-h-screen w-full bg-gray-50 items-center md:items-start md:mt-4">
         <main className="mx-auto flex w-full flex-grow justify-center gap-2 p-4 xl:flex-row">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -72,45 +97,49 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
                   Digite uma nova senha
                 </h1>
 
-                <FormField
-                  control={form.control}
-                  name="password"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        Senha<span className="text-red-600">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="password"
-                          placeholder="********"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="mt-2 flex flex-col gap-8">
+                  <FormField
+                    control={form.control}
+                    name="password"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>
+                          Senha<span className="text-red-600">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="password"
+                            placeholder="********"
+                            className="w-60"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="absolute" />
+                      </FormItem>
+                    )}
+                  />
 
-                <FormField
-                  control={form.control}
-                  name="confirmPassword"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        Confirmar Senha<span className="text-red-600">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        <Input
-                          type="password"
-                          placeholder="********"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                  <FormField
+                    control={form.control}
+                    name="confirmPassword"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>
+                          Confirmar Senha<span className="text-red-600">*</span>
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            type="password"
+                            placeholder="********"
+                            className="w-60"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage className="absolute" />
+                      </FormItem>
+                    )}
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col items-center gap-4">

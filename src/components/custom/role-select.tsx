@@ -1,4 +1,5 @@
-import { Controller } from "react-hook-form";
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -6,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Controller } from "react-hook-form";
 
 interface RoleSelectProps {
   name: string;
