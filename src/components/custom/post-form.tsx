@@ -10,8 +10,14 @@ import { Avatar, AvatarImage } from "../ui/avatar";
 import { toast } from "sonner";
 import { createPost } from "@/actions/createPost";
 import Spinner from "./spinner";
+import { uploadImage } from "@/actions/imageKitUpload";
 
-export default function PostForm() {
+interface PostForm {
+  newPost: number;
+  setNewPost: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export default function PostForm({ setNewPost }: PostForm) {
   // eslint-disable-next-line
   const [imgUrl, setImgUrl] = useState<any>();
   const [message, setMessage] = useState("");
@@ -24,8 +30,6 @@ export default function PostForm() {
   const defaultValues = {
     name: user?.name,
     email: user?.email,
-    message: "",
-    imgUrl: "",
   };
 
   const fetchUser = async () => {
@@ -57,11 +61,19 @@ export default function PostForm() {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const { name, email, message, imgUrl } = defaultValues;
+    const { name, email } = defaultValues;
+    let image = null;
 
     try {
       setIsLoading(true);
-      const res: any = await createPost({ name, email, message, imgUrl });
+
+      if (imgUrl) {
+        image = await uploadImage(imgUrl?.path);
+      }
+
+      const data = { name, email, message, imgUrl: image?.filePath };
+
+      const res: any = await createPost(data);
 
       if (res?.data?.post) {
         toast.message("Mensagem enviada com sucesso!", {
@@ -71,6 +83,7 @@ export default function PostForm() {
 
         setMessage("");
         setImgUrl("");
+        setNewPost((prev) => prev + 1);
       }
 
       if (res?.response?.data?.error) {
