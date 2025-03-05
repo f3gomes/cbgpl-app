@@ -4,7 +4,6 @@ import { listUsers } from "@/actions/listUsers";
 import ParticipantCard from "./participants-card";
 import { useEffect, useState } from "react";
 
-
 export default function ParticipantsList() {
   const [isLoading, setIsLoading] = useState(true);
   const [participantsList, setParticipantsList] = useState([]);
@@ -30,19 +29,16 @@ export default function ParticipantsList() {
       <div className="flex flex-wrap items-center justify-center gap-4">
         {!isLoading ? (
           <>
-            {
-
-              participantsList.map((item: any, index: number) => (
-                <ParticipantCard
-                  key={index}
-                  index={index}
-                  name={item.name}
-                  role={item.role}
-                  activities={item.role}
-                  image={item.profileImgUrl}
-                />
-              ))
-            }
+            {participantsList.map((item: any) => (
+              <ParticipantCard
+                key={item.id}
+                index={item.id}
+                name={item.name}
+                role={item.role}
+                activities={item.role}
+                image={item.profileImgUrl}
+              />
+            ))}
           </>
         ) : (
           <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-solid border-[#35246F]"></div>
