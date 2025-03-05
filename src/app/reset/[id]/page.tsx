@@ -50,7 +50,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
 
     const res: any = await resetUserPassword(id, { password, token });
 
-    if (res?.status === 201) {
+    if (res?.status === 200) {
       form?.reset(defaultValues);
       router.push("/sign-in");
 
@@ -59,8 +59,8 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
         position: "top-right",
       });
     } else {
-      toast.message("Erro ao enviar dados!", {
-        description: "Seus não dados foram enviados",
+      toast.error("Erro ao enviar dados!", {
+        description: res?.response?.data?.error as string,
         position: "top-right",
       });
     }
@@ -88,7 +88,7 @@ const ResetPage = ({ params: { id } }: ResetPageProps) => {
 
   return (
     <>
-      <div className="flex min-h-screen w-full bg-gray-50 items-center md:items-start md:mt-4">
+      <div className="flex min-h-screen w-full items-center bg-gray-50 md:mt-4 md:items-start">
         <main className="mx-auto flex w-full flex-grow justify-center gap-2 p-4 xl:flex-row">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
