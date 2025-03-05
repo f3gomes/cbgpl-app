@@ -41,20 +41,22 @@ const PostCard: React.FC<PostCardProps> = ({
           </p>
         </div>
       </div>
+
       {imgUrl && (
-        <div className="h-48 w-full overflow-hidden">
+        <div className="ml-[3.2rem] h-48 w-full overflow-hidden">
           {imgUrl && (
             <Image
               width={200}
               height={200}
               alt="Post Image"
               src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
-              className="h-auto w-auto object-cover"
+              className="h-auto w-auto border object-cover"
             />
           )}
         </div>
       )}
-      <CardContent>
+
+      <CardContent className="ml-7">
         <p className="text-sm text-gray-700">{message}</p>
       </CardContent>
     </Card>

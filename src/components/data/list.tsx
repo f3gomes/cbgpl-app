@@ -246,7 +246,7 @@ export const formFieldsPersonalData = [
     label: "Organização",
     component: Input,
     props: {
-      placeholder: "Identificação do PMI",
+      placeholder: "Empresa XYZ",
     },
     className: "",
   },
