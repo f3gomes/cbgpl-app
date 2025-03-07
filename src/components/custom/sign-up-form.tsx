@@ -42,7 +42,7 @@ const defaultValues = {
   pmiId: "",
   password: "",
   confirmPassword: "",
-  visible: true,
+  visible: false,
   type: "CONGRESSMAN",
   profileImgUrl: "",
 };
