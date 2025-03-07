@@ -27,6 +27,7 @@ const VisibleSelect: React.FC<VisibleSelectProps> = ({ name, control }) => {
           <SelectTrigger>
             <SelectValue placeholder="Selecione uma cargo" />
           </SelectTrigger>
+
           <SelectContent>
             <SelectItem value="true" className="select-none">
               SIM
