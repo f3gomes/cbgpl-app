@@ -12,7 +12,7 @@ export const updateUser = async (data: any) => {
   }
 
   try {
-    const res = await api.patch(`/api/posts/edit`, data, {
+    const res = await api.patch(`/api/user/edit`, data, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

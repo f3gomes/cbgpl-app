@@ -41,14 +41,15 @@ export default function ProfileModal() {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
+    setUserToUpdate({ ...userToUpdate, email: user?.email });
 
     try {
       setIsLoading(true);
       const res: any = await updateUser(userToUpdate);
 
-      if (res?.data?.message) {
+      if (res?.data?.user) {
         toast.message("Dados enviados com sucesso!", {
-          description: res?.data?.message as string,
+          description: "Suas alterações foram salvas",
           position: "top-right",
         });
         setUserToUpdate(null);
@@ -80,7 +81,7 @@ export default function ProfileModal() {
           type="text"
           value={user?.name}
           onChange={(e) => {
-            setUser({ ...userToUpdate, name: e.target.value });
+            setUser({ ...user, name: e.target.value });
             setUserToUpdate({ ...userToUpdate, name: e.target.value });
           }}
         />
