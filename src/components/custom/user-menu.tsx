@@ -7,7 +7,17 @@ import { CircleUserRound, HelpCircle, LogOut, User } from "lucide-react";
 
 import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarTrigger } from "@/components/ui/menubar";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+import { Dialog, DialogTrigger } from "../ui/dialog";
+import ProfileModal from "./profile-modal";
+import HelpModal from "./help-modal";
 
 interface UserMenuProps {
   name: string | null;
@@ -60,15 +70,31 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
 
           <MenubarSeparator />
 
-          <MenubarItem className="flex cursor-pointer items-center gap-2">
-            <User className="h-4 w-4" />
-            <span>Perfil</span>
-          </MenubarItem>
+          <Dialog>
+            <DialogTrigger asChild>
+              <MenubarItem
+                onSelect={(e) => e.preventDefault()}
+                className="flex cursor-pointer items-center gap-2"
+              >
+                <User className="h-4 w-4" />
+                <span>Perfil</span>
+              </MenubarItem>
+            </DialogTrigger>
+            <ProfileModal />
+          </Dialog>
 
-          <MenubarItem className="flex cursor-pointer items-center gap-2">
-            <HelpCircle className="h-4 w-4" />
-            <span>Ajuda</span>
-          </MenubarItem>
+          <Dialog>
+            <DialogTrigger asChild>
+              <MenubarItem
+                onSelect={(e) => e.preventDefault()}
+                className="flex cursor-pointer items-center gap-2"
+              >
+                <HelpCircle className="h-4 w-4" />
+                <span>Ajuda</span>
+              </MenubarItem>
+            </DialogTrigger>
+            <HelpModal />
+          </Dialog>
 
           <MenubarSeparator />
 

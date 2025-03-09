@@ -25,7 +25,7 @@ const VisibleSelect: React.FC<VisibleSelectProps> = ({ name, control }) => {
           value={field.value !== undefined ? String(field.value) : ""}
         >
           <SelectTrigger>
-            <SelectValue placeholder="Selecione uma cargo" />
+            <SelectValue placeholder="Selecione uma opção" />
           </SelectTrigger>
 
           <SelectContent>
