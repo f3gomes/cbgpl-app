@@ -35,7 +35,7 @@ const RoleSelect: React.FC<RoleSelectProps> = ({
       render={({ field }) => (
         <Select onValueChange={field.onChange} value={field.value}>
           <SelectTrigger>
-            <SelectValue placeholder="Selecione uma cargo" />
+            <SelectValue placeholder="Selecione um cargo" />
           </SelectTrigger>
           <SelectContent>
             {options.map((option) => (
