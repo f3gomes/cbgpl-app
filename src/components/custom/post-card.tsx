@@ -50,7 +50,7 @@ const PostCard: React.FC<PostCardProps> = ({
               height={200}
               alt="Post Image"
               src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
-              className="h-auto w-auto border object-cover"
+              className="h-auto sm:w-auto border object-cover"
             />
           )}
         </div>

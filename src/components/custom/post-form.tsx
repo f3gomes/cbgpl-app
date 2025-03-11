@@ -126,7 +126,7 @@ export default function PostForm({ setNewPost }: PostForm) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Compartilhe uma publicação"
-            className="h-[72px] w-[537px] flex-grow rounded-3xl bg-[#F3F3F3]"
+            className="h-[72px] sm:w-[537px] flex-grow rounded-3xl bg-[#F3F3F3]"
           />
         </div>
 
