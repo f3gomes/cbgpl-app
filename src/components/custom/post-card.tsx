@@ -43,7 +43,7 @@ const PostCard: React.FC<PostCardProps> = ({
       </div>
 
       {imgUrl && (
-        <div className="ml-[3.2rem] h-48 w-full overflow-hidden">
+        <div className="ml-[3.2rem] w-full">
           {imgUrl && (
             <Image
               width={200}
