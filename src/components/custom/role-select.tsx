@@ -1,4 +1,5 @@
-import { Controller } from "react-hook-form";
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -6,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Controller } from "react-hook-form";
 
 interface RoleSelectProps {
   name: string;
@@ -33,7 +35,7 @@ const RoleSelect: React.FC<RoleSelectProps> = ({
       render={({ field }) => (
         <Select onValueChange={field.onChange} value={field.value}>
           <SelectTrigger>
-            <SelectValue placeholder="Selecione uma cargo" />
+            <SelectValue placeholder="Selecione um cargo" />
           </SelectTrigger>
           <SelectContent>
             {options.map((option) => (

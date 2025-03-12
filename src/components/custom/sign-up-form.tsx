@@ -28,6 +28,7 @@ import Spinner from "./spinner";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
 import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
+import { TooltipQuestion } from "./tooltip-question";
 
 const defaultValues = {
   name: "",
@@ -42,7 +43,7 @@ const defaultValues = {
   pmiId: "",
   password: "",
   confirmPassword: "",
-  visible: true,
+  visible: false,
   type: "CONGRESSMAN",
   profileImgUrl: "",
 };
@@ -107,6 +108,8 @@ export default function SignUpForm() {
         <ImageContainer profileImg={profileImg} setProfileImg={setProfileImg} />
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <TooltipQuestion />
+
           <div className="flex flex-col gap-2">
             {formFieldsPersonalData.map((field: any) => (
               <div key={field.name}>

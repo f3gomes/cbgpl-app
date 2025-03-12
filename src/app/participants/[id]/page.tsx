@@ -19,12 +19,7 @@ const ParticipantPage = ({ params: { id } }: ParticipantPageProps) => {
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
-          <ParticipantDetails
-            image={id}
-            name="Maria Silva"
-            role="Analista de Projetos"
-            activities="Planejamento"
-          />
+          <ParticipantDetails id={id} />
 
           <AsideRight />
         </main>

@@ -10,6 +10,7 @@ import { FileCheck2 } from "lucide-react";
 import { Input } from "../ui/input";
 import MultiSelect from "../custom/multi-select";
 import RoleSelect from "../custom/role-select";
+import VisibleSelect from "../custom/visible-select";
 
 export interface ISession {
   session: {
@@ -193,6 +194,13 @@ export const schedule = [
 
 export const formFieldsPersonalData = [
   {
+    name: "visible",
+    label: "Visível",
+    component: VisibleSelect,
+    props: {},
+    className: "",
+  },
+  {
     title: "Dados Pessoais",
     name: "pmiId",
     label: "ID PMI",
@@ -246,7 +254,7 @@ export const formFieldsPersonalData = [
     label: "Organização",
     component: Input,
     props: {
-      placeholder: "Identificação do PMI",
+      placeholder: "Empresa XYZ",
     },
     className: "",
   },

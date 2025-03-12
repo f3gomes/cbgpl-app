@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Bell } from "lucide-react";
-import { MessageCircle } from "lucide-react";
+// import { Bell } from "lucide-react";
+// import { MessageCircle } from "lucide-react";
 import UserMenu from "./user-menu";
 import { useEffect, useState } from "react";
 import NavMenu from "./nav-items-menu";
+import NavItemsMobile from "./nav-items-mobile";
 
 export default function Header() {
   const [user, setUser] = useState<any>(null);
@@ -32,7 +33,7 @@ export default function Header() {
             height={78}
             src="/assets/Design_sem_nome-removebg-preview.png"
             alt="Congresso Logo"
-            className="w-[70%] sm:w-[80%] md:w-full object-contain max-w-[215px]"
+            className="w-[70%] max-w-[215px] object-contain sm:w-[80%] md:w-full"
           />
         </div>
       </div>
@@ -40,19 +41,21 @@ export default function Header() {
       <NavMenu />
 
       <div className="flex items-center space-x-4 p-4">
-        <button
+        {/* <button
           type="button"
           className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
         >
-          <MessageCircle size={20} className="text-[#FFFFFF]" />
+        <MessageCircle size={20} className="text-[#FFFFFF]" />
         </button>
+        
+        <button
+        type="button"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
+        >
+        <Bell size={20} className="text-[#FFFFFF]" />
+        </button> */}
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600"
-        >
-          <Bell size={20} className="text-[#FFFFFF]" />
-        </button>
+        <NavItemsMobile />
 
         <UserMenu
           name={user?.name}
