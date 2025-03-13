@@ -1,6 +1,6 @@
 import { CircleX } from "lucide-react";
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
+import { Card } from "../ui/card";
 
 export default function WorkshopDetails() {
   return (
@@ -41,7 +41,7 @@ export default function WorkshopDetails() {
           </div>
 
           {/* Descrição embaixo */}
-          <p className="mt-6">
+          <p className="mt-6 text-justify">
             <span className="font-semibold">Descrição:</span>{" "}
             <span className="font-inter">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -92,9 +92,13 @@ export default function WorkshopDetails() {
           >
             Material
           </Link>
-          <button className="h-[39px] w-[188px] rounded-[21px] bg-orange-500 text-[21px] font-semibold text-white transition-colors hover:bg-orange-600">
+          <Link
+            href="https://pontoonline.com.br/20cbgpl/"
+            rel="noopener noreferrer"
+            className="flex h-[39px] w-[188px] items-center justify-center rounded-[21px] border bg-orange-500 text-[21px] font-semibold text-white transition-colors hover:bg-orange-600"
+          >
             Inscreva-se!
-          </button>
+          </Link>
         </div>
       </div>
     </Card>
