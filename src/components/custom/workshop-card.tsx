@@ -27,9 +27,14 @@ export default function WorkshopCard({ session }: ISession) {
         >
           Detalhes
         </Link>
-        <button className="h-[33px] w-[133px] rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600">
+        <Link
+          href="https://pontoonline.com.br/20cbgpl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600"
+        >
           Inscreva-se!
-        </button>
+        </Link>
       </div>
     </div>
   );
