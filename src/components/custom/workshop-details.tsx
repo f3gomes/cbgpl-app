@@ -41,7 +41,7 @@ export default function WorkshopDetails() {
           </div>
 
           {/* Descrição embaixo */}
-          <p className="mt-6">
+          <p className="mt-6 text-justify">
             <span className="font-semibold">Descrição:</span>{" "}
             <span className="font-inter">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
