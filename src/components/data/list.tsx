@@ -146,49 +146,41 @@ export const sideIcons = [
   { title: "Feedbacks", icons: MessageSquareText, href: "/" },
 ];
 
-export const schedule = [
+export const sessionsDayOne = [
   {
-    date: "22 DE ABRIL",
-    sessions: [
-      {
-        id: "ia-futuro-profissao",
-        time: "9h - 10h",
-        type: "Workshop",
-        theme: "IA e o futuro da profissão em gestão de projetos",
-        speaker:
-          "Americo Pinto, Managing Director of PMO Global Alliance - PMI",
-        typeColor: "bg-blue-500",
-      },
-      {
-        id: "estrategias-gestao-agil",
-        time: "10h - 11h",
-        type: "Palestra",
-        theme: "Estratégias para gestão ágil",
-        speaker: "Mariana Lima, Especialista em Scrum - PMI",
-        typeColor: "bg-purple-500",
-      },
-    ],
+    id: "ia-futuro-profissao",
+    time: "9h - 10h",
+    type: "Workshop",
+    theme: "IA e o futuro da profissão em gestão de projetos",
+    speaker: "Americo Pinto, Managing Director of PMO Global Alliance - PMI",
+    typeColor: "bg-blue-500",
   },
   {
-    date: "23 DE ABRIL",
-    sessions: [
-      {
-        id: "tendencias-globais-gerenciamento-projetos",
-        time: "9h - 10h",
-        type: "Painel",
-        theme: "Tendências globais em gerenciamento de projetos",
-        speaker: "João Silva, Diretor de Inovação - PMO Alliance",
-        typeColor: "bg-orange-500",
-      },
-      {
-        id: "ferramentas-tecnologias-gerenciamento-equipes",
-        time: "11h - 12h",
-        type: "Workshop",
-        theme: "Ferramentas tecnológicas no gerenciamento de equipes",
-        speaker: "Ana Souza, CTO da PM Tech",
-        typeColor: "bg-teal-500",
-      },
-    ],
+    id: "estrategias-gestao-agil",
+    time: "10h - 11h",
+    type: "Palestra",
+    theme: "Estratégias para gestão ágil",
+    speaker: "Mariana Lima, Especialista em Scrum - PMI",
+    typeColor: "bg-purple-500",
+  },
+];
+
+export const sessionsDayTwo = [
+  {
+    id: "tendencias-globais-gerenciamento-projetos",
+    time: "9h - 10h",
+    type: "Painel",
+    theme: "Tendências globais em gerenciamento de projetos",
+    speaker: "João Silva, Diretor de Inovação - PMO Alliance",
+    typeColor: "bg-orange-500",
+  },
+  {
+    id: "ferramentas-tecnologias-gerenciamento-equipes",
+    time: "11h - 12h",
+    type: "Workshop",
+    theme: "Ferramentas tecnológicas no gerenciamento de equipes",
+    speaker: "Ana Souza, CTO da PM Tech",
+    typeColor: "bg-teal-500",
   },
 ];
 

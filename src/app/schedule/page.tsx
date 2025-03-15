@@ -2,7 +2,12 @@ import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import ScheduleSection from "@/components/custom/schedule-section";
-import { schedule, sideIcons, socialIcons } from "@/components/data/list";
+import {
+  sessionsDayOne,
+  sessionsDayTwo,
+  sideIcons,
+  socialIcons,
+} from "@/components/data/list";
 
 export default function Schedule() {
   return (
@@ -13,7 +18,10 @@ export default function Schedule() {
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row xl:items-start">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
-          <ScheduleSection schedule={schedule} />
+          <section className="flex h-full w-full flex-row justify-center rounded-3xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
+            <ScheduleSection date="22 de agosto" sessions={sessionsDayOne} />
+            <ScheduleSection date="23 de agosto" sessions={sessionsDayTwo} />
+          </section>
 
           <AsideRight />
         </main>
