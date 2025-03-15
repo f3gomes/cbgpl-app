@@ -31,7 +31,9 @@ export default function ProfileModal() {
       const userFromStorage = await JSON.parse(
         window.localStorage.getItem("gtxp-user")!,
       );
+
       setUser(userFromStorage);
+      setUserToUpdate({ email: userFromStorage?.email });
     }
   };
 
@@ -41,7 +43,6 @@ export default function ProfileModal() {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    setUserToUpdate({ ...userToUpdate, email: user?.email });
 
     try {
       setIsLoading(true);
