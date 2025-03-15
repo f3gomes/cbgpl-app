@@ -19,8 +19,8 @@ export default function Schedule() {
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
           <section className="flex h-full w-full flex-row justify-center rounded-3xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
-            <ScheduleSection date="22 de agosto" sessions={sessionsDayOne} />
-            <ScheduleSection date="23 de agosto" sessions={sessionsDayTwo} />
+            <ScheduleSection date="22 de abril" sessions={sessionsDayOne} />
+            <ScheduleSection date="23 de abril" sessions={sessionsDayTwo} />
           </section>
 
           <AsideRight />

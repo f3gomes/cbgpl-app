@@ -169,7 +169,7 @@ export const sessionsDayTwo = [
   {
     id: "tendencias-globais-gerenciamento-projetos",
     time: "9h - 10h",
-    type: "Painel",
+    type: "Palestra",
     theme: "Tendências globais em gerenciamento de projetos",
     speaker: "João Silva, Diretor de Inovação - PMO Alliance",
     typeColor: "bg-orange-500",
