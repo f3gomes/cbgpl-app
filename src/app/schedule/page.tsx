@@ -18,7 +18,7 @@ export default function Schedule() {
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row xl:items-start">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
-          <section className="flex h-full w-full flex-row justify-center rounded-3xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
+          <section className="flex h-full w-full flex-col justify-center rounded-3xl bg-white md:flex-row xl:min-w-[700px] xl:max-w-[700px]">
             <ScheduleSection date="22 de abril" sessions={sessionsDayOne} />
             <ScheduleSection date="23 de abril" sessions={sessionsDayTwo} />
           </section>

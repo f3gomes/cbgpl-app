@@ -38,7 +38,7 @@ export default function ScheduleSection({
         </select>
       </div>
 
-      <div className="relative z-10 mt-6 flex h-full flex-col flex-wrap gap-2">
+      <div className="relative z-10 mt-6 flex h-full flex-col flex-wrap items-center justify-center gap-2">
         {filteredSessions.map((session) => (
           <div
             key={session.id}

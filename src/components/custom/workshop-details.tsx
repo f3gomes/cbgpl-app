@@ -4,7 +4,7 @@ import { Card } from "../ui/card";
 
 export default function WorkshopDetails() {
   return (
-    <Card className="w-full rounded-2xl bg-white p-3 shadow-md">
+    <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
         <div className="relative mx-auto flex h-[120px] w-full items-center rounded-[27px] bg-[#35246F] p-4 shadow-xl">
           <Link
@@ -15,7 +15,7 @@ export default function WorkshopDetails() {
           >
             <CircleX />
           </Link>
-          <h2 className="ml-1 w-[572px] p-1 text-start text-[25px] font-bold text-white">
+          <h2 className="ml-1 w-[572px] p-1 text-start text-2xl font-bold text-white">
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
@@ -97,7 +97,7 @@ export default function WorkshopDetails() {
             href="https://pontoonline.com.br/20cbgpl/"
             rel="noopener noreferrer"
             target="_blank"
-            className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border bg-orange-500 px-12 py-2 text-base font-semibold text-white sm:text-lg md:text-xl"
+            className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border bg-orange-500 px-14 py-2 text-base font-semibold text-white sm:text-lg md:text-xl"
           >
             Inscreva-se!
           </Link>
