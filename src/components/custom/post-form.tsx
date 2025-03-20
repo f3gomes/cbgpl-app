@@ -118,7 +118,7 @@ export default function PostForm({ setNewPost }: PostForm) {
           <div className="flex h-[72px] min-w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]">
             <Avatar className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
               <AvatarImage src={profileImg} alt="User avatar" />
-              <CircleUserRound size={20} className="text-[#FFFFFF]" />
+              <CircleUserRound size={36} className="text-[#FFFFFF]" />
             </Avatar>
           </div>
 

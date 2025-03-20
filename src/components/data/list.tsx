@@ -38,7 +38,7 @@ export const navItemsMobile = [
   { title: "Palestrantes", link: "/speakers" },
   { title: "Participantes", link: "/participants" },
   { title: "Experiência", link: "/" },
-  { title: "Certificações", link: "/" },
+  { title: "Certificações", link: "https://pontoonline.com.br/20cbgpl/" },
   { title: "Feedbacks", link: "/" },
 ];
 
@@ -142,7 +142,7 @@ export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal, href: "/speakers" },
   { title: "Participantes", icons: UsersRound, href: "/participants" },
   { title: "Espaço experiência", icons: MapPinned, href: "/" },
-  { title: "Certificações do Congresso", icons: FileCheck2, href: "/" },
+  { title: "Certificações do Congresso", icons: FileCheck2, href: "https://pontoonline.com.br/20cbgpl/" },
   { title: "Feedbacks", icons: MessageSquareText, href: "/" },
 ];
 

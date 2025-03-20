@@ -34,6 +34,7 @@ export default function NavItemsMobile() {
               <a
                 key={index}
                 href={item.link}
+                target="_blank"
                 onClick={() => setIsMenuOpen(false)}
                 className="cursor-pointer px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-slate-100"
               >

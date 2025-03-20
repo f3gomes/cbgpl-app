@@ -53,7 +53,7 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
         <MenubarTrigger className="cursor-pointer p-0">
           <Avatar className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
             <AvatarImage src={profileImg} alt="User avatar" />
-            <CircleUserRound size={20} className="text-[#FFFFFF]" />
+            <CircleUserRound size={24} className="text-[#FFFFFF]" />
           </Avatar>
         </MenubarTrigger>
 
