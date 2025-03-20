@@ -7,21 +7,13 @@ import UserMenu from "./user-menu";
 import { useEffect, useState } from "react";
 import NavMenu from "./nav-items-menu";
 import NavItemsMobile from "./nav-items-mobile";
+import { fetchUser } from "@/actions/fetchUser";
 
 export default function Header() {
   const [user, setUser] = useState<any>(null);
 
-  const fetchUser = async () => {
-    if (typeof window !== "undefined") {
-      const userFromStorage = await JSON.parse(
-        window.localStorage.getItem("gtxp-user")!,
-      );
-      setUser(userFromStorage);
-    }
-  };
-
   useEffect(() => {
-    fetchUser();
+    fetchUser(setUser);
   }, []);
 
   return (
