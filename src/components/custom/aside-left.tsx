@@ -11,14 +11,15 @@ export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
   return (
     <aside className="flex h-12 w-full flex-col items-center rounded-2xl bg-white px-4 shadow-md xl:h-[600px] xl:w-[330px] xl:p-4 xl:px-0">
       <div className="mt-2 flex w-full justify-between xl:mt-0">
-        {socialIcons.map((Item, index) => (
-          <Button
+        {socialIcons.map((item, index) => (
+          <Link
             key={index}
-            variant="ghost"
+            href={item.href}
+            target="_blank"
             className="[&_svg]:h-7 [&_svg]:w-7"
           >
-            <Item size={64} className="text-[#35246F]" />
-          </Button>
+            <item.icon size={64} className="text-[#35246F]" />
+          </Link>
         ))}
       </div>
 

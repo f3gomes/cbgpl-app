@@ -136,13 +136,34 @@ export const participantsList = [
   },
 ];
 
-export const socialIcons = [Linkedin, Instagram, Youtube, Mail];
+export const socialIcons = [
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/cbgpl/posts/?feedView=all",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/cbgpl",
+  },
+  {
+    icon: Youtube,
+    href: "https://www.youtube.com/@cbgpl",
+  },
+  {
+    icon: Mail,
+    href: "https://www.linkedin.com/company/cbgpl/posts/?feedView=all",
+  },
+];
 
 export const sideIcons = [
   { title: "Palestrantes", icons: MicVocal, href: "/speakers" },
   { title: "Participantes", icons: UsersRound, href: "/participants" },
   { title: "Espaço experiência", icons: MapPinned, href: "/" },
-  { title: "Certificações do Congresso", icons: FileCheck2, href: "https://pontoonline.com.br/20cbgpl/" },
+  {
+    title: "Certificações do Congresso",
+    icons: FileCheck2,
+    href: "https://pontoonline.com.br/20cbgpl/",
+  },
   { title: "Feedbacks", icons: MessageSquareText, href: "/" },
 ];
 
