@@ -4,6 +4,7 @@ import { useState } from "react";
 import WorkshopCard from "./workshop-card";
 import { sessionsDayOne } from "../data/list";
 import { SlidersHorizontal } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ScheduleSectionProps {
   date: string;
@@ -38,7 +39,12 @@ export default function ScheduleSection({
         </select>
       </div>
 
-      <div className="relative z-10 mt-6 flex h-full flex-col flex-wrap gap-2">
+      <div
+        className={cn(
+          sessions.length === 1 && "justify-center",
+          "relative z-10 mt-6 flex h-full flex-col flex-wrap items-center gap-2",
+        )}
+      >
         {filteredSessions.map((session) => (
           <div
             key={session.id}
