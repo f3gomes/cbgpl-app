@@ -39,7 +39,7 @@ export const navItemsMobile = [
   { title: "Participantes", link: "/participants" },
   { title: "Experiência", link: "/" },
   { title: "Certificações", link: "https://pontoonline.com.br/20cbgpl/" },
-  { title: "Feedbacks", link: "/" },
+  { title: "Feedback", link: "/" },
 ];
 
 export const speakersList = [
@@ -164,7 +164,7 @@ export const sideIcons = [
     icons: FileCheck2,
     href: "https://pontoonline.com.br/20cbgpl/",
   },
-  { title: "Feedbacks", icons: MessageSquareText, href: "/" },
+  { title: "Feedback", icons: MessageSquareText, href: "/" },
 ];
 
 export const sessionsDayOne = [
