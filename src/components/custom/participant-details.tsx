@@ -6,7 +6,8 @@ import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { useEffect, useState } from "react";
 import { getUserById } from "@/actions/getUserById";
-import { SquareUserRound } from "lucide-react";
+import { Instagram, Linkedin, SquareUserRound, Twitter } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ParticipantDetailsProps {
   id: string;
@@ -47,6 +48,27 @@ export default function ParticipantDetails({ id }: ParticipantDetailsProps) {
 
   const interests = areasNames[user?.areas[0]];
 
+  const socialLinks = [
+    {
+      name: "Linkedin",
+      icon: Linkedin,
+      url: (user: any) => user?.linkedin || "https://www.linkedin.com/in/",
+      hoverClass: "hover:text-blue-500",
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      url: (user: any) => user?.twitter || "https://x.com/?lang=pt",
+      hoverClass: "hover:text-blue-400",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: (user: any) => user?.instagram || "https://instagram.com",
+      hoverClass: "hover:text-pink-500",
+    },
+  ];
+
   return (
     <div className="flex h-full min-h-[600px] flex-col items-center justify-start rounded-xl bg-white shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="flex flex-col gap-3 p-4 sm:flex-row">
@@ -72,23 +94,30 @@ export default function ParticipantDetails({ id }: ParticipantDetailsProps) {
 
         <div className="flex flex-col items-center gap-4">
           <Card className="flex h-[350px] w-[390px] flex-col items-start gap-3 bg-[#F3F3F3]">
-            <div className="flex h-[300px] flex-col gap-6 p-4">
+            <div className="flex h-full w-full flex-col gap-6 p-4">
               <h1 className="text-3xl font-bold">{user?.name}</h1>
 
-              <div className="text-justify text-sm font-medium md:text-base">
-                {user?.description ? (
-                  user?.description
-                ) : (
-                  <div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea.
-                  </div>
-                )}
+              <div className="h-full w-full text-justify text-sm font-medium md:text-base">
+                <div className="flex h-full w-full flex-col space-y-4 rounded-xl bg-gray-900 p-4 shadow-lg">
+                  {user?.description
+                    ? user?.description
+                    : socialLinks.map(
+                      ({ name, icon: Icon, url, hoverClass }) => (
+                        <Link
+                          key={name}
+                          target="_blank"
+                          href={url(user)}
+                          className={cn(
+                            hoverClass,
+                            "flex items-center space-x-3 text-white",
+                          )}
+                        >
+                          <Icon size={24} />
+                          <span>{name}</span>
+                        </Link>
+                      ),
+                    )}
+                </div>
               </div>
             </div>
           </Card>
