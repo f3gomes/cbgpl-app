@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   DialogContent,
   DialogDescription,
@@ -12,16 +13,18 @@ export default function HelpModal() {
         <DialogTitle>Suporte</DialogTitle>
       </DialogHeader>
       <DialogDescription>
-        Entre em contato no telefone ou e-mail abaixo se precisar de ajuda.
+        Entre em contato pelo e-mail abaixo se precisar de ajuda.
       </DialogDescription>
 
       <DialogDescription className="font-bold">
-        suporte@cbgpl.com
+        <Link href={"mailto:suportecbgpl@pmice.org.br"}>
+          suportecbgpl@pmice.org.br
+        </Link>
       </DialogDescription>
 
-      <DialogDescription className="font-bold">
+      {/* <DialogDescription className="font-bold">
         (85) 9999-8888
-      </DialogDescription>
+      </DialogDescription> */}
     </DialogContent>
   );
 }
