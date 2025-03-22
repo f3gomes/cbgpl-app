@@ -55,7 +55,7 @@ const PrivacyAgreement: React.FC = () => {
         <p className="text-justify text-sm text-gray-500">
           Você pode solicitar acesso, correção ou exclusão dos seus dados
           pessoais a qualquer momento, conforme previsto na LGPD. Para isso,
-          entre em contato pelo e-mail <strong>[inserir e-mail]</strong> e exerça os seus
+          entre em contato pelo e-mail <strong>suportecbgpl@pmice.org.br</strong> e exerça os seus
           direitos previstos em Lei. Ao continuar navegando no website e ao se
           inscrever no evento, você concorda com esta política de segurança da
           informação.
