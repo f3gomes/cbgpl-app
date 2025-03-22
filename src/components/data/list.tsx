@@ -112,7 +112,7 @@ export const socialIcons = [
   },
   {
     icon: Mail,
-    href: "https://www.linkedin.com/company/cbgpl/posts/?feedView=all",
+    href: "mailto:suportecbgpl@pmice.org.br",
   },
 ];
 
@@ -124,7 +124,7 @@ export const sideIcons = [
     href: "/participants",
     target: false,
   },
-  { title: "Espaço experiência", icons: MapPinned, href: "/", target: true },
+  { title: "Livro de experiência", icons: MapPinned, href: "/", target: true },
   {
     title: "Certificações do Congresso",
     icons: FileCheck2,
