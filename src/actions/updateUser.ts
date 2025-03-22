@@ -17,6 +17,7 @@ export const updateUser = async (data: any) => {
         Authorization: `Bearer ${token}`,
       },
     });
+
     return res;
   } catch (err) {
     return err;

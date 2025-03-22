@@ -53,7 +53,16 @@ export default function ProfileModal() {
           description: "Suas alterações foram salvas",
           position: "top-right",
         });
+
+        const userData = await res?.data?.user;
+
         setUserToUpdate(null);
+        setUser({ ...user, name: userData?.name });
+        window.localStorage.setItem("gtxp-user", JSON.stringify(user));
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
       }
 
       if (res?.response?.data?.error) {
