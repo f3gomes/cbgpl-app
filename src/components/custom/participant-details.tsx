@@ -48,7 +48,7 @@ export default function ParticipantDetails({ id }: ParticipantDetailsProps) {
   const interests = areasNames[user?.areas[0]];
 
   return (
-    <div className="flex h-full flex-col items-center justify-center rounded-xl bg-white xl:min-w-[700px] xl:max-w-[700px]">
+    <div className="flex h-full min-h-[600px] flex-col items-center justify-start rounded-xl bg-white shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="flex flex-col gap-3 p-4 sm:flex-row">
         <div className="flex flex-col items-center justify-between gap-4">
           {user?.profileImgUrl === "" ? (
