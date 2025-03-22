@@ -6,7 +6,12 @@ import { createFeedback } from "@/actions/createFeedback";
 import Spinner from "./spinner";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from "../ui/dialog";
+import {
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "../ui/dialog";
 
 interface FeedbackProps {
   name?: string;
@@ -65,12 +70,12 @@ export default function FeedbackModal() {
     <form className="flex flex-col gap-3" onSubmit={onSubmit}>
       <DialogContent className="border-none p-0">
         <DialogHeader className="w-full">
-          <DialogTitle className="flex w-full items-center justify-center rounded-b-2xl bg-[#35246F] p-4 text-white shadow-xl">
+          <DialogTitle className="flex w-full items-center justify-center rounded-b-xl bg-[#35246F] p-4 text-2xl text-white shadow-xl">
             Feedback
           </DialogTitle>
         </DialogHeader>
 
-        <DialogDescription className="text-center text-base">
+        <DialogDescription className="text-center text-base text-black">
           Escreva um comentário sobre o evento, palestras, organização,
           palestrantes e o que mais desejar.
           <div>
@@ -78,17 +83,17 @@ export default function FeedbackModal() {
           </div>
         </DialogDescription>
 
-        <div className="flex flex-col gap-3 p-4">
+        <div className="flex flex-col items-center justify-center gap-3 p-4">
           <Input
             value={data?.message}
             onChange={(e) => setData({ ...data, message: e.target.value })}
             placeholder="Escreva seu comentário..."
-            className="h-[72px] flex-grow rounded-xl bg-[#F3F3F3]"
+            className="h-[100px] flex-grow rounded-xl bg-[#F3F3F3] text-center"
           />
 
           <Button
             type="submit"
-            className="w-full bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
+            className="w-24 rounded-xl bg-orange-500 text-lg font-semibold text-white hover:bg-orange-600 active:bg-orange-700"
             disabled={isLoading || !data?.message}
           >
             {isLoading ? <Spinner /> : "Enviar"}
