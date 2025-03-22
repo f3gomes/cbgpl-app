@@ -70,7 +70,7 @@ export default function FeedbackModal() {
     <form className="flex flex-col gap-3" onSubmit={onSubmit}>
       <DialogContent className="border-none p-0">
         <DialogHeader className="w-full">
-          <DialogTitle className="flex w-full items-center justify-center bg-[#35246F] p-4 text-2xl text-white shadow-xl">
+          <DialogTitle className="flex w-full items-center justify-center rounded-b-xl bg-[#35246F] p-4 text-2xl text-white shadow-xl">
             Feedback
           </DialogTitle>
         </DialogHeader>
