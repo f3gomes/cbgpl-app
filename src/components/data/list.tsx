@@ -51,92 +51,49 @@ export const speakersList = [
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
   {
     name: "Neudson Barroso",
     role: "Gerente de Projetos",
     image: "/assets/profile.jpeg",
-  },
-];
-
-export const participantsList = [
-  {
-    name: "Maria Silva",
-    role: "Analista de Projetos",
-    activities: "Planejamento",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "João Santos",
-    role: "Coordenador de Projetos",
-    activities: "Coordenação",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Ana Paula",
-    role: "Scrum Master",
-    activities: "Facilitação",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Carlos Andrade",
-    role: "Gerente de Portfólio",
-    activities: "Gestão de Portfólio",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Renata Oliveira",
-    role: "Product Owner",
-    activities: "Definição de Backlog",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Eduardo Ferreira",
-    role: "Consultor de Projetos",
-    activities: "Consultoria",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Beatriz Carvalho",
-    role: "Especialista em Riscos",
-    activities: "Mitigação de Riscos",
-    image: "/assets/profile.jpeg",
-  },
-  {
-    name: "Gabriel Souza",
-    role: "PMO",
-    activities: "Monitoramento",
-    image: "/assets/profile.jpeg",
+    type: "SPEAKER",
   },
 ];
 
