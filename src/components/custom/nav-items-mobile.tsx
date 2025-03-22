@@ -29,32 +29,29 @@ export default function NavItemsMobile() {
         )}
       </button>
 
-      {/* Mobile Menu Overlay */}
       {openMenu && (
         <div className="absolute right-0 top-24 z-20 rounded-b-lg bg-white shadow-lg">
           <div className="flex flex-col py-2">
-            {navItemsMobile.map((item, index) => (
-              <>
-                {item.title === "Feedback" ? (
-                  <Dialog>
-                    <DialogTrigger className="ml-4 mt-1 flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6">
-                      <span className="font-inter text-base">{item.title}</span>
-                    </DialogTrigger>
-                    <FeedbackModal />
-                  </Dialog>
-                ) : (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    onClick={() => setOpenMenu(false)}
-                    className="cursor-pointer px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-slate-100"
-                  >
-                    {item.title}
-                  </Link>
-                )}
-              </>
-            ))}
+            {navItemsMobile.map((item, index) =>
+              item.title === "Feedback" ? (
+                <Dialog key={index}>
+                  <DialogTrigger className="ml-4 mt-1 flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6">
+                    <span className="font-inter text-base">{item.title}</span>
+                  </DialogTrigger>
+                  <FeedbackModal />
+                </Dialog>
+              ) : (
+                <Link
+                  key={index}
+                  href={item.link}
+                  onClick={() => setOpenMenu(false)}
+                  target={item.target ? "_blank" : "_self"}
+                  className="cursor-pointer px-4 py-2 text-base font-medium text-black transition duration-200 hover:bg-slate-100"
+                >
+                  {item.title}
+                </Link>
+              ),
+            )}
           </div>
         </div>
       )}

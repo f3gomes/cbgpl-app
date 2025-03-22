@@ -31,14 +31,14 @@ export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
             <hr className="my-4 border-gray-300" />
             {item.title === "Feedback" ? (
               <Dialog>
-                <DialogTrigger className="flex ml-4 w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6">
+                <DialogTrigger className="ml-4 flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6">
                   <item.icons size={50} className="text-[#35246F]" />
                   <span className="font-inter text-lg">{item.title}</span>
                 </DialogTrigger>
                 <FeedbackModal />
               </Dialog>
             ) : (
-              <Link href={item.href} target="_blank">
+              <Link href={item.href} target={item.target ? "_blank" : "_self"}>
                 <Button
                   variant="ghost"
                   className="flex w-full items-center justify-start gap-3 [&_svg]:h-6 [&_svg]:w-6"

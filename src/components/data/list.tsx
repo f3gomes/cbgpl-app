@@ -31,15 +31,19 @@ export const navItems = [
 ];
 
 export const navItemsMobile = [
-  { title: "Início", link: "/" },
-  { title: "Programação", link: "/schedule" },
-  { title: "Notícias", link: "/" },
-  { title: "Fotos", link: "/" },
-  { title: "Palestrantes", link: "/speakers" },
-  { title: "Participantes", link: "/participants" },
-  { title: "Experiência", link: "/" },
-  { title: "Certificações", link: "https://pontoonline.com.br/20cbgpl/" },
-  { title: "Feedback", link: "/" },
+  { title: "Início", link: "/", target: false },
+  { title: "Programação", link: "/schedule", target: false },
+  { title: "Notícias", link: "/", target: false },
+  { title: "Fotos", link: "/", target: false },
+  { title: "Palestrantes", link: "/speakers", target: false },
+  { title: "Participantes", link: "/participants", target: false },
+  { title: "Experiência", link: "/", target: true },
+  {
+    title: "Certificações",
+    link: "https://pontoonline.com.br/20cbgpl/",
+    target: true,
+  },
+  { title: "Feedback", link: "/", target: false },
 ];
 
 export const speakersList = [
@@ -156,15 +160,21 @@ export const socialIcons = [
 ];
 
 export const sideIcons = [
-  { title: "Palestrantes", icons: MicVocal, href: "/speakers" },
-  { title: "Participantes", icons: UsersRound, href: "/participants" },
-  { title: "Espaço experiência", icons: MapPinned, href: "/" },
+  { title: "Palestrantes", icons: MicVocal, href: "/speakers", target: false },
+  {
+    title: "Participantes",
+    icons: UsersRound,
+    href: "/participants",
+    target: false,
+  },
+  { title: "Espaço experiência", icons: MapPinned, href: "/", target: true },
   {
     title: "Certificações do Congresso",
     icons: FileCheck2,
     href: "https://pontoonline.com.br/20cbgpl/",
+    target: true,
   },
-  { title: "Feedback", icons: MessageSquareText, href: "/" },
+  { title: "Feedback", icons: MessageSquareText, href: "/", target: false },
 ];
 
 export const sessionsDayOne = [
