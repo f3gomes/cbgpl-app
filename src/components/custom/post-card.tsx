@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format } from "date-fns";
 import Image from "next/image";
 
@@ -28,10 +28,9 @@ const PostCard: React.FC<PostCardProps> = ({
               alt={name}
             />
           ) : (
-            <AvatarImage
-              src={`https://api.dicebear.com/7.x/identicon/svg?seed=${name}`}
-              alt={name}
-            />
+            <Avatar className="h-10 w-10">
+              <AvatarFallback className="font-bold">{name?.substring(0, 1)}</AvatarFallback>
+            </Avatar>
           )}
         </Avatar>
         <div>
@@ -50,7 +49,7 @@ const PostCard: React.FC<PostCardProps> = ({
               height={200}
               alt="Post Image"
               src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
-              className="h-auto sm:w-auto border object-cover"
+              className="h-auto border object-cover sm:w-auto"
             />
           )}
         </div>

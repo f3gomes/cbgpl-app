@@ -67,8 +67,8 @@ export default function FeedbackModal() {
   };
 
   return (
-    <form className="flex flex-col gap-3" onSubmit={onSubmit}>
-      <DialogContent className="border-none p-0">
+    <DialogContent className="border-none p-0">
+      <form className="flex flex-col gap-3" onSubmit={onSubmit}>
         <DialogHeader className="w-full">
           <DialogTitle className="flex w-full items-center justify-center rounded-b-xl bg-[#35246F] p-4 text-2xl text-white shadow-xl">
             Feedback
@@ -76,11 +76,12 @@ export default function FeedbackModal() {
         </DialogHeader>
 
         <DialogDescription className="text-center text-base text-black">
-          Escreva um comentário sobre o evento, palestras, organização,
-          palestrantes e o que mais desejar.
-          <div>
-            <strong>Queremos saber como foi sua experiência!</strong>
-          </div>
+          <span>
+            Escreva um comentário sobre o evento, palestras, organização,
+            palestrantes e o que mais desejar.
+          </span>
+          <br />
+          <strong>Queremos saber como foi sua experiência!</strong>
         </DialogDescription>
 
         <div className="flex flex-col items-center justify-center gap-3 p-4">
@@ -99,7 +100,7 @@ export default function FeedbackModal() {
             {isLoading ? <Spinner /> : "Enviar"}
           </Button>
         </div>
-      </DialogContent>
-    </form>
+      </form>
+    </DialogContent>
   );
 }
