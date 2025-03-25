@@ -46,7 +46,7 @@ export default function SpeakerDetails({ id }: SpeakerDetailsProps) {
   }
 
   return (
-    <div className="flex min-h-[600px] w-full flex-col gap-1 rounded-3xl bg-white shadow-md xl:h-[600px] xl:min-w-[700px] xl:max-w-[700px]">
+    <div className="flex min-h-[600px] w-full flex-col gap-1 rounded-3xl bg-white shadow-md xl:min-h-[600px] xl:min-w-[700px] xl:max-w-[700px]">
       <div className="flex flex-col gap-3 p-4 sm:flex-row">
         <div className="flex min-w-[270px] flex-col items-center gap-4">
           <Image
@@ -90,12 +90,7 @@ export default function SpeakerDetails({ id }: SpeakerDetailsProps) {
       <div className="p-4">
         <h1 className="font-bold">Tema da Palestra:</h1>
 
-        <div className="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          repudiandae recusandae eius aliquam quam dicta ut a, ullam
-          necessitatibus totam mollitia, possimus officia voluptatum dolorum,
-          enim voluptates soluta accusamus. Similique!
-        </div>
+        <div className="text-justify">{speaker?.speech}</div>
       </div>
     </div>
   );
