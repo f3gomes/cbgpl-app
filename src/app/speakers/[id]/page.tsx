@@ -19,11 +19,7 @@ const SpeakerPage = ({ params: { id } }: SpeakerPageProps) => {
         <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row">
           <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
 
-          <SpeakerDetails
-            image={id}
-            name="Neudson Barroso"
-            role="Gerente de Projetos"
-          />
+          <SpeakerDetails id={id} />
 
           <AsideRight />
         </main>

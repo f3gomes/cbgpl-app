@@ -7,7 +7,7 @@ import { listSpeakers } from "@/actions/listSpeakers";
 
 export default function SpeakerList() {
   const [isLoading, setIsLoading] = useState(true);
-  const [speakerList, setSpeakerList] = useState([]);
+  const [speakerList, setSpeakerList] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchList = async () => {
@@ -27,13 +27,14 @@ export default function SpeakerList() {
         </h1>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-2">
+      <div className="flex flex-row flex-wrap justify-center gap-14">
         {isLoading ? (
           <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-solid border-[#35246F]"></div>
         ) : (
-          speakerList.map((item: any, index: number) => (
-            <Link href={`/speakers/${index}`} key={index}>
+          speakerList.map((item: any) => (
+            <Link href={`/speakers/${item.id}`} key={item.id}>
               <SpeakerCard
+                id={item.id}
                 name={item.name}
                 role={item.role}
                 image={item.profileImgUrl}
