@@ -27,7 +27,7 @@ export default function SpeakerList() {
         </h1>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-14">
+      <div className="flex flex-row flex-wrap justify-center gap-4 sm:gap-14">
         {isLoading ? (
           <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-solid border-[#35246F]"></div>
         ) : (
