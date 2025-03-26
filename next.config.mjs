@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "cbgpl.org.br",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "media.licdn.com",
+        port: "",
+      },
     ],
   },
 };
