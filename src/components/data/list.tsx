@@ -114,6 +114,10 @@ export const socialIcons = [
     icon: Mail,
     href: "mailto:suportecbgpl@pmice.org.br",
   },
+  {
+    icon: "Whatsapp",
+    href: "https://api.whatsapp.com/send/?phone=558591431049",
+  },
 ];
 
 export const sideIcons = [

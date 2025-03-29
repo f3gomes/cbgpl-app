@@ -3,6 +3,7 @@ import { sideIcons, socialIcons } from "../data/list";
 import { Button } from "../ui/button";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
+import Image from "next/image";
 
 interface AsideProps {
   socialIcons: typeof socialIcons;
@@ -20,7 +21,16 @@ export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
             target="_blank"
             className="[&_svg]:h-7 [&_svg]:w-7"
           >
-            <item.icon size={64} className="text-[#35246F]" />
+            {item.icon === "Whatsapp" ? (
+              <Image
+                src={"/assets/wpp.svg"}
+                alt="Ícone do Whatsapp"
+                width={28}
+                height={28}
+              />
+            ) : (
+              <item.icon size={64} className="text-[#35246F]" />
+            )}
           </Link>
         ))}
       </div>
