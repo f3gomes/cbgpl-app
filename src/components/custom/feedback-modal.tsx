@@ -59,6 +59,10 @@ export default function FeedbackModal() {
           position: "top-right",
         });
       }
+
+      setTimeout(() => {
+        location.reload();
+      }, 500);
     } catch (err) {
       console.log(err);
     } finally {

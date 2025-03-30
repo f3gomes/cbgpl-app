@@ -5,12 +5,9 @@ export function PopoverFotos() {
     <div className="absolute -mt-4">
       <Popover>
         <PopoverTrigger>
-          <a
-            href={"#"}
-            className="absolute -mt-3 text-base font-medium text-black transition duration-200 hover:text-slate-700"
-          >
+          <div className="absolute -mt-3 text-base font-medium text-black transition duration-200 hover:text-slate-700">
             Fotos
-          </a>
+          </div>
         </PopoverTrigger>
         <PopoverContent className="absolute">
           <p className="text-center text-base">
