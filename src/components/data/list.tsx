@@ -250,6 +250,64 @@ export const formFieldsPersonalData = [
   },
 ];
 
+export const formFieldsPersonalDataEdit = [
+  {
+    name: "visible",
+    label: "Visível",
+    component: VisibleSelect,
+    props: {},
+    className: "",
+  },
+  {
+    title: "Dados Pessoais",
+    name: "pmiId",
+    label: "ID PMI",
+    component: Input,
+    props: {
+      placeholder: "Identificação do PMI",
+    },
+    className: "",
+  },
+  {
+    name: "name",
+    label: "Nome Completo",
+    component: Input,
+    props: {
+      placeholder: "João da Silva",
+    },
+    className: "",
+    required: true,
+  },
+  {
+    name: "phone",
+    label: "Número de Telefone",
+    component: Input,
+    props: {
+      placeholder: "(11) 98765-4321",
+    },
+    className: "",
+    required: true,
+  },
+  {
+    name: "role",
+    label: "Cargo",
+    component: RoleSelect,
+    props: {
+      placeholder: "Cargo",
+    },
+    className: "",
+  },
+  {
+    name: "company",
+    label: "Organização",
+    component: Input,
+    props: {
+      placeholder: "Empresa XYZ",
+    },
+    className: "",
+  },
+];
+
 export const formFieldsSocialLinks = [
   {
     name: "linkedin",
