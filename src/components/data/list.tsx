@@ -27,14 +27,14 @@ export const navItems = [
   { title: "Início", link: "/" },
   { title: "Programação", link: "/schedule" },
   { title: "Notícias", link: "/" },
-  { title: "Fotos", link: "/" },
+  { title: "Fotos", link: "#" },
 ];
 
 export const navItemsMobile = [
   { title: "Início", link: "/", target: false },
   { title: "Programação", link: "/schedule", target: false },
   { title: "Notícias", link: "/", target: false },
-  { title: "Fotos", link: "/", target: false },
+  // { title: "Fotos", link: "/", target: false },
   { title: "Palestrantes", link: "/speakers", target: false },
   { title: "Participantes", link: "/participants", target: false },
   { title: "Experiência", link: "/", target: true },
