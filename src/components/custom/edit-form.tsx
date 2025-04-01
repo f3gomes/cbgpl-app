@@ -10,7 +10,7 @@ import { phoneMask } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { formSchema } from "@/schemas/form-schema";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { uploadImage } from "@/actions/imageKitUpload";
 import {
@@ -31,6 +31,7 @@ import {
 import { TooltipQuestion } from "./tooltip-question";
 import { updateUser } from "@/actions/updateUser";
 import { getUserByEmail } from "@/actions/getUserByEmail";
+import { formEditSchema } from "@/schemas/form-edit-schema";
 
 export interface IProfileImg {
   path: string | undefined;
@@ -53,7 +54,25 @@ export default function EditForm() {
       try {
         setIsLoading(true);
         const userData: any = await getUserByEmail(userFromStorage?.email);
-        setUser(userData?.data?.updatedUser);
+
+        const {
+          // eslint-disable-next-line
+          id,
+          // eslint-disable-next-line
+          description,
+          // eslint-disable-next-line
+          resetToken,
+          // eslint-disable-next-line
+          type,
+          // eslint-disable-next-line
+          updatedAt,
+          // eslint-disable-next-line
+          expiresAt,
+          // eslint-disable-next-line
+          verified,
+          ...rest
+        } = userData?.data?.updatedUser;
+        setUser(rest);
       } catch (error) {
         console.log(error);
       } finally {
@@ -66,9 +85,9 @@ export default function EditForm() {
     fetchUser();
   }, []);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: user || undefined,
+  const form = useForm<z.infer<typeof formEditSchema>>({
+    resolver: zodResolver(formEditSchema),
+    defaultValues: user,
     mode: "onChange",
   });
 
@@ -78,13 +97,12 @@ export default function EditForm() {
     }
   }, [user, form]);
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log("submit");
+  const onSubmit = async (values: z.infer<typeof formEditSchema>) => {
     let data = null;
     let image = null;
 
     // eslint-disable-next-line
-    const { confirmPassword, ...rest } = values;
+    const { ...rest } = values;
 
     if (profileImg) {
       image = await uploadImage(profileImg?.path);
@@ -97,11 +115,11 @@ export default function EditForm() {
 
     const regex = /unique.*email|email.*unique/i;
 
-    if (res?.status === 201) {
+    if (res?.status === 200) {
       form?.reset(user);
       router.push("/sign-in");
 
-      toast.message("Cadastro realizado com sucesso!", {
+      toast.message("Atualização realizada com sucesso!", {
         description: "Seus dados foram enviados",
         position: "top-right",
       });
@@ -118,7 +136,7 @@ export default function EditForm() {
   if (isLoading) {
     return (
       <div className="rounded-lg bg-white p-8 shadow-lg">
-        <h1>Carregando...</h1>
+        <Spinner />
       </div>
     );
   }
@@ -126,10 +144,13 @@ export default function EditForm() {
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg">
       <Form {...form}>
-        <ImageContainer profileImg={profileImg} setProfileImg={setProfileImg} />
-
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <TooltipQuestion />
+          <ImageContainer
+            profileImg={profileImg}
+            setProfileImg={setProfileImg}
+          />
+
+          <TooltipQuestion className="!mt-0" />
 
           <div className="flex flex-col gap-2">
             {formFieldsPersonalDataEdit.map((field: any) => (
@@ -187,9 +208,9 @@ export default function EditForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h1 className="font-semibold text-cbgpl-tangerine">
+            <h2 className="font-semibold text-cbgpl-tangerine">
               Redes Sociais
-            </h1>
+            </h2>
 
             {/* eslint-disable-next-line */}
             {formFieldsSocialLinks.map((field: any) => (
@@ -216,8 +237,9 @@ export default function EditForm() {
 
           <div className="flex flex-col items-center gap-4">
             <Button
-              type="submit"
               size={"lg"}
+              type="submit"
+              disabled={form?.formState?.isSubmitting}
               className="w-[104px] bg-cbgpl-tangerine hover:bg-cbgpl-tangerine-hover active:bg-cbgpl-tangerine-active"
             >
               {form?.formState?.isSubmitting ? <Spinner /> : "Enviar"}
