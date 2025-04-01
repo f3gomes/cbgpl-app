@@ -1,9 +1,14 @@
 import { CircleHelp } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { cn } from "@/lib/utils";
 
-export function TooltipQuestion() {
+interface TooltipQuestionProps {
+  className?: string;
+}
+
+export function TooltipQuestion({ className }: TooltipQuestionProps) {
   return (
-    <div className="absolute -mt-4">
+    <div className={cn("absolute -mt-4", className)}>
       <Popover>
         <PopoverTrigger>
           <CircleHelp size={20} className="absolute ml-11 text-slate-600" />
