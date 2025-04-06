@@ -421,7 +421,7 @@ export const sessionsDayTwo = [
     id: "coffee-break",
     time: "10:50 - 11:20",
     type: "Networking",
-    theme: "COFFEE BREAK",
+    theme: "Networking + COFFEE BREAK",
     speaker: "",
     typeColor: "",
   },
