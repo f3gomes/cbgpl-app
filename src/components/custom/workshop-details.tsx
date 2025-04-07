@@ -1,6 +1,8 @@
 import { CircleX } from "lucide-react";
 import Link from "next/link";
 import { Card } from "../ui/card";
+import { Dialog, DialogTrigger } from "../ui/dialog";
+import FeedbackModal from "./feedback-modal";
 
 export default function WorkshopDetails() {
   return (
@@ -81,12 +83,12 @@ export default function WorkshopDetails() {
 
         {/* Palestrantes, botões etc. */}
         <div className="flex justify-center gap-3 p-6 align-middle sm:flex-row">
-          <Link
-            href={`/details`}
-            className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl"
-          >
-            Feedback
-          </Link>
+          <Dialog>
+            <DialogTrigger className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl">
+              <span className="font-inter text-lg">Feedback</span>
+            </DialogTrigger>
+            <FeedbackModal />
+          </Dialog>
           <Link
             href={`/details`}
             className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl"
