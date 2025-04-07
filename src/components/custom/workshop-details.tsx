@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Card } from "../ui/card";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
+import { PopoverMaterial } from "./popover-material";
 
 export default function WorkshopDetails() {
   return (
@@ -89,12 +90,13 @@ export default function WorkshopDetails() {
             </DialogTrigger>
             <FeedbackModal />
           </Dialog>
-          <Link
+          {/* <Link
             href={`/details`}
             className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl"
           >
             Material
-          </Link>
+          </Link> */}
+          <PopoverMaterial />
           <Link
             href="https://pontoonline.com.br/20cbgpl/"
             rel="noopener noreferrer"
