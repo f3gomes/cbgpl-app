@@ -142,23 +142,15 @@ export const sessionsDayOne = [
     time: "09:00 - 09:30",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas (Plenária)",
-    speaker: "Cristiano Oliveira",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
-    id: "ia-futuro-profissao",
-    time: "9h - 10h",
-    type: "Workshop",
-    theme: "IA e o Futuro da Profissão em Gestão de Projetos",
-    speaker: "Americo Pinto",
-    typeColor: "bg-blue-500",
-  },
-  {
-    id: "overview-pmi-carolina-latorre",
+    id: "project-success-carolina-latorre",
     time: "09:30 - 09:50",
     type: "Plenária",
-    theme: "Overview PMI",
-    speaker: "Carolina Latorre",
+    theme: "Project Success PMI",
+    speaker: "Carolina Latorre - PMI Latam",
     typeColor: "",
   },
   {
@@ -168,14 +160,6 @@ export const sessionsDayOne = [
     theme: "Escritório de Gerenciamento de Projetos – PMO",
     speaker: "Américo Pinto",
     typeColor: "",
-  },
-  {
-    id: "estrategias-gestao-agil",
-    time: "10h - 11h",
-    type: "Palestra",
-    theme: "Estratégias para Gestão Ágil",
-    speaker: "Mariana Lima",
-    typeColor: "bg-purple-500",
   },
   {
     id: "como-acelerar-vmo",
@@ -191,15 +175,7 @@ export const sessionsDayOne = [
     type: "Palestra",
     theme:
       "Experiência de Uma Jornada de Avaliação de Maturidade de Práticas ESG Numa Organização Sem Fins Lucrativos",
-    speaker: "Everaldo Artur Grahl",
-    typeColor: "",
-  },
-  {
-    id: "espaco-patrocinador-monday-nortrez",
-    time: "11:20 - 12:00",
-    type: "Patrocinador",
-    theme: "Espaço Patrocinador",
-    speaker: "Monday + Nortrez",
+    speaker: "Everaldo Artur Grahl - Professor Universitário",
     typeColor: "",
   },
   {
@@ -207,7 +183,7 @@ export const sessionsDayOne = [
     time: "11:20 - 12:00",
     type: "Palestra",
     theme: "Gestão de Mudança e a Neuroplasticidade Cerebral",
-    speaker: "Driéle Castro",
+    speaker: "Driéle Castro - Mentora de projetos e gestão",
     typeColor: "",
   },
   {
@@ -215,15 +191,7 @@ export const sessionsDayOne = [
     time: "11:20 - 12:00",
     type: "Palestra",
     theme: "Gerenciamento de Egos: O Que Apenas a Experiência Ensina?",
-    speaker: "Anderson Marques Nunes",
-    typeColor: "",
-  },
-  {
-    id: "experiencia-congressista",
-    time: "13:00 - 13:30",
-    type: "Experiência",
-    theme: "Experiência Congressista",
-    speaker: "Cristiano Oliveira",
+    speaker: "Anderson Marques Nunes - Head Global do PMO da Angola Cables",
     typeColor: "",
   },
   {
@@ -232,7 +200,7 @@ export const sessionsDayOne = [
     type: "Workshop",
     theme:
       "Design Thinking + Lego Serious Play Para Planejamento Estratégico (Experience)",
-    speaker: "Sergio Nascimento",
+    speaker: "Sergio Nascimento - Empresário, Professor e Consultor",
     typeColor: "",
   },
   {
@@ -240,7 +208,8 @@ export const sessionsDayOne = [
     time: "13:30 - 15:30",
     type: "Workshop",
     theme: "Projetização Pocket",
-    speaker: "Pedro Paulo Coutinho e Felipe Borges",
+    speaker:
+      "Pedro Paulo Coutinho - Especialista em Redes de Computadores e Bancos de Dados pela PUC-MG, graduado em Tecnologia em Processamento de Dados pela UNA-MG, e certificado PMP®. É Diretor Executivo e Sócio Fundador da Strategie – Consultoria e Treinamentos, além de SCRUM Master na Entrega Contínua. e Felipe Borges - Presidente no PMI Minas Gerais",
     typeColor: "",
   },
   {
@@ -248,7 +217,8 @@ export const sessionsDayOne = [
     time: "13:30 - 15:30",
     type: "Workshop",
     theme: "PM Canvas com ChatGPT",
-    speaker: "Bernardo Zurli",
+    speaker:
+      "Bernardo Zurli - Especialista em Portfolio de Projetos e VP de Governança e Finanças do PMIRS",
     typeColor: "",
   },
   {
@@ -256,15 +226,8 @@ export const sessionsDayOne = [
     time: "13:30 - 15:30",
     type: "Workshop",
     theme: "PMO ao VMO: Construindo um Escritório de Valor na Prática",
-    speaker: "Marcelo Antonelli",
-    typeColor: "",
-  },
-  {
-    id: "case-patrocinador-moldsoft",
-    time: "13:30 - 13:50",
-    type: "Patrocinador",
-    theme: "Case Patrocinador",
-    speaker: "Moldsoft",
+    speaker:
+      "Marcelo Antonelli - Consultor e Mentor em Gestão de Valor e Implantação de VMO",
     typeColor: "",
   },
   {
@@ -273,7 +236,8 @@ export const sessionsDayOne = [
     type: "Painel",
     theme:
       "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
-    speaker: "Cassio, Patriciana e Murilo",
+    speaker:
+      "Cassio - CEO Grupo Portfolio, Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos e Murilo - CEO do Beach Park",
     typeColor: "",
   },
   {
@@ -281,14 +245,14 @@ export const sessionsDayOne = [
     time: "14:30 - 15:30",
     type: "Premiação",
     theme: "Prêmio Melhores do Ano: Categoria Projetos",
-    speaker: "Cristiano Oliveira",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
     id: "case-patrocinador-zoho",
     time: "15:30 - 15:50",
     type: "Patrocinador",
-    theme: "Case Patrocinador",
+    theme: "Case - ZOHO",
     speaker: "Zoho",
     typeColor: "",
   },
@@ -297,7 +261,7 @@ export const sessionsDayOne = [
     time: "16:20 - 17:00",
     type: "Debate Executivo",
     theme: "Gestão de Projetos Públicos e Privados: Conexões e Desafios",
-    speaker: "Cristiano Oliveira",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
@@ -305,15 +269,7 @@ export const sessionsDayOne = [
     time: "16:20 - 18:00",
     type: "Workshop",
     theme: "AI Inception: Da Necessidade à Viabilidade",
-    speaker: "Rafael Vilela",
-    typeColor: "",
-  },
-  {
-    id: "espaco-patrocinador-alvarez",
-    time: "16:20 - 18:00",
-    type: "Patrocinador",
-    theme: "Espaço Patrocinador",
-    speaker: "Alvarez",
+    speaker: "Rafael Vilela - Consultor em Gestão Estratégica Ágil",
     typeColor: "",
   },
   {
@@ -321,15 +277,7 @@ export const sessionsDayOne = [
     time: "16:20 - 18:00",
     type: "Palestra",
     theme: "Como os Agentes de IA Podem Revolucionar o Gerenc. de Proj.",
-    speaker: "Victor Dantas",
-    typeColor: "",
-  },
-  {
-    id: "espaco-patrocinador-zoho",
-    time: "16:20 - 18:00",
-    type: "Patrocinador",
-    theme: "Espaço Patrocinador",
-    speaker: "Zoho",
+    speaker: "Victor Dantas - MOLDSOFT",
     typeColor: "",
   },
   {
@@ -338,14 +286,14 @@ export const sessionsDayOne = [
     type: "Workshop",
     theme:
       "Gestão de Projetos Sociais: Estratégias para Gerar Impacto Positivo",
-    speaker: "Elisangela Machado",
+    speaker: "Elisangela Machado - Gerente de Projetos Sociais",
     typeColor: "",
   },
   {
     id: "case-patrocinador-monday-nortrez",
     time: "17:00 - 17:20",
     type: "Patrocinador",
-    theme: "Case Patrocinador",
+    theme: "Case MONDAY + NORTREZ",
     speaker: "Monday + Nortrez",
     typeColor: "",
   },
@@ -354,15 +302,8 @@ export const sessionsDayOne = [
     time: "17:20 - 18:00",
     type: "Painel",
     theme: "Painel sobre Value Management Office (VMO)",
-    speaker: "Mirian Leite, Erica Smith, Marcelo Antonelli e Fábio Cruz",
-    typeColor: "",
-  },
-  {
-    id: "sorteios",
-    time: "18:00 - 18:10",
-    type: "Sorteios",
-    theme: "Sorteios",
-    speaker: "Cristiano Oliveira",
+    speaker:
+      "Mirian Leite - Head VMO Grupo 3corações,Erica Smith - Head de PMO Estratégico,Marcelo Antonelli - Consultor e Mentor em Gestão de Valor e Implantação de VMO e Fábio Cruz - Head de Práticas, Projetos e Agilidade para clientes",
     typeColor: "",
   },
   {
@@ -382,23 +323,7 @@ export const sessionsDayTwo = [
     time: "09:00 - 09:10",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas",
-    speaker: "Cristiano Oliveira",
-    typeColor: "",
-  },
-  {
-    id: "experiencia-regional",
-    time: "09:10 - 09:25",
-    type: "Palestra",
-    theme: "Experiência Regional",
-    speaker: "Cristiano Oliveira",
-    typeColor: "",
-  },
-  {
-    id: "lancamento-cbgp-2025",
-    time: "09:25 - 09:30",
-    type: "Palestra",
-    theme: "Lançamento do CBGP 2025",
-    speaker: "Cristiano Oliveira",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
@@ -406,23 +331,16 @@ export const sessionsDayTwo = [
     time: "09:30 - 10:30",
     type: "Palestra",
     theme: "Gestão Sustentável de Projetos",
-    speaker: "Gino Terentim",
+    speaker: "Gino Terentim - Professor e Curioso",
     typeColor: "",
   },
   {
-    id: "margareth-chanwin-agile-alliance",
+    id: "margareth-carneiro-agile-alliance",
     time: "10:30 - 10:50",
     type: "Palestra",
     theme: "PMI Agile Alliance: O Futuro dos Profissionais de Projetos",
-    speaker: "Margareth Chanwin",
-    typeColor: "",
-  },
-  {
-    id: "coffee-break",
-    time: "10:50 - 11:20",
-    type: "Networking",
-    theme: "Networking + COFFEE BREAK",
-    speaker: "",
+    speaker:
+      "Margareth Carneiro - Diretora do Agile Alliance, ex PMI Board of Directors",
     typeColor: "",
   },
   {
@@ -430,7 +348,8 @@ export const sessionsDayTwo = [
     time: "11:20 - 12:00",
     type: "Painel",
     theme: "Sustentabilidade em Mega Projetos: Desafios e Oportunidades",
-    speaker: "Kelly Anselmo, Mateus Freire, Maiza Pimenta, Andrea Oliveira",
+    speaker:
+      "Kelly Anselmo - CEO Projecta - Consultoria & Gestão,Mateus Freire - Diretor Geral - Magnesium do Brasil,Maiza Pimenta,Andrea Oliveira - Diretora Executiva Marquise Incorporações",
     typeColor: "",
   },
   {
@@ -438,8 +357,8 @@ export const sessionsDayTwo = [
     time: "11:20 - 12:00",
     type: "Case",
     theme:
-      "Amazônia - Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo",
-    speaker: "Felipe Borges",
+      "Case Amazônia - Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo",
+    speaker: "Felipe Borges - Presidente no PMI Minas Gerais",
     typeColor: "",
   },
   {
@@ -448,7 +367,7 @@ export const sessionsDayTwo = [
     type: "Palestra",
     theme:
       "Projeto de Conversão de Aeronaves de Passageiros E190 em E190F Cargueiras",
-    speaker: "Marcelo Tocci - EMBRAER",
+    speaker: "Marcelo Tocci - Program Director - EMBRAER",
     typeColor: "",
   },
   {
@@ -465,7 +384,8 @@ export const sessionsDayTwo = [
     time: "11:20 - 12:00",
     type: "Palestra",
     theme: "Mediação de Conflitos e a Gestão de Projetos - Uma dupla perfeita!",
-    speaker: "Antônio Duarte",
+    speaker:
+      "Antônio Duarte - Especialista de Projetos, Programas e Portfólio no Exército Brasileiro",
     typeColor: "",
   },
   {
@@ -474,7 +394,7 @@ export const sessionsDayTwo = [
     type: "Palestra",
     theme:
       "São João de Caruaru: Como Planejar e Gerenciar o Maior Projeto de Entretenimento do Mundo",
-    speaker: "Marcio Gomes",
+    speaker: "Marcio Gomes - Head PMO Prefeitura de Caruaru",
     typeColor: "",
   },
   {
@@ -482,15 +402,8 @@ export const sessionsDayTwo = [
     time: "13:00 - 13:40",
     type: "Palestra",
     theme: "Seu Comportamento Está te Sabotando e Você nem Sabe",
-    speaker: "Carlos Silva Jr - SLUPER",
-    typeColor: "",
-  },
-  {
-    id: "espaco-patrocinador",
-    time: "13:00 - 13:40",
-    type: "Patrocinador",
-    theme: "Espaço Patrocinador",
-    speaker: "FIOCRUZ",
+    speaker:
+      "Carlos Silva Jr - Cristão, Pai, Esposo, Curioso, Empresário, Mentor e Palestrante - SLUPER",
     typeColor: "",
   },
   {
@@ -508,7 +421,7 @@ export const sessionsDayTwo = [
     type: "Palestra",
     theme:
       "Perspicácia Empresarial: Estratégias de Gestão Para Transformar Criatividade em Resultados Sustentáveis",
-    speaker: "Lia Quinderé",
+    speaker: "Lia Quinderé - Chef Pâtissier, Fundadora e CEO da Sucré Brasil",
     typeColor: "",
   },
   {
@@ -517,7 +430,7 @@ export const sessionsDayTwo = [
     type: "Workshop",
     theme:
       "Construindo Sua Persona de Liderança: Um Guia Baseado Nos Seus Pontos Fortes",
-    speaker: "Ricardo Peters",
+    speaker: "Ricardo Peters - Canivete Suíço",
     typeColor: "",
   },
   {
@@ -525,7 +438,7 @@ export const sessionsDayTwo = [
     time: "14:00 - 16:00",
     type: "Workshop",
     theme: "Estimativas Ágeis: Poemas que Transformam Planejamento",
-    speaker: "Sarah Branco",
+    speaker: "Sarah Branco - IT Manager",
     typeColor: "",
   },
   {
@@ -533,15 +446,7 @@ export const sessionsDayTwo = [
     time: "14:40 - 15:40",
     type: "Premiação",
     theme: "Melhores do Ano",
-    speaker: "Cristiano Oliveira",
-    typeColor: "",
-  },
-  {
-    id: "coffee-break-2",
-    time: "16:00 - 16:30",
-    type: "Networking",
-    theme: "COFFEE BREAK",
-    speaker: "",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
@@ -549,7 +454,8 @@ export const sessionsDayTwo = [
     time: "16:30 - 17:10",
     type: "Painel",
     theme: "Liderança Feminina",
-    speaker: "Delania Santos, Annete Castro, Simone Caixeta, Fernanda Colares",
+    speaker:
+      "Delania Santos - CEO DS - Educação & negócios e Mentora Executiva Internacional,Annete Castro,Simone Caixeta - Diretora de Pessoas,Fernanda Colares - Médica, Professora e Gestora",
     typeColor: "",
   },
   {
@@ -565,23 +471,15 @@ export const sessionsDayTwo = [
     time: "17:10 - 17:30",
     type: "Premiação",
     theme: "Resultado Melhores do Ano - Projetos e PMO",
-    speaker: "Cristiano Oliveira",
+    speaker: "Cristiano Oliveira - Presidente PMI",
     typeColor: "",
   },
   {
     id: "case-patrocinador",
     time: "17:30 - 17:50",
     type: "Patrocinador",
-    theme: "Case Patrocinador",
+    theme: "Case FIOCRUZ",
     speaker: "FIOCRUZ",
-    typeColor: "",
-  },
-  {
-    id: "sorteio",
-    time: "17:50 - 18:00",
-    type: "Sorteio",
-    theme: "Sorteio",
-    speaker: "Cristiano Oliveira",
     typeColor: "",
   },
   {
@@ -589,7 +487,7 @@ export const sessionsDayTwo = [
     time: "18:00 - 19:00",
     type: "Palestra",
     theme: "Impacto Social - ESG, Gestão de Projetos Sociais",
-    speaker: "Andrea Cardoso",
+    speaker: "Andreia Cardoso - Diretora Executiva da Somos Um",
     typeColor: "",
   },
 ];
