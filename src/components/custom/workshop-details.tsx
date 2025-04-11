@@ -5,7 +5,20 @@ import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
 import { PopoverMaterial } from "./popover-material";
 
-export default function WorkshopDetails() {
+// type Workshop = {
+//   id: string;
+//   time: string;
+//   type: string;
+//   theme: string;
+//   speaker: string;
+//   description: string;
+// };
+
+// type Props = {
+//   workshop: Workshop;
+// };
+
+export default function WorkshopDetails({ workshop }: any) {
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
@@ -47,12 +60,7 @@ export default function WorkshopDetails() {
           {/* Descrição embaixo */}
           <p className="mt-6 text-justify">
             <span className="font-semibold">Descrição:</span>{" "}
-            <span className="font-inter">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea.
-            </span>
+            <span className="font-inter">{workshop.description}</span>
           </p>
         </div>
 
