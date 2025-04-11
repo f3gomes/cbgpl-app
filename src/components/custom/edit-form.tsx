@@ -32,13 +32,14 @@ import { TooltipQuestion } from "./tooltip-question";
 import { updateUser } from "@/actions/updateUser";
 import { getUserByEmail } from "@/actions/getUserByEmail";
 import { formEditSchema } from "@/schemas/form-edit-schema";
+import { EditModalProps } from "./profile-modal";
 
 export interface IProfileImg {
   path: string | undefined;
   profileImgUrl: string | undefined;
 }
 
-export default function EditForm() {
+export default function EditForm({ setOpen }: EditModalProps) {
   const router = useRouter();
 
   const [user, setUser] = useState<any>(null);
@@ -72,6 +73,7 @@ export default function EditForm() {
           verified,
           ...rest
         } = userData?.data?.updatedUser;
+
         setUser(rest);
       } catch (error) {
         console.log(error);
@@ -123,6 +125,8 @@ export default function EditForm() {
         description: "Seus dados foram enviados",
         position: "top-right",
       });
+
+      setOpen(false);
     }
 
     if (res?.status === 500 && regex.test(res?.response?.data?.error)) {

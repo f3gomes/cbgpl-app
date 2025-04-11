@@ -2,7 +2,11 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 import { DialogContent } from "../ui/dialog";
 import EditForm from "./edit-form";
 
-export default function ProfileModal() {
+export interface EditModalProps {
+  setOpen: (open: boolean) => void
+}
+
+export default function ProfileModal({ setOpen }: EditModalProps) {
   return (
     <DialogContent className="h-full overflow-y-auto">
       <DialogTitle>
@@ -10,7 +14,7 @@ export default function ProfileModal() {
           Atualize seus dados
         </h1>
       </DialogTitle>
-      <EditForm />
+      <EditForm setOpen={setOpen} />
     </DialogContent>
   );
 }

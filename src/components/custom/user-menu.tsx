@@ -29,6 +29,7 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
   const router = useRouter();
 
   const [profileImg, setProfileImg] = useState("");
+  const [open, setOpen] = useState(false);
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -70,7 +71,7 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
 
           <MenubarSeparator />
 
-          <Dialog>
+          <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
               <MenubarItem
                 onSelect={(e) => e.preventDefault()}
@@ -80,7 +81,7 @@ const UserMenu = ({ name, email, imgPath }: UserMenuProps) => {
                 <span>Perfil</span>
               </MenubarItem>
             </DialogTrigger>
-            <ProfileModal />
+            <ProfileModal setOpen={setOpen} />
           </Dialog>
 
           <Dialog>
