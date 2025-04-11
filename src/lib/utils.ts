@@ -13,3 +13,20 @@ export function phoneMask(value: string) {
     .replace(/(\d{4})-(\d)(\d{4})/, "$1$2-$3")
     .replace(/(-\d{4})\d+?$/, "$1");
 }
+
+export function subText(text: string) {
+  const limit = 36;
+
+  if (text.length <= limit) return text;
+
+  const indexBefore = text.lastIndexOf(" ", limit);
+  const nextSpace = text.indexOf(" ", limit);
+
+  if (indexBefore !== -1) {
+    return text.substring(0, indexBefore);
+  } else if (nextSpace !== -1) {
+    return text.substring(0, nextSpace);
+  }
+
+  return text.substring(0, limit);
+}

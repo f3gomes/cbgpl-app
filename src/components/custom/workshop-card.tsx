@@ -1,16 +1,17 @@
+import { subText } from "@/lib/utils";
 import { ISession } from "../data/list";
 import Link from "next/link";
 
 export default function WorkshopCard({ session }: ISession) {
   return (
-    <div className="relative mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 pb-16 text-black">
+    <div className="relative mx-1 mb-2 mt-1 flex-1 rounded-b-[27px] bg-white p-2 pb-16 text-black min-h-60 max-h-60">
       <h3 className="mb-2 text-lg">
         <span className="font-semibold">Tema:</span> {session.theme}
       </h3>
 
-      <p className="mb-4 text-gray-700">
+      <p className="mb-4 text-gray-700 p-1">
         <span className="font-semibold text-black underline">
-          {session.speaker}
+          {subText(session.speaker)}
         </span>
       </p>
 
