@@ -1,5 +1,6 @@
+import { ISession } from "@/data/list";
 import { subText } from "@/lib/utils";
-import { ISession } from "../data/list";
+
 import Link from "next/link";
 
 export default function WorkshopCard({ session }: ISession) {

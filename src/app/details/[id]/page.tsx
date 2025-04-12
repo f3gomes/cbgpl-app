@@ -1,12 +1,9 @@
 import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
-import {
-  sideIcons,
-  socialIcons,
-  workshopDetailsList,
-} from "@/components/data/list";
+import { sideIcons, socialIcons } from "@/data/list";
 import WorkshopDetails from "@/components/custom/workshop-details";
+import { workshopDetailsList } from "@/data/workshop-list";
 
 type Params = {
   id: string;
@@ -14,12 +11,12 @@ type Params = {
 
 export async function generateStaticParams() {
   return workshopDetailsList.map((workshop) => ({
-    id: workshop.id,
+    id: workshop.workshopId,
   }));
 }
 
 export default function Details({ params }: { params: Params }) {
-  const workshop = workshopDetailsList.find((e) => e.id === params.id);
+  const workshop = workshopDetailsList.find((e) => e.workshopId === params.id);
 
   if (!workshop) {
     <div>

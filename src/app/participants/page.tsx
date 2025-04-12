@@ -3,7 +3,7 @@ import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import ParticipantsList from "@/components/custom/participants-list";
 
-import { sideIcons, socialIcons } from "@/components/data/list";
+import { sideIcons, socialIcons } from "@/data/list";
 
 export default function ParticipantsPage() {
   return (

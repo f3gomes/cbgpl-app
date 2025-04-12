@@ -7,7 +7,7 @@ import {
   sessionsDayTwo,
   sideIcons,
   socialIcons,
-} from "@/components/data/list";
+} from "@/data/list";
 
 export default function Schedule() {
   return (

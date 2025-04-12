@@ -27,7 +27,7 @@ import {
 import Spinner from "./spinner";
 import PrivacyAgreement from "./terms-modal";
 import ImageContainer from "./image-container";
-import { formFieldsPersonalData, formFieldsSocialLinks } from "../data/list";
+import { formFieldsPersonalData, formFieldsSocialLinks } from "@/data/list";
 import { TooltipQuestion } from "./tooltip-question";
 
 const defaultValues = {

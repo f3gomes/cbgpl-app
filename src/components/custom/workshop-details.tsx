@@ -5,20 +5,24 @@ import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
 import { PopoverMaterial } from "./popover-material";
 
-// type Workshop = {
-//   id: string;
-//   time: string;
-//   type: string;
-//   theme: string;
-//   speaker: string;
-//   description: string;
-// };
+type Workshop =
+  | {
+    workshopId: string;
+    speakerId: string;
+    profileImgUrl: string;
+    time: string;
+    type: string;
+    theme: string;
+    speaker: string;
+    description: string;
+  }
+  | undefined;
 
-// type Props = {
-//   workshop: Workshop;
-// };
+type Props = {
+  workshop: Workshop;
+};
 
-export default function WorkshopDetails({ workshop }: any) {
+export default function WorkshopDetails({ workshop }: Props) {
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
@@ -35,9 +39,8 @@ export default function WorkshopDetails({ workshop }: any) {
             Palestra: IA e o futuro da profissão em gestão de projetos
           </h2>
         </div>
-        {/* Descrição, palestrantes etc. */}
+
         <div className="p-6 text-xl">
-          {/* Bloco com Data, Horário à esquerda e Local à direita */}
           <div className="flex w-full items-start justify-between">
             <div>
               <p>
@@ -60,7 +63,7 @@ export default function WorkshopDetails({ workshop }: any) {
           {/* Descrição embaixo */}
           <p className="mt-6 text-justify">
             <span className="font-semibold">Descrição:</span>{" "}
-            <span className="font-inter">{workshop.description}</span>
+            <span className="font-inter">{workshop?.description}</span>
           </p>
         </div>
 
@@ -68,24 +71,8 @@ export default function WorkshopDetails({ workshop }: any) {
           <div className="flex h-[90px] items-center space-x-3 p-6">
             <div className="h-[90px] w-[90px] shrink-0 rounded-full bg-[#D9D9D9]" />
             <div>
-              <p className="text-[16px] font-semibold">Palestrante</p>
-              <p className="text-[16px] font-semibold">Nome</p>
-              <p className="font-inter text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-3 p-6">
-            <div className="h-[90px] w-[90px] shrink-0 rounded-full bg-[#D9D9D9]" />
-            <div>
-              <p className="text-[16px] font-semibold">Palestrante</p>
-              <p className="text-[16px] font-semibold">Nome</p>
-              <p className="font-inter text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <p className="text-[16px] font-semibold">{workshop?.speaker}</p>
+              <p className="font-inter text-sm">{workshop?.theme}</p>
             </div>
           </div>
         </div>
@@ -98,12 +85,14 @@ export default function WorkshopDetails({ workshop }: any) {
             </DialogTrigger>
             <FeedbackModal />
           </Dialog>
+
           {/* <Link
             href={`/details`}
             className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl"
           >
             Material
           </Link> */}
+
           <PopoverMaterial />
           <Link
             href="https://pontoonline.com.br/20cbgpl/"

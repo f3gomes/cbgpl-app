@@ -1,6 +1,7 @@
 import React from "react";
-import { navItems } from "../data/list";
+
 import { PopoverFotos } from "./popover-fotos";
+import { navItems } from "@/data/list";
 
 const NavMenu = () => {
   return (

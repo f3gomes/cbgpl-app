@@ -2,10 +2,11 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { navItemsMobile } from "../data/list";
+
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
 import Link from "next/link";
+import { navItemsMobile } from "@/data/list";
 
 export default function NavItemsMobile() {
   const [openMenu, setOpenMenu] = useState(false);

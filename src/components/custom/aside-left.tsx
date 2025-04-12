@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sideIcons, socialIcons } from "../data/list";
+import { sideIcons, socialIcons } from "@/data/list";
 import { Button } from "../ui/button";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";

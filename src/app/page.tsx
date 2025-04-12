@@ -2,7 +2,7 @@ import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import Section from "@/components/custom/section";
-import { sideIcons, socialIcons } from "@/components/data/list";
+import { sideIcons, socialIcons } from "@/data/list";
 
 export default function HomePage() {
   return (
