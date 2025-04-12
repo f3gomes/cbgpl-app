@@ -24,10 +24,10 @@ export default function SponsorColumn({ folder, min, max }: SponsorProps) {
     <div className="flex flex-col items-center">
       <Image
         width={250}
-        height={78}
+        height={330}
         src={`/assets/patrocinio/${folder}/${index}.png`}
         alt="Banner"
-        className="w-[300px] object-contain"
+        className="w-[400px] object-contain xl:w-[300px]"
       />
       <hr className="my-4 w-full border-gray-300" />
     </div>
