@@ -82,8 +82,9 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "gestao-portfilio-projetos-ia-monday",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "0f50342d-d4f9-477d-8a1e-2043329d9aaa",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQG2FTz17xfLFg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715195809926?e=1749686400&v=beta&t=Z9qEGVPWlZyYJxB5kUEfvBr2iUwrR-Ai4-iw2uyzF1o",
     time: "11:20 - 12:00",
     date: "22/04/2025",
     local: "Cumbuco",

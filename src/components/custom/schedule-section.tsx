@@ -31,7 +31,7 @@ export default function ScheduleSection({
             setFilter(e.target.value);
             e.target.blur();
           }}
-          className="w-28 cursor-pointer appearance-none rounded bg-transparent p-2"
+          className="w-28 cursor-pointer appearance-none rounded bg-transparent p-2 text-sm"
         >
           <option value="Todos">Todos</option>
           <option value="Workshop">Workshop</option>
@@ -46,7 +46,7 @@ export default function ScheduleSection({
         )}
       >
         <div className="mb-4 flex items-center justify-between pl-3">
-          <div className="mx-auto mr-auto flex h-[39px] w-[180px] items-center justify-center rounded-[18px] bg-orange-500 px-4">
+          <div className="mx-auto mr-auto flex h-[39px] w-[160px] items-center justify-center rounded-[18px] bg-orange-500 px-4">
             <h2 className="text-center font-sans text-base font-extrabold uppercase leading-6 tracking-wider text-white">
               {date}
             </h2>
