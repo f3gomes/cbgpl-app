@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function AsideRight() {
   return (
-    <aside className="sticky top-4 w-[330px] rounded-2xl bg-white p-4 shadow-md">
+    <aside className="sticky top-4 min-w-[330px] rounded-2xl bg-white p-4 shadow-md">
       {/* Banner centralizado */}
       <div className="flex flex-col items-center">
         <Image

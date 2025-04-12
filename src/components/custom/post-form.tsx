@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { createPost } from "@/actions/createPost";
 import Spinner from "./spinner";
 import { uploadImage } from "@/actions/imageKitUpload";
+import { fetchUser } from "@/actions/fetchUser";
 
 interface PostForm {
   newPost: number;
@@ -30,15 +31,6 @@ export default function PostForm({ setNewPost }: PostForm) {
   const defaultValues = {
     name: user?.name,
     email: user?.email,
-  };
-
-  const fetchUser = async () => {
-    if (typeof window !== "undefined") {
-      const userFromStorage = await JSON.parse(
-        window.localStorage.getItem("gtxp-user")!,
-      );
-      setUser(userFromStorage);
-    }
   };
 
   const handleImageChange = (event: any) => {
@@ -100,7 +92,7 @@ export default function PostForm({ setNewPost }: PostForm) {
   };
 
   useEffect(() => {
-    fetchUser();
+    fetchUser(setUser);
   }, []);
 
   useEffect(() => {
@@ -126,7 +118,7 @@ export default function PostForm({ setNewPost }: PostForm) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Compartilhe uma publicação"
-            className="h-[72px] sm:w-[537px] flex-grow rounded-3xl bg-[#F3F3F3]"
+            className="h-[72px] flex-grow rounded-3xl bg-[#F3F3F3] sm:w-[537px]"
           />
         </div>
 
