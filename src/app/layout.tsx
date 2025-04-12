@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "GTXP App",
   description: "Bem vindo a nossa rede",
   icons: {
-    icon: "/assets/logo-text-none.png",
+    icon: "/assets/logos/logo-text-none.png",
   },
 };
 

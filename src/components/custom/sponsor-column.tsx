@@ -18,7 +18,7 @@ export default function SponsorColumn({ folder, min, max }: SponsorProps) {
     }, 5000);
 
     return () => clearTimeout(timeout);
-  }, [index]);
+  }, [index, max, min]);
 
   return (
     <div className="flex flex-col items-center">

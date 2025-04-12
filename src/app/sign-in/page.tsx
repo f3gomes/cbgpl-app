@@ -75,11 +75,11 @@ export default function Login() {
       <div
         className="relative hidden w-1/2 items-center justify-center bg-cover bg-center p-8 md:flex"
         style={{
-          backgroundImage: `linear-gradient(rgba(71, 29, 195, 0.7), rgba(71, 29, 195, 0.7)), url('/assets/Fortaleza.png')`,
+          backgroundImage: `linear-gradient(rgba(71, 29, 195, 0.7), rgba(71, 29, 195, 0.7)), url('/assets/images/Fortaleza.png')`,
         }}
       >
         <Image
-          src="/assets/logo.png"
+          src="/assets/logos/logo.png"
           alt="Logo do App"
           width={500}
           height={500}
@@ -104,9 +104,8 @@ export default function Login() {
                 type="email"
                 placeholder="seuemail@exemplo.com"
                 {...register("email")}
-                className={`mt-1 block w-full ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${errors.email ? "border-red-500" : "border-gray-300"
+                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.email && (
                 <p className="mt-1 text-sm text-red-600">
@@ -125,9 +124,8 @@ export default function Login() {
                 type="password"
                 placeholder="********"
                 {...register("password")}
-                className={`mt-1 block w-full ${
-                  errors.password ? "border-red-500" : "border-gray-300"
-                } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
+                className={`mt-1 block w-full ${errors.password ? "border-red-500" : "border-gray-300"
+                  } rounded-md shadow-sm focus:border-orange-500 focus:ring-orange-500`}
               />
               {errors.password && (
                 <p className="mt-1 text-sm text-red-600">

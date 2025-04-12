@@ -45,57 +45,6 @@ export const navItemsMobile = [
   { title: "Feedback", link: "/", target: false },
 ];
 
-export const speakersList = [
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-  {
-    name: "Neudson Barroso",
-    role: "Gerente de Projetos",
-    image: "/assets/profile.jpeg",
-    type: "SPEAKER",
-  },
-];
-
 export const socialIcons = [
   {
     icon: Linkedin,

@@ -23,7 +23,7 @@ export default function Header() {
           <Image
             width={215}
             height={78}
-            src="/assets/Design_sem_nome-removebg-preview.png"
+            src="/assets/logos/logo-large-no-bg.png"
             alt="Congresso Logo"
             className="w-[70%] max-w-[215px] object-contain sm:w-[80%] md:w-full"
           />

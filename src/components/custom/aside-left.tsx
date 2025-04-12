@@ -23,7 +23,7 @@ export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
           >
             {item.icon === "Whatsapp" ? (
               <Image
-                src={"/assets/wpp.svg"}
+                src={"/assets/icones/wpp.svg"}
                 alt="Ícone do Whatsapp"
                 width={28}
                 height={28}
