@@ -2,7 +2,7 @@ import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import SpeakerDetails from "@/components/custom/speaker-details";
-import { sideIcons, socialIcons } from "@/components/data/list";
+import { sideIcons, socialIcons } from "@/data/list";
 
 interface SpeakerPageProps {
   params: {

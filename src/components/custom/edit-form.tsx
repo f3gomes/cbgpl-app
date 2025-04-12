@@ -24,15 +24,13 @@ import {
 
 import Spinner from "./spinner";
 import ImageContainer from "./image-container";
-import {
-  formFieldsPersonalDataEdit,
-  formFieldsSocialLinks,
-} from "../data/list";
+
 import { TooltipQuestion } from "./tooltip-question";
 import { updateUser } from "@/actions/updateUser";
 import { getUserByEmail } from "@/actions/getUserByEmail";
 import { formEditSchema } from "@/schemas/form-edit-schema";
 import { EditModalProps } from "./profile-modal";
+import { formFieldsPersonalDataEdit, formFieldsSocialLinks } from "@/data/list";
 
 export interface IProfileImg {
   path: string | undefined;

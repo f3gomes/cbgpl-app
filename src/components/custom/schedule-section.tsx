@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import WorkshopCard from "./workshop-card";
-import { sessionsDayOne } from "../data/list";
+import { sessionsDayOne } from "@/data/list";
 import { SlidersHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
 
