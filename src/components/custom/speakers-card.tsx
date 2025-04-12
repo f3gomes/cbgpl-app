@@ -23,7 +23,7 @@ export default function SpeakerCard({ name, role, image }: SpeakerCardProps) {
       </CardHeader>
       <CardContent className="flex h-[84px] flex-col justify-center gap-1 rounded-b-xl bg-[#35246F] px-2 py-0 text-center text-sm text-white">
         <span className="font-bold">{name}</span>
-        <span>{subText(role)}</span>
+        <span>{subText(role, 36)}</span>
       </CardContent>
     </Card>
   );

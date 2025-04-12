@@ -14,9 +14,7 @@ export function phoneMask(value: string) {
     .replace(/(-\d{4})\d+?$/, "$1");
 }
 
-export function subText(text: string) {
-  const limit = 36;
-
+export function subText(text: string, limit: number) {
   if (text.length <= limit) return text;
 
   const indexBefore = text.lastIndexOf(" ", limit);

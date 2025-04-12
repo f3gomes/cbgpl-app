@@ -6,15 +6,17 @@ import Link from "next/link";
 export default function WorkshopCard({ session }: ISession) {
   return (
     <div className="relative mx-1 mb-2 mt-1 max-h-60 min-h-60 flex-1 rounded-b-[27px] bg-white p-2 pb-16 text-black">
-      <h3 className="mb-2 text-lg">
-        <span className="font-semibold">Tema:</span> {session.theme}
-      </h3>
+      <div className="h-48 flex flex-col justify-between">
+        <h3 className="mb-2 text-lg">
+          <span className="font-semibold">Tema:</span> {session.theme}
+        </h3>
 
-      <p className="mb-4 p-1 text-gray-700">
-        <span className="font-semibold text-black underline">
-          {subText(session.speaker)}
-        </span>
-      </p>
+        <p className="mb-4 p-1 text-gray-700">
+          <span className="font-semibold text-black underline">
+            {subText(session.speaker, 100)}
+          </span>
+        </p>
+      </div>
 
       <div className="absolute bottom-4 flex items-center justify-between gap-3 px-3">
         <Link

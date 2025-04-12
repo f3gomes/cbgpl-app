@@ -26,6 +26,7 @@ type Props = {
 };
 
 export default function WorkshopDetails({ workshop }: Props) {
+
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">

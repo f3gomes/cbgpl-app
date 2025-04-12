@@ -1,8 +1,9 @@
 export const workshopDetailsList = [
   {
     workshopId: "cerimonia-abertura-boas-vindas",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
     time: "09:00 - 09:30",
     date: "22/04/2025",
     local: "Plenária - Futuro",
@@ -196,8 +197,9 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "premio-melhores-projetos",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
     time: "14:30 - 15:30",
     date: "22/04/2025",
     local: "Plenária - Futuro",
@@ -304,8 +306,9 @@ export const workshopDetailsList = [
 
   {
     workshopId: "cerimonia-abertura-boas-vindas-dia2",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
     time: "09:00 - 09:10",
     date: "23/04/2025",
     local: "Plenária - Futuro",
@@ -498,8 +501,9 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "melhores-do-ano",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
     time: "14:40 - 15:40",
     date: "23/04/2025",
     local: "Plenária - Futuro",
@@ -538,8 +542,9 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "resultado-melhores-do-ano-projetos-e-pmo",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    profileImgUrl:
+      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
     time: "17:10 - 17:30",
     date: "23/04/2025",
     local: "Plenária - Futuro",

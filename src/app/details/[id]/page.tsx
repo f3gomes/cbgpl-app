@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Details({ params }: { params: Params }) {
+export default function WorkshoPage({ params }: { params: Params }) {
   const workshop = workshopDetailsList.find((e) => e.workshopId === params.id);
 
   if (!workshop) {
