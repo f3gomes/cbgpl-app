@@ -4,8 +4,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "09:00 - 09:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas (Plenária)",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -17,8 +17,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/03/Latorre.png",
     time: "09:30 - 09:50",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Plenária",
     theme: "Project Success PMI",
     speaker: "Carolina Latorre - PMI Latam",
@@ -30,8 +30,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Americo-Pinto.png",
     time: "09:50 - 10:50",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Plenária",
     theme: "Escritório de Gerenciamento de Projetos – PMO",
     speaker: "Américo Pinto",
@@ -43,12 +43,13 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Antonio-Muniz.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme: "Como Acelerar os 3 Pilares do VMO Ágil",
     speaker: "Antonio Muniz",
-    description: "",
+    description:
+      "Muito se fala que o VMO é a versão do PMO para a agilidade, mas será que basta renomear o escritório de projetos tradicional para gerar resultados?   O objetivo desta palestra é apresentar cases e estudos sobre os 3 pilares que geram valor para empresas neste mercado cada vez mais competitivo e imprevisível.  A dinâmica da palestra apresentará importantes reflexões para os participantes adaptarem em suas empresas para ações práticas também para compartilhar com suas equipes.  Como as práticas não são prescritas, todos terão a oportunidade de enxergar a sua situação atual e oportunidades de melhoria.",
   },
   {
     workshopId: "avaliacao-maturidade-esg",
@@ -56,13 +57,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Everaldo-Artur-Grahl.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Iracema",
     type: "Palestra",
     theme:
       "Experiência de Uma Jornada de Avaliação de Maturidade de Práticas ESG Numa Organização Sem Fins Lucrativos",
     speaker: "Everaldo Artur Grahl - Professor Universitário",
-    description: "",
+    description:
+      "A palestra “Experiência de uma Jornada de Avaliação de Maturidade de Práticas ESG em uma Organização sem Fins Lucrativos” apresenta como a Fundação Fritz Müller, de Blumenau (Santa Catarina), planejou e realizou uma análise de suas práticas Ambiental, Social e Governança (ESG) com base na norma ABNT PR 2030:2022. A exposição aborda a relevância do ESG, o passo a passo aplicado, os estágios de maturidade descritos na norma, além de desafios e aprendizados observados ao longo do processo. Como principais objetivos de aprendizagem, destacam-se: Compreender o fluxo da norma ABNT PR 2030:2022, desde o diagnóstico inicial até a comunicação dos resultados; Diferenciar os cinco estágios de evolução propostos na norma; Avaliar as principais barreiras para a adoção de iniciativas ESG, bem como as oportunidades que se apresentam ao envolver stakeholders em organizações de menor porte.",
   },
   {
     workshopId: "gestao-mudanca-neuroplasticidade",
@@ -70,12 +72,25 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Driele-Castro.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Jericoacoara",
     type: "Palestra",
     theme: "Gestão de Mudança e a Neuroplasticidade Cerebral",
     speaker: "Driéle Castro - Mentora de projetos e gestão",
-    description: "",
+    description:
+      "Na palestra “Gestão de Mudança e a Neuroplasticidade Cerebral”, Driéle Castro explora como o cérebro humano é capaz de se adaptar e criar novas conexões para enfrentar mudanças, tanto no âmbito pessoal quanto organizacional. A partir de conceitos sobre neuroplasticidade, cultura, crenças e autoconhecimento, os participantes serão conduzidos a uma reflexão prática e profunda sobre como iniciar processos de transformação de maneira sustentável. Além disso, será destacada a importância da empatia, da disciplina e da responsabilidade individual como pilares para mudanças efetivas que beneficiem não apenas o indivíduo, mas também as relações e os resultados coletivos. Objetivos de Aprendizagem: - Entender o conceito de neuroplasticidade e como aplicá-lo para transformar hábitos e crenças limitantes. - Refletir sobre a influência da cultura e das crenças no contexto pessoal e corporativo. - Reconhecer a importância da autorresponsabilidade para alcançar objetivos pessoais e profissionais. - Aprender a integrar autoconhecimento e disciplina como ferramentas práticas para a gestão de mudanças. - Desenvolver a empatia como uma competência essencial para a construção de equipes e resultados colaborativos. - Compreender que o sucesso não é alcançado de forma isolada, mas sim por meio da colaboração e da interdependência. Essa palestra é um convite à ação, capacitando os participantes a liderarem mudanças reais em suas vidas e organizações com propósito e consciência.",
+  },
+  {
+    workshopId: "gestao-portfilio-projetos-ia-monday",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "11:20 - 12:00",
+    date: "22/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme: "Gestão de Portfólio de Projetos com IA na Monday.com",
+    speaker: "João Sandri - MONDAY.COM",
+    description: "Gestão de Portfólio de Projetos com IA na Monday.com",
   },
   {
     workshopId: "gerenciamento-egos",
@@ -83,8 +98,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Anderson.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Beach Park",
     type: "Palestra",
     theme: "Gerenciamento de Egos: O Que Apenas a Experiência Ensina?",
     speaker: "Anderson Marques Nunes - Head Global do PMO da Angola Cables",
@@ -92,17 +107,31 @@ export const workshopDetailsList = [
       "Compartilhar a experiência de mercado a respeito da importância da inteligência emocional para o gerente de projetos em busca de garantir a execução do projeto conforme o planejado mediante o esforço contínuo de garantir o engajamento das partes interessadas, com base em suas necessidades, expectativas, interesses e potencial impacto no projeto.",
   },
   {
+    workshopId: "ia-revolucao-gerenciamento",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "13:30 - 13:50",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
+    type: "Palestra",
+    theme:
+      "Como os Agentes de IA Podem Revolucionar o Gerenciamento de Projetos",
+    speaker: "Victor Dantas - MOLDSOFT",
+    description: "",
+  },
+  {
     workshopId: "workshop-design-thinking-lego",
     speakerId: "",
     profileImgUrl: "",
     time: "13:30 - 15:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Iracema",
     type: "Workshop",
     theme:
       "Design Thinking + Lego Serious Play Para Planejamento Estratégico (Experience)",
     speaker: "Sergio Nascimento - Empresário, Professor e Consultor",
-    description: "",
+    description:
+      "Será um Mini-Workshop apresentando uma trilha com o Design Thinking + LEGO Serious Play na execução do Planejamento Estratégico",
   },
   {
     workshopId: "workshop-projetizacao-pocket",
@@ -110,8 +139,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Pedro-Paulo.png",
     time: "13:30 - 15:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Jericoacoara",
     type: "Workshop",
     theme: "Projetização Pocket",
     speaker:
@@ -124,13 +153,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Bernado-Zurl.png",
     time: "13:30 - 15:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Cumbuco",
     type: "Workshop",
     theme: "PM Canvas com ChatGPT",
     speaker:
       "Bernardo Zurli - Especialista em Portfolio de Projetos e VP de Governança e Finanças do PMIRS",
-    description: "",
+    description:
+      "O workshop 'PM Canvas com ChatGPT' oferece uma experiência interativa e dinâmica para transformar ideias em projetos reais. Combinando a estrutura prática do PM Canvas e o apoio da inteligência do ChatGPT, os participantes trabalharão em grupo para resolver desafios reais e inesperados, explorando criatividade, colaboração e inovação. Uma oportunidade única para tornar a aprovação de projetos mais simples.",
   },
   {
     workshopId: "workshop-pmo-ao-vmo",
@@ -138,13 +168,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Marcelo-Antonelli.png",
     time: "13:30 - 15:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Beach Park",
     type: "Workshop",
     theme: "PMO ao VMO: Construindo um Escritório de Valor na Prática",
     speaker:
       "Marcelo Antonelli - Consultor e Mentor em Gestão de Valor e Implantação de VMO",
-    description: "",
+    description:
+      'Painel VMO - apenas o tema do painel / Workshop VMO - Título: "Do PMO ao VMO: Construindo um Escritório de Valor na Prática"description Este workshop interativo e prático foi desenvolvido para profissionais que desejam transformar seus Escritórios de Projetos (PMOs) em Escritórios de Gestão de Valor (VMOs), alinhando suas operações aos objetivos estratégicos das organizações. Durante duas horas, os participantes irão vivenciar atividades mão na massa para diagnosticar o estado atual de seus PMOs, definir o que significa "valor" no contexto de seus projetos e criar um roteiro de transição personalizado para implementar um VMO que realmente entrega impacto estratégico. O workshop combina dinâmicas colaborativas, ferramentas práticas e simulações que capacitarão os participantes a aplicar os conceitos discutidos imediatamente em suas organizações. Objetivos de Aprendizagem Ao final do workshop, os participantes serão capazes de: Diagnosticar o estado atual de seus PMOs: Identificar os principais desafios e barreiras que limitam a entrega de valor estratégico. Definir claramente o conceito de valor estratégico: Desenvolver uma definição personalizada e alinhada aos objetivos organizacionais. Planejar a transição de um PMO para um VMO: Construir um roteiro prático com ações concretas, incluindo etapas, métricas e engajamento de stakeholders. Criar apresentações estratégicas: Desenvolver e apresentar pitches eficazes para obter buy-in da alta liderança em iniciativas de transformação. Aplicar imediatamente os aprendizados: Sair do workshop com ferramentas e insights aplicáveis para transformar o gerenciamento de projetos em um motor de valor estratégico. Público-Alvo Este workshop é ideal para: Gestores de PMOs que desejam evoluir suas práticas para um modelo de entrega de valor. Líderes organizacionais interessados em alinhar projetos às metas estratégicas. Profissionais de gerenciamento de projetos e portfólio que buscam ferramentas práticas para ampliar o impacto de seus trabalhos. Tomadores de decisão que precisam justificar investimentos em iniciativas estratégicas. ',
   },
   {
     workshopId: "painel-ceos",
@@ -152,22 +183,23 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Cassio-Germano.png",
     time: "13:50 - 14:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Painel",
     theme:
       "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
     speaker:
-      "Cassio - CEO Grupo Portfolio, Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos e Murilo - CEO do Beach Park",
-    description: "",
+      "Cassio Germano - CEO Grupo Portfolio, Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos e Murilo - CEO do Beach Park",
+    description:
+      "Roda de discussão em Gestão de inovação, pessoas e governança corporativa. ",
   },
   {
     workshopId: "premio-melhores-projetos",
     speakerId: "",
     profileImgUrl: "",
     time: "14:30 - 15:30",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Prêmio Melhores do Ano: Categoria Projetos",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -178,8 +210,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "15:30 - 15:50",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Patrocinador",
     theme: "Case - ZOHO",
     speaker: "Zoho",
@@ -190,11 +222,11 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "16:20 - 17:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Debate Executivo",
     theme: "Gestão de Projetos Públicos e Privados: Conexões e Desafios",
-    speaker: "Cristiano Oliveira - Presidente PMI",
+    speaker: "Ana Pansini, Mariangela e Evelise",
     description: "",
   },
   {
@@ -203,24 +235,13 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Rafael-Vilela.png",
     time: "16:20 - 18:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Iracema",
     type: "Workshop",
     theme: "AI Inception: Da Necessidade à Viabilidade",
     speaker: "Rafael Vilela - Consultor em Gestão Estratégica Ágil",
-    description: "",
-  },
-  {
-    workshopId: "ia-revolucao-gerenciamento",
-    speakerId: "",
-    profileImgUrl: "",
-    time: "16:20 - 18:00",
-    date: "",
-    local: "",
-    type: "Palestra",
-    theme: "Como os Agentes de IA Podem Revolucionar o Gerenc. de Proj.",
-    speaker: "Victor Dantas - MOLDSOFT",
-    description: "",
+    description:
+      "objetivo do workshop (carga horária 2 horas): Abordaremos as melhores práticas e ferramentas desde avaliar a necessidade de uma solução de IA, criação de um AI Canvas, Backlog do Produto de IA e análise de viabilidade (Go / No-Go Decision).",
   },
   {
     workshopId: "workshop-gestao-projetos-sociais",
@@ -228,24 +249,25 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Elisangela-Machado.png",
     time: "16:20 - 18:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Beach Park",
     type: "Workshop",
     theme:
       "Gestão de Projetos Sociais: Estratégias para Gerar Impacto Positivo",
     speaker: "Elisangela Machado - Gerente de Projetos Sociais",
-    description: "",
+    description:
+      "Em um contexto brasileiro marcado por desigualdades, a gestão de projetos sociais é essencial para promover uma sociedade mais equitativa. Esta oficina abordará estratégias para desenhar, executar e avaliar projetos sociais com foco na redução da pobreza e no avanço da equidade social. A oficina será dividida em três partes: 1. Cenário da desigualdade social na América Latina: Analisar as questões que afetam a inclusão e como os projetos sociais podem contribuir para a transformação dessas realidades.     2. Desenho de projetos sociais: Compreender os componentes essenciais para criar projetos que reduzam a pobreza e aumentem a inclusão, destacando o papel do Value Management Office (VMO) na maximização do impacto, além do controle de custos e prazos, focando na criação de valor real para as comunidades. 3. Metodologias na gestão de projetos sociais: Explorar o uso de dados e metodologias ágeis para potencializar os resultados dos projetos sociais. A oficina será interativa, com estudos de caso, discussões e exemplos práticos. O objetivo é proporcionar uma experiência de aprendizado, permitindo aos participantes aplicar as abordagens em seus próprios projetos, garantindo resultados monitorados e mensuráveis. ",
   },
   {
     workshopId: "case-patrocinador-monday-nortrez",
     speakerId: "",
     profileImgUrl: "",
     time: "17:00 - 17:20",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Patrocinador",
-    theme: "Case MONDAY + NORTREZ",
-    speaker: "Monday + Nortrez",
+    theme: "Operação Spark: Eficiência em movimento com Monday.com",
+    speaker: "Karina Rios - MONDAY.COM",
     description: "",
   },
   {
@@ -254,13 +276,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Mirian-L.png",
     time: "17:20 - 18:00",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Painel",
     theme: "Painel sobre Value Management Office (VMO)",
     speaker:
       "Mirian Leite - Head VMO Grupo 3corações,Erica Smith - Head de PMO Estratégico,Marcelo Antonelli - Consultor e Mentor em Gestão de Valor e Implantação de VMO e Fábio Cruz - Head de Práticas, Projetos e Agilidade para clientes",
-    description: "",
+    description:
+      "VMO - Escriório de Gestão de Valor Como descobrir o que  é valor para o cliente e maximizar os resultados da empresa!",
   },
   {
     workshopId: "futuro-trabalho-ai",
@@ -268,13 +291,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "18:10 - 19:10",
-    date: "",
-    local: "",
+    date: "22/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme:
       "O Futuro do Trabalho e os Impactos da AI na Profissão de Gerenciamento de Projetos",
     speaker: "Ricardo Vargas",
-    description: "",
+    description:
+      "A Inteligência Artificial está redefinindo o mercado de trabalho e o papel dos gerentes de projeto. Nesta palestra, Ricardo Vargas explora como a IA está transformando a gestão de projetos, os desafios e oportunidades dessa revolução e as competências essenciais para profissionais se manterem relevantes. Com uma abordagem prática e estratégica, ele compartilha insights sobre a adoção da IA, seus impactos na tomada de decisão e no futuro das carreiras na área. Não perca esta oportunidade de entender como se preparar para o futuro do trabalho!",
   },
 
   {
@@ -282,8 +306,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "09:00 - 09:10",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -294,12 +318,13 @@ export const workshopDetailsList = [
     speakerId: "05004c42-36ef-4b47-bd52-f912eae1e92d",
     profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Gino.png",
     time: "09:30 - 10:30",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme: "Gestão Sustentável de Projetos",
     speaker: "Gino Terentim - Professor e Curioso",
-    description: "",
+    description:
+      "Nesta apresentação, exploraremos como incorporar a sustentabilidade na avaliação da viabilidade de projetos, indo além dos aspectos financeiros tradicionais. Discutiremos como adicionar a visão de impactos sociais e ambientais ao Business Case, promovendo decisões mais alinhadas com os Objetivos de Desenvolvimento Sustentável (ODS) e a responsabilidade corporativa. O objetivo é fornecer ferramentas práticas para gestores avaliarem projetos sob uma perspectiva holística e sustentável, contribuindo para um futuro mais equilibrado e consciente.",
   },
   {
     workshopId: "margareth-carneiro-agile-alliance",
@@ -307,13 +332,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/D4D03AQF_CuaC8_TahQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702563078066?e=1748476800&v=beta&t=5OWnD6jzPzkyBcbbeCo-3XHhZjjqFd4AHI0cDXP316c",
     time: "10:30 - 10:50",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme: "PMI Agile Alliance: O Futuro dos Profissionais de Projetos",
     speaker:
       "Margareth Carneiro - Diretora do Agile Alliance, ex PMI Board of Directors",
-    description: "",
+    description:
+      "Será uma exposição rápida sobre a parceria firmada entre o PMi e a Agile Alliance, dando ao público o potencial desta parceria para a carreira e o mercado de projetos, bem como prospecção dos próximos passos da parceria. ",
   },
   {
     workshopId: "sustentabilidade-em-mega-projetos-desafios-e-oportunidades",
@@ -321,8 +347,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Kelly-Anselmo.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Painel",
     theme: "Sustentabilidade em Mega Projetos: Desafios e Oportunidades",
     speaker:
@@ -336,13 +362,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Felipe-Borges.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Iracema",
     type: "Case",
     theme:
       "Case Amazônia - Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo",
     speaker: "Felipe Borges - Presidente no PMI Minas Gerais",
-    description: "",
+    description:
+      "Nesta palestra, discutirei a importância da sustentabilidade em projetos e apresentarei um case real de impacto social positivo relacionado ao gerenciamento de portfólio de projetos em um grande empreendimento na Amazônia Brasileira. O foco será o ciclo de atividades necessárias para incorporar a sustentabilidade, incluindo planejamento estratégico, avaliação de impactos, definição de metas e indicadores, além do acompanhamento e reporting de resultados. Serão apresentados resultados concretos que ilustram como a aplicação de práticas sustentáveis pode gerar benefícios expressivos para comunidades locais e outros stakeholders, destacando a sustentabilidade como um elemento indispensável na gestão de projetos. Ademais apresentar-se-ão resultados relevantes que demonstrem como suportar os ODS da ONU. ",
   },
   {
     workshopId:
@@ -351,13 +378,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/C4D03AQFLyFkqCFEz_w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1629751543380?e=1748476800&v=beta&t=3F7v6qnQdQKToXXDbv6vDKks2nDNqRj9k9gE0BnBjMM",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Jericoacoara",
     type: "Palestra",
     theme:
       "Projeto de Conversão de Aeronaves de Passageiros E190 em E190F Cargueiras",
     speaker: "Marcelo Tocci - Program Director - EMBRAER",
-    description: "",
+    description:
+      "Marcelo Tocci, Program Director responsável pelo Desenvolvimento do E-Freighter da Embraer, compartilhará insights valiosos de gestão de projetos e liderança sobre este desenvolvimento. Marcelo liderou uma equipe multidisciplinar e multinacional de mais de 1000 profissionais.  O E-Freighter foi feito em um prazo recorde e é o próximo passo de evolução em desenvolvimento de programas de Aviação Comercial da Embraer, depois do E-Jets E2.  O Programa E-Jets E2, da qual o Marcelo fez parte, foi o primeiro projeto brasileiro e de um avião (de todo o mundo) a ganhar o prêmio de melhor projeto do mundo pelo PMI - o PMI Global Project of the Year Award. Esta palestra que vai contar a história e desafios do E-Freighter. Ela vai explorar as inovações criadas, alinhadas com os Global Megatrends do PMI, e aplicáveis a projetos de todas as complexidades.",
   },
   {
     workshopId:
@@ -365,13 +393,14 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Cumbuco",
     type: "Palestra",
     theme:
       "Otimizando a Jornada do Time: Aplicando o Dojô em Métricas com Auxílio da IA em Projetos",
     speaker: "Fabio Henrique",
-    description: "",
+    description:
+      "A busca por eficácia e eficiência no fluxo de trabalho é essencial para que times de produtos e serviços entreguem valor de maneira consistente. Em um contexto onde métricas são fundamentais para a tomada de decisão, muitos times enfrentam desafios ao definir, interpretar e aplicar indicadores relevantes para o seu contexto. Pensando nisso, o Dojô de Métricas se apresenta como uma abordagem prática, colaborativa e iterativa para apoiar times na definição de métricas que sejam compreensíveis, acionáveis e conectadas à estratégia do negócio. Nesta palestra, serão abordadas as principais etapas de um Dojô de Métricas, desde o diagnóstico inicial de problemas até a definição e validação de métricas em um ambiente seguro e controlado. Além disso, os participantes terão a oportunidade de explorar como tecnologias de Inteligência Artificial, como o ChatGPT e o Gemini, podem ser usadas para simular cenários, projetar baselines e criar provas de conceito para validação rápida de métricas. Durante a palestra, serão apresentados exemplos práticos de como um Dojô de Métricas pode ser aplicado para diferentes tipos de times – desde times de desenvolvimento ágil até equipes de suporte ou operações – garantindo que as métricas gerem insights relevantes e orientem tomadas de decisão com base em dados concretos. ",
   },
   {
     workshopId:
@@ -379,28 +408,29 @@ export const workshopDetailsList = [
     speakerId: "57cc9b0d-dc2c-4de0-80da-3b956253e738",
     profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Duarte.png",
     time: "11:20 - 12:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Beach Park",
     type: "Palestra",
     theme: "Mediação de Conflitos e a Gestão de Projetos - Uma dupla perfeita!",
     speaker:
       "Antônio Duarte - Especialista de Projetos, Programas e Portfólio no Exército Brasileiro",
-    description: "",
+    description:
+      "Nesta palestra, será explorado o conceito do “Novo DNA da Gestão de Projetos,” que integra três pilares fundamentais para enfrentar os desafios contemporâneos: Híbrido, Inteligente e Humano. - Híbrido: A combinação de metodologias ágeis e tradicionais, que permite maior flexibilidade e adaptação aos cenários de crescente complexidade e incerteza. Serão apresentadas estratégias e exemplos práticos de como unir o melhor desses dois mundos, considerando o modelo Cynefin para a escolha das abordagens mais adequadas. - Inteligente: O uso de tecnologias emergentes, como inteligência artificial (IA) e análise de dados, na gestão de projetos. Discutiremos ferramentas, técnicas e o impacto da automação e aprendizado de máquina na eficiência e na tomada de decisões. - Humano: A valorização das habilidades interpessoais e emocionais (soft skills) para a construção de equipes engajadas e liderança eficaz. Serão abordadas a importância da diversidade, da empatia e da comunicação assertiva na gestão moderna. - A palestra também abordará os principais desafios e oportunidades que surgem com a adoção dessas abordagens, como a resistência à mudança e a necessidade de capacitação, além das tendências voltadas para sustentabilidade e inovação no setor. Objetivos de aprendizagem: Compreender o conceito de metodologias híbridas e sua aplicação em diferentes contextos. Explorar como a inteligência artificial pode transformar a gestão de projetos. Reconhecer a importância das habilidades humanas na liderança e na construção de equipes de alto desempenho. Identificar estratégias para superar desafios e alavancar oportunidades no cenário de projetos modernos. Desenvolver uma visão multidisciplinar que una tecnologia, inovação e responsabilidade social na gestão de projetos. Essa palestra oferecerá aos congressistas insights valiosos sobre as tendências emergentes em gestão de projetos, promovendo a evolução das práticas e o preparo para o futuro dinâmico da profissão.",
   },
   {
     workshopId:
-      "sao-joao-de-caruaru-como-planejar-e-gerenciar-o-maior-projeto-de-entretenimento-do-mundo",
-    speakerId: "c8e92d60-13bd-4420-8c97-a1edc3d9d5a0",
+      "perspicacia-empresarial-estrategias-de-gestao-para-transformar-criatividade-em-resultados-sustentaveis",
+    speakerId: "ca22acef-3e14-4f25-a3b4-3820c95dd4a1",
     profileImgUrl:
-      "https://media.licdn.com/dms/image/v2/D4D03AQG6IR5SF5yLUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696887714701?e=1748476800&v=beta&t=Ah8cmyRdWesnbbdilbZpwowNpmtYHhlMnUeUnjC0_UY",
+      "https://cbgpl.org.br/wp-content/uploads/2025/02/Lia-Quindere.png",
     time: "13:00 - 13:40",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme:
-      "São João de Caruaru: Como Planejar e Gerenciar o Maior Projeto de Entretenimento do Mundo",
-    speaker: "Marcio Gomes - Head PMO Prefeitura de Caruaru",
-    description: "",
+      "Perspicácia Empresarial: Estratégias de Gestão Para Transformar Criatividade em Resultados Sustentáveis",
+    speaker: "Lia Quinderé - Chef Pâtissier, Fundadora e CEO da Sucré Brasil",
+    description: "Perspicácia Empresarial de forma estratégica",
   },
   {
     workshopId: "seu-comportamento-esta-te-sabotando-e-voce-nem-sabe",
@@ -408,13 +438,14 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/D4D03AQG-83DnWUTjiw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1685388130187?e=1748476800&v=beta&t=G6vTBPQp6lM5_97rPbLjsTb_xFylrmoz18yEVIWteRE",
     time: "13:00 - 13:40",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Iracema",
     type: "Palestra",
     theme: "Seu Comportamento Está te Sabotando e Você nem Sabe",
     speaker:
       "Carlos Silva Jr - Cristão, Pai, Esposo, Curioso, Empresário, Mentor e Palestrante - SLUPER",
-    description: "",
+    description:
+      "✅ Uma palestra provocativa sobre como seus comportamentos diários impactam tudo: resultados, clima e até sua sanidade. Prepare-se para virar a chave! ✅Nesta palestra baseada no conceito de Flip Thinking, vamos mostrar como os comportamentos profissionais – muito mais do que os processos ou a tecnologia – são os verdadeiros motores (ou freios) de resultados nas organizações. Com uma linguagem acessível, provocativa e bem-humorada, você vai refletir sobre atitudes que travam a evolução e descobrir práticas reais para transformar problemas em oportunidades. Não é autoajuda. É autoatitude. ✅ Benefícios de quem assistir à palestra ➡️Vai entender como mudar a postura muda o jogo, mesmo em ambientes difíceis. ➡️Vai descobrir como parar de perder tempo com o que não controla e agir sobre o que importa. ➡️Vai aprender práticas simples e aplicáveis para virar o comportamento no dia a dia. ➡️Vai se identificar e sair motivado(a) a fazer diferente na próxima segunda-feira. ➡️Vai se reconhecer em comportamentos sabotadores e aprender como virar o jogo. ➡️Vai ganhar ferramentas práticas para lidar melhor com os desafios do trabalho. ➡️Vai se tornar uma influência positiva para sua equipe e para a cultura da empresa. ",
   },
   {
     workshopId:
@@ -423,28 +454,30 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "13:00 - 16:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Jericoacoara",
     type: "Workshop",
     theme:
       "Uncertainty Cycle: Gerenciamento de Incertezas (Networking Pré-Workshop)",
     speaker: "Ricardo Vargas",
-    description: "",
+    description:
+      "O Uncertainty Cycle® é o mais novo workshop de Ricardo Vargas sobre o gerenciamento de incertezas. Em um trabalho em equipe, os participantes aprendem um processo inovador de gerenciamento do desconhecido através de um modelo iterativo e ágil. O workshop utiliza como base conceitos de PESTLE, planejamento de cenários, DevOps, agilidade de negócios, e SAFe® (ScaleAgile Framework). O Uncertainty Cycle® é destinado a Executivos, Equipes de Planejamento Estratégico, responsáveis pelo planejamento de investimentos, gestores de risco, líderes de transformação digital, gerentes de projeto. Todos aqueles envolvidos em atividades que necessitam de rápida avaliação e tomada de decisão para responder com eficiência a condições impostas pelo mercado e fatores externos à uma organização.",
   },
   {
     workshopId:
-      "perspicacia-empresarial-estrategias-de-gestao-para-transformar-criatividade-em-resultados-sustentaveis",
-    speakerId: "ca22acef-3e14-4f25-a3b4-3820c95dd4a1",
+      "sao-joao-de-caruaru-como-planejar-e-gerenciar-o-maior-projeto-de-entretenimento-do-mundo",
+    speakerId: "c8e92d60-13bd-4420-8c97-a1edc3d9d5a0",
     profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Lia-Quindere.png",
+      "https://media.licdn.com/dms/image/v2/D4D03AQG6IR5SF5yLUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696887714701?e=1748476800&v=beta&t=Ah8cmyRdWesnbbdilbZpwowNpmtYHhlMnUeUnjC0_UY",
     time: "14:00 - 14:40",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme:
-      "Perspicácia Empresarial: Estratégias de Gestão Para Transformar Criatividade em Resultados Sustentáveis",
-    speaker: "Lia Quinderé - Chef Pâtissier, Fundadora e CEO da Sucré Brasil",
-    description: "",
+      "São João de Caruaru: Como Planejar e Gerenciar o Maior Projeto de Entretenimento do Mundo",
+    speaker: "Marcio Gomes - Head PMO Prefeitura de Caruaru",
+    description:
+      "Vamos compartilhar os desafios de planejar, executar a maior festa popular do mundo em 2024, com um cronograma de 72 dias, o time de 1.500 profissionais envolvidos, lições aprendidas e os riscos envolvidos.",
   },
   {
     workshopId:
@@ -453,38 +486,26 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-p.png",
     time: "14:00 - 16:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Iracema",
     type: "Workshop",
     theme:
       "Construindo Sua Persona de Liderança: Um Guia Baseado Nos Seus Pontos Fortes",
     speaker: "Ricardo Peters - Canivete Suíço",
-    description: "",
-  },
-  {
-    workshopId: "estimativas-ageis-poemas-que-transformam-planejamento",
-    speakerId: "0c478c2c-2cbb-4785-857f-f8cdd91565e7",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Sarah-Branco.png",
-    time: "14:00 - 16:00",
-    date: "",
-    local: "",
-    type: "Workshop",
-    theme: "Estimativas Ágeis: Poemas que Transformam Planejamento",
-    speaker: "Sarah Branco - IT Manager",
-    description: "",
+    description:
+      'A liderança de sucesso não segue um modelo único. Cada líder é único e deve construir sua própria persona, alinhada aos seus pontos fortes. Essa palestra convida os participantes a explorar os quatro domínios do CliftonStrengths34 – Executando, Influenciando, Construindo Relacionamentos e Pensamento Estratégico – para identificar e potencializar seus talentos naturais. Com uma abordagem prática e reflexiva, os participantes sairão com ferramentas e estratégias para criar um estilo de liderança autêntico e eficaz, maximizando seu impacto em equipes e organizações. Objetivo Proporcionar uma visão clara de como os talentos naturais de cada indivíduo contribuem para um estilo de liderança único. Apresentar os quatro domínios do CliftonStrengths34 como base para a construção de uma liderança personalizada. Inspirar os participantes a abraçarem um processo contínuo de autoconhecimento e desenvolvimento como líderes. Relevância para o Tema "Liderança: Power Skills" A palestra conecta o desenvolvimento das habilidades comportamentais de liderança – como autoconhecimento, empatia e autenticidade – à aplicação prática de uma ferramenta poderosa, o CliftonStrengths34. Essas "Power Skills" são essenciais para líderes que desejam criar impacto positivo e sustentável em suas equipes e organizações. Público-Alvo Líderes que buscam desenvolver um estilo autêntico e eficaz. Profissionais interessados em explorar seus talentos e maximizar seu impacto. Gestores e membros de equipes que desejam aprimorar sua liderança com base no autoconhecimento.',
   },
   {
     workshopId: "melhores-do-ano",
     speakerId: "",
     profileImgUrl: "",
     time: "14:40 - 15:40",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Melhores do Ano",
     speaker: "Cristiano Oliveira - Presidente PMI",
-    description: "",
+    description: "Premiação Melhores do Ano Categoria PMO",
   },
   {
     workshopId: "lideranca-feminina",
@@ -492,13 +513,13 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Fernanda-Colares.png",
     time: "16:30 - 17:10",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Painel",
     theme: "Liderança Feminina",
     speaker:
       "Delania Santos - CEO DS - Educação & negócios e Mentora Executiva Internacional,Annete Castro,Simone Caixeta - Diretora de Pessoas,Fernanda Colares - Médica, Professora e Gestora",
-    description: "",
+    description: "Liderança Feminina",
   },
   {
     workshopId: "uncertainty-cycle-gerenciamento-de-incertezas",
@@ -506,36 +527,37 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "16:30 - 17:50",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Jericoacoara",
     type: "Workshop",
     theme: "Uncertainty Cycle - Gerenciamento de Incertezas",
     speaker: "Ricardo Vargas",
-    description: "",
+    description:
+      "O Uncertainty Cycle® é o mais novo workshop de Ricardo Vargas sobre o gerenciamento de incertezas. Em um trabalho em equipe, os participantes aprendem um processo inovador de gerenciamento do desconhecido através de um modelo iterativo e ágil. O workshop utiliza como base conceitos de PESTLE, planejamento de cenários, DevOps, agilidade de negócios, e SAFe® (ScaleAgile Framework). O Uncertainty Cycle® é destinado a Executivos, Equipes de Planejamento Estratégico, responsáveis pelo planejamento de investimentos, gestores de risco, líderes de transformação digital, gerentes de projeto. Todos aqueles envolvidos em atividades que necessitam de rápida avaliação e tomada de decisão para responder com eficiência a condições impostas pelo mercado e fatores externos à uma organização.",
   },
   {
     workshopId: "resultado-melhores-do-ano-projetos-e-pmo",
     speakerId: "",
     profileImgUrl: "",
     time: "17:10 - 17:30",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Resultado Melhores do Ano - Projetos e PMO",
     speaker: "Cristiano Oliveira - Presidente PMI",
-    description: "",
+    description: "Resultado Melhores do Ano - Projetos e PMO",
   },
   {
     workshopId: "case-patrocinador",
     speakerId: "",
     profileImgUrl: "",
     time: "17:30 - 17:50",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Patrocinador",
     theme: "Case FIOCRUZ",
     speaker: "FIOCRUZ",
-    description: "",
+    description: "Case Patrocinador FIOCRUZ",
   },
   {
     workshopId: "impacto-social-esg-gestao-de-projetos-sociais",
@@ -543,11 +565,12 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Andreia-c.png",
     time: "18:00 - 19:00",
-    date: "",
-    local: "",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
     type: "Palestra",
     theme: "Impacto Social - ESG, Gestão de Projetos Sociais",
     speaker: "Andreia Cardoso - Diretora Executiva da Somos Um",
-    description: "",
+    description:
+      "Embora ESG não seja uma grande novidade, ainda são percebidas muitas incertezas sobre o que as empresas podem fazer para que a sigla seja mais do que algo que se apresente para se conseguir investimento ou publicidade. O que pode ser feito para que as politicas de ESG sejam aplicáveis e gerem impacto real? Mais do que doar cestas básicas, ou contratar cotistas, tem muito o que ser feito quando pensamos na sigla, especialmente no S (Social), que é onde mais se percebem dificuldades para se criar políticas aprovadas pelas lideranças. Entender as necessidades sociais que a empresa pode solucionar (tanto para o publico interno como para externo) é fundamental para que as ações se tornem relevantes, façam diferença na sociedade e principalmente: que os resultados de impacto possam ser mensuráveis. O S do ESG pode começar pela escuta ativa: ouvir o que a comunidade ecoa é imprescindível para que as ações realmente venham sanar necessidades e construir vínculos que podem mudar tudo. A Somos Um tem conversado com diferentes empresas sobre isso e temos casos muito interessantes do Ecos da Comunidade, uma tecnologia social de escutar, organizar os dados da escuta e fornecer informações construídas pelos dois lados (empresa e comunidade), onde a empresa se torna  realmente relevante para a comunidade, aumentando o seu valor, e a comunidade se sente apoiada e desenvolvida. A ideia da fala é explanar rapidamente sobre ações possíveis para o S do ESG, e apresentar cases de sucesso entre empresas que realmente ouviram a comunidade e construíram uma relação de apoio e confiança. ",
   },
 ];
