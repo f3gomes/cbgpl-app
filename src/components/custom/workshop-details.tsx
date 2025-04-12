@@ -1,9 +1,10 @@
-import { CircleX } from "lucide-react";
+import { CircleUserRound, CircleX } from "lucide-react";
 import Link from "next/link";
 import { Card } from "../ui/card";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
 import { PopoverMaterial } from "./popover-material";
+import { Avatar, AvatarImage } from "../ui/avatar";
 
 type Workshop =
   | {
@@ -11,6 +12,8 @@ type Workshop =
     speakerId: string;
     profileImgUrl: string;
     time: string;
+    date: string;
+    local: string;
     type: string;
     theme: string;
     speaker: string;
@@ -36,7 +39,7 @@ export default function WorkshopDetails({ workshop }: Props) {
             <CircleX />
           </Link>
           <h2 className="ml-1 w-[572px] p-1 text-start text-2xl font-bold text-white">
-            Palestra: IA e o futuro da profissão em gestão de projetos
+            {workshop?.theme}
           </h2>
         </div>
 
@@ -45,22 +48,21 @@ export default function WorkshopDetails({ workshop }: Props) {
             <div>
               <p>
                 <span className="font-semibold">Data:</span>{" "}
-                <span className="font-inter">22/04/2025</span>
+                <span className="font-inter">{workshop?.date}</span>
               </p>
               <p>
                 <span className="font-semibold">Local:</span>{" "}
-                <span className="font-inter">Sala 2</span>
+                <span className="font-inter">{workshop?.local}</span>
               </p>
             </div>
             <div className="mr-12">
               <p>
                 <span className="font-semibold">Horário:</span>{" "}
-                <span className="font-inter">9h - 10h</span>
+                <span className="font-inter">{workshop?.time}</span>
               </p>
             </div>
           </div>
 
-          {/* Descrição embaixo */}
           <p className="mt-6 text-justify">
             <span className="font-semibold">Descrição:</span>{" "}
             <span className="font-inter">{workshop?.description}</span>
@@ -69,10 +71,23 @@ export default function WorkshopDetails({ workshop }: Props) {
 
         <div className="mt-2">
           <div className="flex h-[90px] items-center space-x-3 p-6">
-            <div className="h-[90px] w-[90px] shrink-0 rounded-full bg-[#D9D9D9]" />
+            {workshop?.profileImgUrl !== "" ? (
+              <Link href={`/speakers/${workshop?.speakerId}`}>
+                <Avatar className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
+                  <AvatarImage
+                    src={workshop?.profileImgUrl}
+                    alt="User avatar"
+                  />
+                  <CircleUserRound size={36} className="text-[#FFFFFF]" />
+                </Avatar>
+              </Link>
+            ) : (
+              <div className="h-[90px] w-[90px] shrink-0 rounded-full bg-[#D9D9D9]" />
+            )}
             <div>
-              <p className="text-[16px] font-semibold">{workshop?.speaker}</p>
-              <p className="font-inter text-sm">{workshop?.theme}</p>
+              <Link href={`/speakers/${workshop?.speakerId}`}>
+                <p className="text-[16px] font-semibold">{workshop?.speaker}</p>
+              </Link>
             </div>
           </div>
         </div>

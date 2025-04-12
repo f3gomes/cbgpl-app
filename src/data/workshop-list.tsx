@@ -4,6 +4,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "09:00 - 09:30",
+    date: "",
+    local: "",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas (Plenária)",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -15,6 +17,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/03/Latorre.png",
     time: "09:30 - 09:50",
+    date: "",
+    local: "",
     type: "Plenária",
     theme: "Project Success PMI",
     speaker: "Carolina Latorre - PMI Latam",
@@ -26,6 +30,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Americo-Pinto.png",
     time: "09:50 - 10:50",
+    date: "",
+    local: "",
     type: "Plenária",
     theme: "Escritório de Gerenciamento de Projetos – PMO",
     speaker: "Américo Pinto",
@@ -37,6 +43,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Antonio-Muniz.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Como Acelerar os 3 Pilares do VMO Ágil",
     speaker: "Antonio Muniz",
@@ -48,6 +56,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Everaldo-Artur-Grahl.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "Experiência de Uma Jornada de Avaliação de Maturidade de Práticas ESG Numa Organização Sem Fins Lucrativos",
@@ -60,6 +70,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Driele-Castro.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Gestão de Mudança e a Neuroplasticidade Cerebral",
     speaker: "Driéle Castro - Mentora de projetos e gestão",
@@ -71,6 +83,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Anderson.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Gerenciamento de Egos: O Que Apenas a Experiência Ensina?",
     speaker: "Anderson Marques Nunes - Head Global do PMO da Angola Cables",
@@ -82,6 +96,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "13:30 - 15:30",
+    date: "",
+    local: "",
     type: "Workshop",
     theme:
       "Design Thinking + Lego Serious Play Para Planejamento Estratégico (Experience)",
@@ -94,6 +110,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Pedro-Paulo.png",
     time: "13:30 - 15:30",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "Projetização Pocket",
     speaker:
@@ -106,6 +124,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Bernado-Zurl.png",
     time: "13:30 - 15:30",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "PM Canvas com ChatGPT",
     speaker:
@@ -118,6 +138,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Marcelo-Antonelli.png",
     time: "13:30 - 15:30",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "PMO ao VMO: Construindo um Escritório de Valor na Prática",
     speaker:
@@ -130,6 +152,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Cassio-Germano.png",
     time: "13:50 - 14:30",
+    date: "",
+    local: "",
     type: "Painel",
     theme:
       "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
@@ -142,6 +166,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "14:30 - 15:30",
+    date: "",
+    local: "",
     type: "Premiação",
     theme: "Prêmio Melhores do Ano: Categoria Projetos",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -152,6 +178,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "15:30 - 15:50",
+    date: "",
+    local: "",
     type: "Patrocinador",
     theme: "Case - ZOHO",
     speaker: "Zoho",
@@ -162,6 +190,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "16:20 - 17:00",
+    date: "",
+    local: "",
     type: "Debate Executivo",
     theme: "Gestão de Projetos Públicos e Privados: Conexões e Desafios",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -173,6 +203,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Rafael-Vilela.png",
     time: "16:20 - 18:00",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "AI Inception: Da Necessidade à Viabilidade",
     speaker: "Rafael Vilela - Consultor em Gestão Estratégica Ágil",
@@ -183,6 +215,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "16:20 - 18:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Como os Agentes de IA Podem Revolucionar o Gerenc. de Proj.",
     speaker: "Victor Dantas - MOLDSOFT",
@@ -194,6 +228,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Elisangela-Machado.png",
     time: "16:20 - 18:00",
+    date: "",
+    local: "",
     type: "Workshop",
     theme:
       "Gestão de Projetos Sociais: Estratégias para Gerar Impacto Positivo",
@@ -205,6 +241,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "17:00 - 17:20",
+    date: "",
+    local: "",
     type: "Patrocinador",
     theme: "Case MONDAY + NORTREZ",
     speaker: "Monday + Nortrez",
@@ -216,6 +254,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Mirian-L.png",
     time: "17:20 - 18:00",
+    date: "",
+    local: "",
     type: "Painel",
     theme: "Painel sobre Value Management Office (VMO)",
     speaker:
@@ -228,6 +268,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "18:10 - 19:10",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "O Futuro do Trabalho e os Impactos da AI na Profissão de Gerenciamento de Projetos",
@@ -240,6 +282,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "09:00 - 09:10",
+    date: "",
+    local: "",
     type: "Cerimônia",
     theme: "Cerimônia de Abertura e Boas-Vindas",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -250,6 +294,8 @@ export const workshopDetailsList = [
     speakerId: "05004c42-36ef-4b47-bd52-f912eae1e92d",
     profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Gino.png",
     time: "09:30 - 10:30",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Gestão Sustentável de Projetos",
     speaker: "Gino Terentim - Professor e Curioso",
@@ -261,6 +307,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/D4D03AQF_CuaC8_TahQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1702563078066?e=1748476800&v=beta&t=5OWnD6jzPzkyBcbbeCo-3XHhZjjqFd4AHI0cDXP316c",
     time: "10:30 - 10:50",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "PMI Agile Alliance: O Futuro dos Profissionais de Projetos",
     speaker:
@@ -273,6 +321,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Kelly-Anselmo.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Painel",
     theme: "Sustentabilidade em Mega Projetos: Desafios e Oportunidades",
     speaker:
@@ -286,6 +336,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Felipe-Borges.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Case",
     theme:
       "Case Amazônia - Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo",
@@ -299,6 +351,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/C4D03AQFLyFkqCFEz_w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1629751543380?e=1748476800&v=beta&t=3F7v6qnQdQKToXXDbv6vDKks2nDNqRj9k9gE0BnBjMM",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "Projeto de Conversão de Aeronaves de Passageiros E190 em E190F Cargueiras",
@@ -311,6 +365,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "Otimizando a Jornada do Time: Aplicando o Dojô em Métricas com Auxílio da IA em Projetos",
@@ -323,6 +379,8 @@ export const workshopDetailsList = [
     speakerId: "57cc9b0d-dc2c-4de0-80da-3b956253e738",
     profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Duarte.png",
     time: "11:20 - 12:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Mediação de Conflitos e a Gestão de Projetos - Uma dupla perfeita!",
     speaker:
@@ -336,6 +394,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/D4D03AQG6IR5SF5yLUw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1696887714701?e=1748476800&v=beta&t=Ah8cmyRdWesnbbdilbZpwowNpmtYHhlMnUeUnjC0_UY",
     time: "13:00 - 13:40",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "São João de Caruaru: Como Planejar e Gerenciar o Maior Projeto de Entretenimento do Mundo",
@@ -348,6 +408,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://media.licdn.com/dms/image/v2/D4D03AQG-83DnWUTjiw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1685388130187?e=1748476800&v=beta&t=G6vTBPQp6lM5_97rPbLjsTb_xFylrmoz18yEVIWteRE",
     time: "13:00 - 13:40",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Seu Comportamento Está te Sabotando e Você nem Sabe",
     speaker:
@@ -361,6 +423,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "13:00 - 16:00",
+    date: "",
+    local: "",
     type: "Workshop",
     theme:
       "Uncertainty Cycle: Gerenciamento de Incertezas (Networking Pré-Workshop)",
@@ -374,6 +438,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Lia-Quindere.png",
     time: "14:00 - 14:40",
+    date: "",
+    local: "",
     type: "Palestra",
     theme:
       "Perspicácia Empresarial: Estratégias de Gestão Para Transformar Criatividade em Resultados Sustentáveis",
@@ -387,6 +453,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-p.png",
     time: "14:00 - 16:00",
+    date: "",
+    local: "",
     type: "Workshop",
     theme:
       "Construindo Sua Persona de Liderança: Um Guia Baseado Nos Seus Pontos Fortes",
@@ -399,6 +467,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Sarah-Branco.png",
     time: "14:00 - 16:00",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "Estimativas Ágeis: Poemas que Transformam Planejamento",
     speaker: "Sarah Branco - IT Manager",
@@ -409,6 +479,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "14:40 - 15:40",
+    date: "",
+    local: "",
     type: "Premiação",
     theme: "Melhores do Ano",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -420,6 +492,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Fernanda-Colares.png",
     time: "16:30 - 17:10",
+    date: "",
+    local: "",
     type: "Painel",
     theme: "Liderança Feminina",
     speaker:
@@ -432,6 +506,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
     time: "16:30 - 17:50",
+    date: "",
+    local: "",
     type: "Workshop",
     theme: "Uncertainty Cycle - Gerenciamento de Incertezas",
     speaker: "Ricardo Vargas",
@@ -442,6 +518,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "17:10 - 17:30",
+    date: "",
+    local: "",
     type: "Premiação",
     theme: "Resultado Melhores do Ano - Projetos e PMO",
     speaker: "Cristiano Oliveira - Presidente PMI",
@@ -452,6 +530,8 @@ export const workshopDetailsList = [
     speakerId: "",
     profileImgUrl: "",
     time: "17:30 - 17:50",
+    date: "",
+    local: "",
     type: "Patrocinador",
     theme: "Case FIOCRUZ",
     speaker: "FIOCRUZ",
@@ -463,6 +543,8 @@ export const workshopDetailsList = [
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Andreia-c.png",
     time: "18:00 - 19:00",
+    date: "",
+    local: "",
     type: "Palestra",
     theme: "Impacto Social - ESG, Gestão de Projetos Sociais",
     speaker: "Andreia Cardoso - Diretora Executiva da Somos Um",
