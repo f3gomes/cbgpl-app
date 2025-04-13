@@ -5,15 +5,15 @@ import { WorkshopProps } from "./workshop-details";
 
 export default function WorkshopCard({ workshop }: WorkshopProps) {
   return (
-    <div className="relative mx-1 mb-2 mt-1 max-h-60 min-h-60 flex-1 rounded-b-[27px] bg-white p-5 pb-16 text-black">
-      <div className="flex h-44 flex-col text-center">
-        <h3 className="mb-2 text-lg">
+    <div className="relative mx-1 mb-2 mt-1 max-h-60 min-h-60 flex-1 rounded-b-[27px] bg-white p-4 pb-16 text-black">
+      <div className="flex h-44 flex-col text-center justify-between">
+        <h3 className="mb-2">
           <span className="font-semibold">Tema:</span>
-          <p className="mt-6">{workshop?.theme}</p>
+          <p className="">{workshop?.theme}</p>
         </h3>
 
         <p className="mb-4 p-1 text-gray-700">
-          <span className="font-semibold text-black underline">
+          <span className="font-semibold text-black">
             {subText(workshop?.speaker[0], 100)}
           </span>
         </p>

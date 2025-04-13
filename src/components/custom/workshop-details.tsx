@@ -16,6 +16,7 @@ export type Workshop = {
   type: string;
   theme: string;
   speaker: string[];
+  title: string;
   description: string;
 };
 
@@ -84,11 +85,26 @@ export default function WorkshopDetails({ workshop }: WorkshopProps) {
               <div className="h-[90px] w-[90px] shrink-0 rounded-full bg-[#D9D9D9]" />
             )}
             <div>
-              <Link href={`/speakers/${workshop?.speakerId}`}>
-                <p className="text-[16px] font-semibold">
-                  {workshop?.speaker[0]}
-                </p>
-              </Link>
+              {workshop?.speaker?.map((speaker, index) => (
+                <div
+                  key={index}
+                  className="transition duration-200 hover:opacity-60"
+                >
+                  {index === 0 ? (
+                    <Link href={`/speakers/${workshop?.speakerId}`}>
+                      <p className="text-xs font-semibold md:text-base">
+                        {speaker}
+                      </p>
+                    </Link>
+                  ) : (
+                    <Link href={`/speakers`}>
+                      <p className="text-xs font-semibold md:text-base">
+                        {speaker}
+                      </p>
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
