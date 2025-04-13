@@ -6,26 +6,24 @@ import FeedbackModal from "./feedback-modal";
 import { PopoverMaterial } from "./popover-material";
 import { Avatar, AvatarImage } from "../ui/avatar";
 
-type Workshop =
-  | {
-    workshopId: string;
-    speakerId: string;
-    profileImgUrl: string;
-    time: string;
-    date: string;
-    local: string;
-    type: string;
-    theme: string;
-    speaker: string;
-    description: string;
-  }
-  | undefined;
+export type Workshop = {
+  workshopId: string;
+  speakerId: string;
+  profileImgUrl: string;
+  time: string;
+  date: string;
+  local: string;
+  type: string;
+  theme: string;
+  speaker: string[];
+  description: string;
+};
 
-type Props = {
+export type WorkshopProps = {
   workshop: Workshop;
 };
 
-export default function WorkshopDetails({ workshop }: Props) {
+export default function WorkshopDetails({ workshop }: WorkshopProps) {
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
@@ -87,7 +85,9 @@ export default function WorkshopDetails({ workshop }: Props) {
             )}
             <div>
               <Link href={`/speakers/${workshop?.speakerId}`}>
-                <p className="text-[16px] font-semibold">{workshop?.speaker}</p>
+                <p className="text-[16px] font-semibold">
+                  {workshop?.speaker[0]}
+                </p>
               </Link>
             </div>
           </div>

@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import WorkshopCard from "./workshop-card";
-import { sessionsDayOne } from "@/data/list";
 import { SlidersHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Workshop } from "./workshop-details";
 
 interface ScheduleSectionProps {
   date: string;
-  sessions: typeof sessionsDayOne;
+  sessions: Workshop[];
 }
 
 export default function ScheduleSection({
@@ -17,8 +17,8 @@ export default function ScheduleSection({
 }: ScheduleSectionProps) {
   const [filter, setFilter] = useState("Todos");
 
-  const filteredSessions = sessions.filter(
-    (session) => filter === "Todos" || session.type === filter,
+  const filteredSessions = sessions?.filter(
+    (session) => filter === "Todos" || session?.type === filter,
   );
 
   return (
@@ -53,19 +53,19 @@ export default function ScheduleSection({
           </div>
         </div>
 
-        {filteredSessions.map((session) => (
+        {filteredSessions.map((session: Workshop) => (
           <div
-            key={session.id}
+            key={session?.workshopId}
             className="relative w-[345px] rounded-[27px] bg-white py-1 pl-3"
           >
             <div className="flex flex-col gap-4">
               <div className="flex min-h-[240px] w-[325px] flex-col rounded-[27px] bg-[#35246F] shadow-md">
                 <div className="px-4 pt-2 text-center text-white">
                   <span className="font-semibold">
-                    {session.type} | {session.time}
+                    {session?.type} | {session?.time}
                   </span>
                 </div>
-                <WorkshopCard session={session} />
+                <WorkshopCard workshop={session} />
               </div>
             </div>
           </div>

@@ -19,9 +19,11 @@ export default function WorkshoPage({ params }: { params: Params }) {
   const workshop = workshopDetailsList.find((e) => e.workshopId === params.id);
 
   if (!workshop) {
-    <div>
-      <h1>Evento não encontrado!</h1>
-    </div>;
+    return (
+      <div>
+        <h1>Evento não encontrado!</h1>
+      </div>
+    );
   }
 
   return (

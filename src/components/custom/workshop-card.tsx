@@ -1,26 +1,27 @@
-import { ISession } from "@/data/list";
+import { subText } from "@/lib/utils";
 
 import Link from "next/link";
+import { WorkshopProps } from "./workshop-details";
 
-export default function WorkshopCard({ session }: ISession) {
+export default function WorkshopCard({ workshop }: WorkshopProps) {
   return (
     <div className="relative mx-1 mb-2 mt-1 max-h-60 min-h-60 flex-1 rounded-b-[27px] bg-white p-5 pb-16 text-black">
       <div className="flex h-44 flex-col text-center">
         <h3 className="mb-2 text-lg">
           <span className="font-semibold">Tema:</span>
-          <p className="mt-6">{session.theme}</p>
+          <p className="mt-6">{workshop?.theme}</p>
         </h3>
 
         <p className="mb-4 p-1 text-gray-700">
           <span className="font-semibold text-black underline">
-            {/* {subText(session.speaker, 100)} */}
+            {subText(workshop?.speaker[0], 100)}
           </span>
         </p>
       </div>
 
       <div className="absolute bottom-4 flex items-center justify-between gap-3 px-3">
         <Link
-          href={`/details/${session.id}`}
+          href={`/details/${workshop?.workshopId}`}
           className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] border border-orange-400 bg-white font-semibold text-[#1B1B1B]"
         >
           Detalhes

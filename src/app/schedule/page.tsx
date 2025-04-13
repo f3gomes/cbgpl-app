@@ -4,17 +4,20 @@ import AsideLeft from "@/components/custom/aside-left";
 import AsideRight from "@/components/custom/aside-right";
 import Header from "@/components/custom/header";
 import ScheduleSection from "@/components/custom/schedule-section";
-import {
-  sessionsDayOne,
-  sessionsDayTwo,
-  sideIcons,
-  socialIcons,
-} from "@/data/list";
+import { sideIcons, socialIcons } from "@/data/list";
+import { workshopDetailsList } from "@/data/workshop-list";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Schedule() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const sessionsDayOne = workshopDetailsList.filter(
+    (e) => e.date === "22/04/2025",
+  );
+  const sessionsDayTwo = workshopDetailsList.filter(
+    (e) => e.date === "23/04/2025",
+  );
 
   const sections = [
     <ScheduleSection key="day1" date="22 de abril" sessions={sessionsDayOne} />,
