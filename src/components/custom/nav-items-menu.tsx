@@ -6,7 +6,7 @@ import { navItems } from "@/data/list";
 const NavMenu = () => {
   return (
     <nav className="">
-      <div className="hidden h-[25px] w-[586px] items-center justify-around lg:flex xl:justify-between">
+      <div className="hidden h-[25px] w-[586px] items-center justify-around xl:flex xl:justify-between">
         {navItems.map((item, index) => (
           <a
             key={index}

@@ -16,7 +16,7 @@ export default function NavItemsMobile() {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         onClick={toggleMenu}
         type="button"

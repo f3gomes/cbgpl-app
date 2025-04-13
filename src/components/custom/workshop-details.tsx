@@ -26,7 +26,6 @@ type Props = {
 };
 
 export default function WorkshopDetails({ workshop }: Props) {
-
   return (
     <Card className="w-full rounded-2xl bg-white p-3 shadow-md xl:min-w-[700px] xl:max-w-[700px]">
       <div className="rounded-[30px] border-4 border-gray-200 border-t-white bg-white">
@@ -34,32 +33,33 @@ export default function WorkshopDetails({ workshop }: Props) {
           <Link
             href={`/schedule`}
             type="button"
-            className="absolute right-4 top-2 text-gray-300 transition-colors hover:text-gray-100"
+            className="absolute right-2 top-2 text-gray-300 transition-colors hover:text-gray-100"
             aria-label="Fechar"
           >
             <CircleX />
           </Link>
-          <h2 className="ml-1 w-[572px] p-1 text-start text-2xl font-bold text-white">
+
+          <h2 className="ml-1 w-full p-2 text-center text-lg font-bold text-white md:text-xl xl:text-2xl">
             {workshop?.theme}
           </h2>
         </div>
 
         <div className="p-6 text-xl">
-          <div className="flex w-full items-start justify-between">
+          <div className="flex w-full flex-col items-start justify-between md:flex-row">
             <div>
               <p>
                 <span className="font-semibold">Data:</span>{" "}
                 <span className="font-inter">{workshop?.date}</span>
               </p>
               <p>
-                <span className="font-semibold">Local:</span>{" "}
-                <span className="font-inter">{workshop?.local}</span>
-              </p>
-            </div>
-            <div className="mr-12">
-              <p>
                 <span className="font-semibold">Horário:</span>{" "}
                 <span className="font-inter">{workshop?.time}</span>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span className="font-semibold">Local:</span>{" "}
+                <span className="font-inter">{workshop?.local}</span>
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function WorkshopDetails({ workshop }: Props) {
           <div className="flex h-[90px] items-center space-x-3 p-6">
             {workshop?.profileImgUrl !== "" ? (
               <Link href={`/speakers/${workshop?.speakerId}`}>
-                <Avatar className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
+                <Avatar className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
                   <AvatarImage
                     src={workshop?.profileImgUrl}
                     alt="User avatar"
@@ -93,7 +93,6 @@ export default function WorkshopDetails({ workshop }: Props) {
           </div>
         </div>
 
-        {/* Palestrantes, botões etc. */}
         <div className="flex justify-center gap-3 p-6 align-middle sm:flex-row">
           <Dialog>
             <DialogTrigger className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl">

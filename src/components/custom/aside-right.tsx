@@ -8,9 +8,9 @@ export default function AsideRight() {
       </div>
 
       <div>
-        <SponsorColumn folder="c1" min={1} max={8} />
-        <SponsorColumn folder="c2" min={9} max={16} />
-        <SponsorColumn folder="c3" min={17} max={25} />
+        <SponsorColumn folder="c1" min={1} max={25} />
+        {/* <SponsorColumn folder="c2" min={9} max={16} />
+        <SponsorColumn folder="c3" min={17} max={25} /> */}
       </div>
     </aside>
   );
