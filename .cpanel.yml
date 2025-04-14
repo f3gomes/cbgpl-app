@@ -1,0 +1,15 @@
+deployment:
+  tasks:
+    - source ~/.bashrc
+    - source ~/.bash_profile || true
+    - nvm use 20.11 || . ~/.nvm/nvm.sh && nvm install 20.11 && nvm use 20.11
+
+    - export NODE_ENV=production
+    - export $(cat .env | xargs)
+
+    - npm install
+    - npm run build
+
+    - npx pm2 stop cbgpl-app || true
+    - npx pm2 start npm --name "cbgpl-app" -- start
+    - npx pm2 save
