@@ -36,7 +36,7 @@ export const workshopDetailsList = [
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Plenária",
-    theme: "Escritório de Gerenciamento de Projetos – PMO",
+    theme: "Valor do PMO: Como Definir, Entregar, Medir e Comunicar",
     speaker: ["Américo Pinto"],
     title: "",
     description: "",
@@ -118,22 +118,21 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "ia-revolucao-gerenciamento",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "482953ca-f548-4cc7-bd4a-2db89f6ef5e8",
+    profileImgUrl: "https://media.licdn.com/dms/image/v2/D4D03AQG3NOTz3NCWKg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690418324841?e=1750291200&v=beta&t=44GZ9db-E1VAGKrlObI7psGTb_42tMLOMzx_QdIDfmw",
     time: "13:30 - 13:50",
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Palestra",
-    theme:
-      "Como os Agentes de IA Podem Revolucionar o Gerenciamento de Projetos",
+    theme: "Como os Agentes de IA Podem Revolucionar o Gerenciamento de Projetos",
     speaker: ["Victor Dantas - MOLDSOFT"],
     title: "",
     description: "",
   },
   {
     workshopId: "workshop-design-thinking-lego",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "683b0c67-1e78-466e-ac42-b2963104156b",
+    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Sergio-Nascimento.png",
     time: "13:30 - 15:30",
     date: "22/04/2025",
     local: "Iracema",
@@ -148,16 +147,17 @@ export const workshopDetailsList = [
   {
     workshopId: "workshop-projetizacao-pocket",
     speakerId: "fd728a90-8b72-48e4-81f5-814c8fcfec62",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Pedro-Paulo.png",
+    profileImgUrl: "",
     time: "13:30 - 15:30",
     date: "22/04/2025",
     local: "Jericoacoara",
     type: "Workshop",
-    theme: "Projetização Pocket",
-    speaker: ["Pedro Paulo Coutinho - Especialista em Redes de Computadores"],
-    title:
-      "Especialista em Redes de Computadores e Bancos de Dados pela PUC-MG, graduado em Tecnologia em Processamento de Dados pela UNA-MG, e certificado PMP®. É Diretor Executivo e Sócio Fundador da Strategie – Consultoria e Treinamentos, além de SCRUM Master na Entrega Contínua. e Felipe Borges - Presidente no PMI Minas Gerais",
+    theme: "ProjetizAÇÃO Pocket",
+    speaker: [
+      "Pedro Paulo Coutinho",
+      "Felipe Borges",
+      ],
+    title: "",
     description: "",
   },
   {
@@ -192,13 +192,12 @@ export const workshopDetailsList = [
     ],
     title: "",
     description:
-      'Painel VMO - apenas o tema do painel / Workshop VMO - Título: "Do PMO ao VMO: Construindo um Escritório de Valor na Prática"description Este workshop interativo e prático foi desenvolvido para profissionais que desejam transformar seus Escritórios de Projetos (PMOs) em Escritórios de Gestão de Valor (VMOs), alinhando suas operações aos objetivos estratégicos das organizações. Durante duas horas, os participantes irão vivenciar atividades mão na massa para diagnosticar o estado atual de seus PMOs, definir o que significa "valor" no contexto de seus projetos e criar um roteiro de transição personalizado para implementar um VMO que realmente entrega impacto estratégico. O workshop combina dinâmicas colaborativas, ferramentas práticas e simulações que capacitarão os participantes a aplicar os conceitos discutidos imediatamente em suas organizações. Objetivos de Aprendizagem Ao final do workshop, os participantes serão capazes de: Diagnosticar o estado atual de seus PMOs: Identificar os principais desafios e barreiras que limitam a entrega de valor estratégico. Definir claramente o conceito de valor estratégico: Desenvolver uma definição personalizada e alinhada aos objetivos organizacionais. Planejar a transição de um PMO para um VMO: Construir um roteiro prático com ações concretas, incluindo etapas, métricas e engajamento de stakeholders. Criar apresentações estratégicas: Desenvolver e apresentar pitches eficazes para obter buy-in da alta liderança em iniciativas de transformação. Aplicar imediatamente os aprendizados: Sair do workshop com ferramentas e insights aplicáveis para transformar o gerenciamento de projetos em um motor de valor estratégico. Público-Alvo Este workshop é ideal para: Gestores de PMOs que desejam evoluir suas práticas para um modelo de entrega de valor. Líderes organizacionais interessados em alinhar projetos às metas estratégicas. Profissionais de gerenciamento de projetos e portfólio que buscam ferramentas práticas para ampliar o impacto de seus trabalhos. Tomadores de decisão que precisam justificar investimentos em iniciativas estratégicas. ',
+      "Este workshop interativo e prático foi desenvolvido para profissionais que desejam transformar seus Escritórios de Projetos (PMOs) em Escritórios de Gestão de Valor (VMOs), alinhando suas operações aos objetivos estratégicos das organizações. Durante duas horas, os participantes irão vivenciar atividades mão na massa para diagnosticar o estado atual de seus PMOs, definir o que significa "valor" no contexto de seus projetos e criar um roteiro de transição personalizado para implementar um VMO que realmente entrega impacto estratégico. O workshop combina dinâmicas colaborativas, ferramentas práticas e simulações que capacitarão os participantes a aplicar os conceitos discutidos imediatamente em suas organizações. Objetivos de Aprendizagem Ao final do workshop, os participantes serão capazes de: Diagnosticar o estado atual de seus PMOs: Identificar os principais desafios e barreiras que limitam a entrega de valor estratégico. Definir claramente o conceito de valor estratégico: Desenvolver uma definição personalizada e alinhada aos objetivos organizacionais. Planejar a transição de um PMO para um VMO: Construir um roteiro prático com ações concretas, incluindo etapas, métricas e engajamento de stakeholders. Criar apresentações estratégicas: Desenvolver e apresentar pitches eficazes para obter buy-in da alta liderança em iniciativas de transformação. Aplicar imediatamente os aprendizados: Sair do workshop com ferramentas e insights aplicáveis para transformar o gerenciamento de projetos em um motor de valor estratégico. Público-Alvo Este workshop é ideal para: Gestores de PMOs que desejam evoluir suas práticas para um modelo de entrega de valor. Líderes organizacionais interessados em alinhar projetos às metas estratégicas. Profissionais de gerenciamento de projetos e portfólio que buscam ferramentas práticas para ampliar o impacto de seus trabalhos. Tomadores de decisão que precisam justificar investimentos em iniciativas estratégicas." ,
   },
   {
     workshopId: "painel-ceos",
     speakerId: "2f5a7126-9205-400f-83eb-3e55e0a2d8a6",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Cassio-Germano.png",
+    profileImgUrl: "",
     time: "13:50 - 14:30",
     date: "22/04/2025",
     local: "Plenária - Futuro",
@@ -207,7 +206,8 @@ export const workshopDetailsList = [
       "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
     speaker: [
       "Cassio Germano - CEO Grupo Portfolio",
-      "Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos e Murilo - CEO do Beach Park",
+      "Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos",
+      "Murilo - CEO do Beach Park",
     ],
     title: "",
     description:
@@ -249,7 +249,11 @@ export const workshopDetailsList = [
     local: "Plenária - Futuro",
     type: "Debate Executivo",
     theme: "Gestão de Projetos Públicos e Privados: Conexões e Desafios",
-    speaker: ["Ana Pansini", "Mariangela", "Evelise"],
+    speaker: [
+      "Ana Pansini", 
+      "Mariangela", 
+      "Evelise",
+    ],
     title: "",
     description: "",
   },
@@ -266,7 +270,7 @@ export const workshopDetailsList = [
     speaker: ["Rafael Vilela - Consultor em Gestão Estratégica Ágil"],
     title: "",
     description:
-      "objetivo do workshop (carga horária 2 horas): Abordaremos as melhores práticas e ferramentas desde avaliar a necessidade de uma solução de IA, criação de um AI Canvas, Backlog do Produto de IA e análise de viabilidade (Go / No-Go Decision).",
+      "Abordaremos as melhores práticas e ferramentas desde avaliar a necessidade de uma solução de IA, criação de um AI Canvas, Backlog do Produto de IA e análise de viabilidade (Go / No-Go Decision).",
   },
   {
     workshopId: "workshop-gestao-projetos-sociais",
@@ -300,18 +304,20 @@ export const workshopDetailsList = [
   {
     workshopId: "painel-vmo",
     speakerId: "72c704ad-a4eb-4292-9b9a-01a0e87c7c4e",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Mirian-L.png",
+    profileImgUrl: "",
     time: "17:20 - 18:00",
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Painel",
     theme: "Painel sobre Value Management Office (VMO)",
-    speaker: ["Mirian Leite - Head VMO Grupo 3corações,Erica Smith"],
-    title:
-      "Head de PMO Estratégico,Marcelo Antonelli - Consultor e Mentor em Gestão de Valor e Implantação de VMO e Fábio Cruz - Head de Práticas, Projetos e Agilidade para clientes",
+    speaker: [
+      "Mirian Leite",
+      "Erica Smith",
+      "Marcelo Antonelli",
+    ],
+    title: "",
     description:
-      "VMO - Escriório de Gestão de Valor Como descobrir o que  é valor para o cliente e maximizar os resultados da empresa!",
+      "Como descobrir o que é valor para o cliente e maximizar os resultados da empresa!",
   },
   {
     workshopId: "futuro-trabalho-ai",
@@ -323,7 +329,7 @@ export const workshopDetailsList = [
     local: "Plenária - Futuro",
     type: "Palestra",
     theme:
-      "O Futuro do Trabalho e os Impactos da AI na Profissão de Gerenciamento de Projetos",
+      "O Futuro do Trabalho e os Impactos da IA na Profissão de Gerenciamento de Projetos",
     speaker: ["Ricardo Vargas"],
     title: "",
     description:
@@ -376,8 +382,7 @@ export const workshopDetailsList = [
   {
     workshopId: "sustentabilidade-em-mega-projetos-desafios-e-oportunidades",
     speakerId: "16d2c7fc-3d23-4092-aec2-44ba94e631fc",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Kelly-Anselmo.png",
+    profileImgUrl: "",
     time: "11:20 - 12:00",
     date: "23/04/2025",
     local: "Plenária - Futuro",
@@ -403,7 +408,7 @@ export const workshopDetailsList = [
     local: "Iracema",
     type: "Case",
     theme:
-      "Case Amazônia - Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo",
+      "Gerenciamento de Projetos Sustentáveis com Impacto Social Positivo: Case de um Portfólio na Amazônia Brasileira.",
     speaker: ["Felipe Borges - Presidente no PMI Minas Gerais"],
     title: "",
     description:
@@ -429,8 +434,8 @@ export const workshopDetailsList = [
   {
     workshopId:
       "otimizando-a-jornada-do-time-aplicando-o-dojo-em-metricas-com-auxilio-da-ia-em-projetos",
-    speakerId: "",
-    profileImgUrl: "",
+    speakerId: "8b8de511-3e7b-4c37-90ca-7e9dc3abcbde",
+    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Fabio-Sousa.png",
     time: "11:20 - 12:00",
     date: "23/04/2025",
     local: "Cumbuco",
@@ -484,13 +489,12 @@ export const workshopDetailsList = [
     date: "23/04/2025",
     local: "Iracema",
     type: "Palestra",
-    theme: "Seu Comportamento Está te Sabotando e Você nem Sabe",
+    theme: "Otimização Máxima: Como a IA Impulsiona a Eficiência e a Produtividade percebeu",
     speaker: [
       "Carlos Silva Jr - Cristão, Pai, Esposo, Curioso, Empresário, Mentor e Palestrante - SLUPER",
     ],
     title: "",
-    description:
-      "✅ Uma palestra provocativa sobre como seus comportamentos diários impactam tudo: resultados, clima e até sua sanidade. Prepare-se para virar a chave! ✅Nesta palestra baseada no conceito de Flip Thinking, vamos mostrar como os comportamentos profissionais – muito mais do que os processos ou a tecnologia – são os verdadeiros motores (ou freios) de resultados nas organizações. Com uma linguagem acessível, provocativa e bem-humorada, você vai refletir sobre atitudes que travam a evolução e descobrir práticas reais para transformar problemas em oportunidades. Não é autoajuda. É autoatitude. ✅ Benefícios de quem assistir à palestra ➡️Vai entender como mudar a postura muda o jogo, mesmo em ambientes difíceis. ➡️Vai descobrir como parar de perder tempo com o que não controla e agir sobre o que importa. ➡️Vai aprender práticas simples e aplicáveis para virar o comportamento no dia a dia. ➡️Vai se identificar e sair motivado(a) a fazer diferente na próxima segunda-feira. ➡️Vai se reconhecer em comportamentos sabotadores e aprender como virar o jogo. ➡️Vai ganhar ferramentas práticas para lidar melhor com os desafios do trabalho. ➡️Vai se tornar uma influência positiva para sua equipe e para a cultura da empresa. ",
+    description: "",
   },
   {
     workshopId:
@@ -541,7 +545,7 @@ export const workshopDetailsList = [
     speaker: ["Ricardo Peters - Canivete Suíço"],
     title: "",
     description:
-      'A liderança de sucesso não segue um modelo único. Cada líder é único e deve construir sua própria persona, alinhada aos seus pontos fortes. Essa palestra convida os participantes a explorar os quatro domínios do CliftonStrengths34 – Executando, Influenciando, Construindo Relacionamentos e Pensamento Estratégico – para identificar e potencializar seus talentos naturais. Com uma abordagem prática e reflexiva, os participantes sairão com ferramentas e estratégias para criar um estilo de liderança autêntico e eficaz, maximizando seu impacto em equipes e organizações. Objetivo Proporcionar uma visão clara de como os talentos naturais de cada indivíduo contribuem para um estilo de liderança único. Apresentar os quatro domínios do CliftonStrengths34 como base para a construção de uma liderança personalizada. Inspirar os participantes a abraçarem um processo contínuo de autoconhecimento e desenvolvimento como líderes. Relevância para o Tema "Liderança: Power Skills" A palestra conecta o desenvolvimento das habilidades comportamentais de liderança – como autoconhecimento, empatia e autenticidade – à aplicação prática de uma ferramenta poderosa, o CliftonStrengths34. Essas "Power Skills" são essenciais para líderes que desejam criar impacto positivo e sustentável em suas equipes e organizações. Público-Alvo Líderes que buscam desenvolver um estilo autêntico e eficaz. Profissionais interessados em explorar seus talentos e maximizar seu impacto. Gestores e membros de equipes que desejam aprimorar sua liderança com base no autoconhecimento.',
+      "A liderança de sucesso não segue um modelo único. Cada líder é único e deve construir sua própria persona, alinhada aos seus pontos fortes. Essa palestra convida os participantes a explorar os quatro domínios do CliftonStrengths34 – Executando, Influenciando, Construindo Relacionamentos e Pensamento Estratégico – para identificar e potencializar seus talentos naturais. Com uma abordagem prática e reflexiva, os participantes sairão com ferramentas e estratégias para criar um estilo de liderança autêntico e eficaz, maximizando seu impacto em equipes e organizações. Objetivo Proporcionar uma visão clara de como os talentos naturais de cada indivíduo contribuem para um estilo de liderança único. Apresentar os quatro domínios do CliftonStrengths34 como base para a construção de uma liderança personalizada. Inspirar os participantes a abraçarem um processo contínuo de autoconhecimento e desenvolvimento como líderes. Relevância para o Tema "Liderança: Power Skills" A palestra conecta o desenvolvimento das habilidades comportamentais de liderança – como autoconhecimento, empatia e autenticidade – à aplicação prática de uma ferramenta poderosa, o CliftonStrengths34. Essas "Power Skills" são essenciais para líderes que desejam criar impacto positivo e sustentável em suas equipes e organizações. Público-Alvo Líderes que buscam desenvolver um estilo autêntico e eficaz. Profissionais interessados em explorar seus talentos e maximizar seu impacto. Gestores e membros de equipes que desejam aprimorar sua liderança com base no autoconhecimento.",
   },
   {
     workshopId: "melhores-do-ano",
@@ -560,16 +564,15 @@ export const workshopDetailsList = [
   {
     workshopId: "lideranca-feminina",
     speakerId: "f5dd3c00-35aa-48c6-803a-336efd9407a2",
-    profileImgUrl:
-      "https://cbgpl.org.br/wp-content/uploads/2025/02/Fernanda-Colares.png",
+    profileImgUrl: "",
     time: "16:30 - 17:10",
     date: "23/04/2025",
     local: "Plenária - Futuro",
     type: "Painel",
     theme: "Liderança Feminina",
     speaker: [
-      "Delania Santos - CEO DS - Educação & negócios e ",
-      "Annete Castro,Simone Caixeta - Diretora de Pessoas",
+      "Delania Santos - CEO DS - Educação & negócios",
+      "Simone Caixeta - Diretora de Pessoas",
       "Fernanda Colares - Médica, Professora e Gestora",
     ],
     title: "Mentora Executiva Internacional",
