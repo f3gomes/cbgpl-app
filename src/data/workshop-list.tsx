@@ -39,7 +39,7 @@ export const workshopDetailsList = [
     theme: "Valor do PMO: Como Definir, Entregar, Medir e Comunicar",
     speaker: ["Américo Pinto"],
     title: "",
-    description: "",
+    description: "Mensurar o valor dos PMOs sempre foi um dos maiores desafios enfrentados por organizações ao redor do mundo. Agora, com o lançamento do novo PMI PMO Practice Guide, uma abordagem inovadora e transformadora redefine a forma como compreendemos e demonstramos o verdadeiro impacto dos PMOs. Baseado em três dimensões interconectadas — eficiência na entrega de serviços, geração de resultados e reconhecimento de valor, esse novo modelo traz uma visão poderosa e prática para reposicionar os PMOs como protagonistas estratégicos. Nesta palestra inspiradora, vamos explorar como essa nova perspectiva não apenas redefine o desempenho e o sucesso dos PMOs, mas também abre caminho para uma atuação mais alinhada aos objetivos estratégicos e às expectativas reais dos clientes do PMO. É hora de revelar o que realmente importa!",
   },
   {
     workshopId: "como-acelerar-vmo",
