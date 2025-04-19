@@ -6,7 +6,7 @@ import { WorkshopProps } from "./workshop-details";
 export default function WorkshopCard({ workshop }: WorkshopProps) {
   return (
     <div className="relative mx-1 mb-2 mt-1 max-h-60 min-h-60 flex-1 rounded-b-[27px] bg-white p-4 pb-16 text-black">
-      <div className="flex h-44 flex-col text-center justify-between">
+      <div className="flex h-44 flex-col justify-between text-center">
         <h3 className="mb-2">
           <span className="font-semibold">Tema:</span>
           <p className="">{workshop?.theme}</p>
@@ -27,7 +27,7 @@ export default function WorkshopCard({ workshop }: WorkshopProps) {
           Detalhes
         </Link>
         <Link
-          href="https://pontoonline.com.br/20cbgpl/"
+          href="https://pontoonline.com.br/20cbgpl/login"
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-[33px] w-[133px] items-center justify-center rounded-[21px] bg-orange-500 font-semibold text-white transition-colors hover:bg-orange-600"

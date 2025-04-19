@@ -126,7 +126,7 @@ export default function WorkshopDetails({ workshop }: WorkshopProps) {
 
           <PopoverMaterial />
           <Link
-            href="https://pontoonline.com.br/20cbgpl/"
+            href="https://pontoonline.com.br/20cbgpl/login"
             rel="noopener noreferrer"
             target="_blank"
             className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border bg-orange-500 px-14 py-2 text-base font-semibold text-white sm:text-lg md:text-xl"
