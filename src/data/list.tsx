@@ -36,7 +36,11 @@ export const navItemsMobile = [
   // { title: "Fotos", link: "/", target: false },
   { title: "Palestrantes", link: "/speakers", target: false },
   { title: "Participantes", link: "/participants", target: false },
-  { title: "Experiência", link: "/", target: true },
+  {
+    title: "Experiência",
+    link: "https://cbgpl.org.br/wp-content/uploads/2025/04/Book-de-Experiencias-CBGPL-2025-.pdf",
+    target: true,
+  },
   {
     title: "Certificações",
     link: "https://pontoonline.com.br/20cbgpl/",
@@ -64,7 +68,7 @@ export const socialIcons = [
   },
   {
     icon: "Whatsapp",
-    href: "https://api.whatsapp.com/send/?phone=558591431049",
+    href: "https://chat.whatsapp.com/FFAuX8040Wt6TjIoUgXYP8",
   },
 ];
 
@@ -76,7 +80,12 @@ export const sideIcons = [
     href: "/participants",
     target: false,
   },
-  { title: "Livro de experiência", icons: MapPinned, href: "/", target: true },
+  {
+    title: "Livro de experiência",
+    icons: MapPinned,
+    href: "https://cbgpl.org.br/wp-content/uploads/2025/04/Book-de-Experiencias-CBGPL-2025-.pdf",
+    target: true,
+  },
   {
     title: "Certificações do Congresso",
     icons: FileCheck2,
