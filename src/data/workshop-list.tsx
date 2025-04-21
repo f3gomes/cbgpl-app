@@ -539,7 +539,7 @@ export const workshopDetailsList = [
     type: "Palestra",
     theme: "Otimização Máxima: Como a IA Impulsiona a Eficiência e a Produtividade percebeu",
     speaker: [
-      "Carlos Silva Jr - Cristão, Pai, Esposo, Curioso, Empresário, Mentor e Palestrante - SLUPER",
+      "Carlos Silva Jr - Mentor e Palestrante - SLUPER",
     ],
     title: "",
     description: "",
@@ -704,9 +704,9 @@ export const workshopDetailsList = [
     type: "Painel",
     theme: "Liderança Feminina",
     speaker: [
+      "Fernanda Colares - Médica, Professora e Gestora",
       "Delania Santos - CEO DS - Educação & negócios",
       "Simone Caixeta - Diretora de Pessoas",
-      "Fernanda Colares - Médica, Professora e Gestora",
     ],
     title: "Mentora Executiva Internacional",
     description: "Liderança Feminina",
