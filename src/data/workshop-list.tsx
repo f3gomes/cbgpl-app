@@ -719,12 +719,10 @@ export const workshopDetailsList = [
     date: "23/04/2025",
     local: "Iracema",
     type: "Painel",
-    theme: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos - Um dos Melhores Hospitais do Mundo",
-    speaker: [
-      "Tainá Klein - INTERACT SOLUTIONS",
-    ],
+    theme: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos",
+    speaker: ["Tainá Klein - INTERACT SOLUTIONS"],
     title: "",
-    description: "",
+    description: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos - Um dos Melhores Hospitais do Mundo",
   },
   {
     workshopId: "uncertainty-cycle-gerenciamento-de-incertezas",
