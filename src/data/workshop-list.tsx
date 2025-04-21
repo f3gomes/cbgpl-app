@@ -473,7 +473,7 @@ export const workshopDetailsList = [
     local: "Jericoacoara",
     type: "Palestra",
     theme:
-      "Projeto de Conversão de Aeronaves de Passageiros E190 em E190F Cargueiras",
+      "Desenvolvimento do Embraer E-Freighter",
     speaker: ["Marcelo Tocci - Program Director - EMBRAER"],
     title: "",
     description:
@@ -504,7 +504,7 @@ export const workshopDetailsList = [
     date: "23/04/2025",
     local: "Beach Park",
     type: "Palestra",
-    theme: "Mediação de Conflitos e a Gestão de Projetos - Uma dupla perfeita!",
+    theme: "Híbrido, Inteligente e Humano: O Novo DNA da Gestão de Projetos.",
     speaker: [
       "Antônio Duarte - Especialista de Projetos, Programas e Portfólio no Exército Brasileiro",
     ],
@@ -546,6 +546,40 @@ export const workshopDetailsList = [
   },
   {
     workshopId:
+      "Como_a_gestao_de_projetos",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:00 - 13:40",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme:
+      "Como a gestão de projetos na M. Dias Branco ajudou a empresa a gerar inovação próxima a meio bilhão de reais.",
+    speaker: ["Rodrigo Martinez"],
+    title: "",
+    description:
+      "",
+  },
+  {
+    workshopId:
+      "Preservo",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:00 - 13:40",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme:
+      "Preservo - Complexo de Acervos da Fiocruz",
+    speaker: ["Marcelo Pelajo Machado - FIOCRUZ"],
+    title: "",
+    description:
+      "",
+  },
+  {
+    workshopId:
       "uncertainty-cycle-gerenciamento-de-incertezas-networking-pre-workshop",
     speakerId: "b881ba4b-5549-4640-9ed0-71e3e14954ac",
     profileImgUrl:
@@ -560,6 +594,23 @@ export const workshopDetailsList = [
     title: "",
     description:
       "O Uncertainty Cycle® é o mais novo workshop de Ricardo Vargas sobre o gerenciamento de incertezas. Em um trabalho em equipe, os participantes aprendem um processo inovador de gerenciamento do desconhecido através de um modelo iterativo e ágil. O workshop utiliza como base conceitos de PESTLE, planejamento de cenários, DevOps, agilidade de negócios, e SAFe® (ScaleAgile Framework). O Uncertainty Cycle® é destinado a Executivos, Equipes de Planejamento Estratégico, responsáveis pelo planejamento de investimentos, gestores de risco, líderes de transformação digital, gerentes de projeto. Todos aqueles envolvidos em atividades que necessitam de rápida avaliação e tomada de decisão para responder com eficiência a condições impostas pelo mercado e fatores externos à uma organização.",
+  },
+  {
+    workshopId:
+      "Preservo",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:40 - 14:00",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
+    type: "CASE FIOCRUZ",
+    theme:
+      "Patrimônio Biológico e Saúde",
+    speaker: ["Marcelo Pelajo Machado"],
+    title: "",
+    description:
+      "",
   },
   {
     workshopId:
@@ -596,6 +647,40 @@ export const workshopDetailsList = [
       "A liderança de sucesso não segue um modelo único. Cada líder é único e deve construir sua própria persona, alinhada aos seus pontos fortes. Essa palestra convida os participantes a explorar os quatro domínios do CliftonStrengths34 – Executando, Influenciando, Construindo Relacionamentos e Pensamento Estratégico – para identificar e potencializar seus talentos naturais. Com uma abordagem prática e reflexiva, os participantes sairão com ferramentas e estratégias para criar um estilo de liderança autêntico e eficaz, maximizando seu impacto em equipes e organizações. Objetivo Proporcionar uma visão clara de como os talentos naturais de cada indivíduo contribuem para um estilo de liderança único. Apresentar os quatro domínios do CliftonStrengths34 como base para a construção de uma liderança personalizada. Inspirar os participantes a abraçarem um processo contínuo de autoconhecimento e desenvolvimento como líderes. Relevância para o Tema 'Liderança: Power Skills' A palestra conecta o desenvolvimento das habilidades comportamentais de liderança – como autoconhecimento, empatia e autenticidade – à aplicação prática de uma ferramenta poderosa, o CliftonStrengths34. Essas 'Power Skills' são essenciais para líderes que desejam criar impacto positivo e sustentável em suas equipes e organizações. Público-Alvo Líderes que buscam desenvolver um estilo autêntico e eficaz. Profissionais interessados em explorar seus talentos e maximizar seu impacto. Gestores e membros de equipes que desejam aprimorar sua liderança com base no autoconhecimento.",
   },
   {
+    workshopId:
+      "estimativas_ageis",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "14:00 - 16:00",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Workshop",
+    theme:
+      "Estimativas Ágeis: Poemas que Transformam Planejamento",
+    speaker: ["Alaíde Pitombeira"],
+    title: "",
+    description:
+      "",
+  },
+   {
+    workshopId:
+      "hand_on",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "14:00 - 16:00",
+    date: "23/04/2025",
+    local: "Beach Park",
+    type: "Workshop",
+    theme:
+      "Hands-on: Construa comunidades de prática (CoPs - comunidades com interesses em comum) com IA e práticas ágeis.",
+    speaker: ["Gerson Albuquerque e Eliabe Abreu - ATLANTICO"],
+    title: "",
+    description:
+      "",
+  },
+  {
     workshopId: "melhores-do-ano",
     speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
     profileImgUrl:
@@ -627,6 +712,21 @@ export const workshopDetailsList = [
     description: "Liderança Feminina",
   },
   {
+    workshopId: "case_interact",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "16:30 - 17:10",
+    date: "23/04/2025",
+    local: "Iracema",
+    type: "Painel",
+    theme: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos - Um dos Melhores Hospitais do Mundo",
+    speaker: [
+      "Tainá Klein - INTERACT SOLUTIONS",
+    ],
+    title: "",
+    description: "",
+  },
+  {
     workshopId: "uncertainty-cycle-gerenciamento-de-incertezas",
     speakerId: "b881ba4b-5549-4640-9ed0-71e3e14954ac",
     profileImgUrl:
@@ -643,15 +743,15 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "resultado-melhores-do-ano-projetos-e-pmo",
-    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    speakerId: "",
     profileImgUrl:
-      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
+      "",
     time: "17:10 - 17:30",
     date: "23/04/2025",
     local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Resultado Melhores do Ano - Projetos e PMO",
-    speaker: ["Cristiano Oliveira - Presidente PMI"],
+    speaker: ["Mateus Pereira"],
     title: "",
     description: "Resultado Melhores do Ano - Projetos e PMO",
   },
@@ -662,11 +762,11 @@ export const workshopDetailsList = [
     time: "17:30 - 17:50",
     date: "23/04/2025",
     local: "Plenária - Futuro",
-    type: "Patrocinador",
-    theme: "Case FIOCRUZ",
-    speaker: ["FIOCRUZ"],
+    type: "Palestra",
+    theme: "Pablo Lledó - PMI Argetina ",
+    speaker: ["Pablo Lledó - PMI Argetina"],
     title: "",
-    description: "Case Patrocinador FIOCRUZ",
+    description: "",
   },
   {
     workshopId: "impacto-social-esg-gestao-de-projetos-sociais",
