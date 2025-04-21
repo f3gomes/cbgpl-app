@@ -203,7 +203,7 @@ export const workshopDetailsList = [
     local: "Plenária - Futuro",
     type: "Painel",
     theme:
-      "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
+      "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos (Painel dos CEOs)",
     speaker: [
       "Cassio Germano - CEO Grupo Portfolio",
       "Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos",
@@ -235,10 +235,10 @@ export const workshopDetailsList = [
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Patrocinador",
-    theme: "Case - ZOHO",
-    speaker: ["Zoho"],
+    theme: "O Hack dos Projetos Multidisciplinares: O Case Zoho Projects de gerenciamento de projetos na indústria",
+    speaker: ["Abiezer Lima - Zoho"],
     title: "",
-    description: "",
+    description: "O Hack dos Projetos Multidisciplinares: O Case Zoho Projects de gerenciamento de projetos na indústria",
   },
   {
     workshopId: "debate-executivo",
@@ -352,17 +352,17 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "palestra-gino-terentim",
-    speakerId: "05004c42-36ef-4b47-bd52-f912eae1e92d",
-    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Gino.png",
+    speakerId: "16d2c7fc-3d23-4092-aec2-44ba94e631fc",
+    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Kelly-Anselmo.png",
     time: "09:30 - 10:30",
     date: "23/04/2025",
     local: "Plenária - Futuro",
     type: "Palestra",
-    theme: "Gestão Sustentável de Projetos",
-    speaker: ["Gino Terentim - Professor e Curioso"],
+    theme: "Projetos inovadores, impactos sustentáveis: conectando valor e futuro",
+    speaker: ["Kelly Anselmo"],
     title: "",
     description:
-      "Nesta apresentação, exploraremos como incorporar a sustentabilidade na avaliação da viabilidade de projetos, indo além dos aspectos financeiros tradicionais. Discutiremos como adicionar a visão de impactos sociais e ambientais ao Business Case, promovendo decisões mais alinhadas com os Objetivos de Desenvolvimento Sustentável (ODS) e a responsabilidade corporativa. O objetivo é fornecer ferramentas práticas para gestores avaliarem projetos sob uma perspectiva holística e sustentável, contribuindo para um futuro mais equilibrado e consciente.",
+      "Projetos inovadores, impactos sustentáveis: conectando valor e futuro",
   },
   {
     workshopId: "margareth-carneiro-agile-alliance",
