@@ -16,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GTXP App",
+  title: "CBPL App",
   description: "Bem vindo a nossa rede",
   icons: {
     icon: "/assets/logos/logo-text-none.png",
