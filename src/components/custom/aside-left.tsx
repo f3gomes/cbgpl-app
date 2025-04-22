@@ -12,7 +12,7 @@ interface AsideProps {
 
 export default function AsideLeft({ socialIcons, sideIcons }: AsideProps) {
   return (
-    <aside className="flex h-12 w-full flex-col items-center rounded-2xl bg-white px-4 shadow-md xl:h-[600px] xl:w-[330px] xl:p-4 xl:px-0">
+    <aside className="flex -mt-10 xl:mt-0 h-12 w-full flex-col items-center rounded-2xl bg-white px-4 shadow-md xl:h-[600px] xl:w-[330px] xl:p-4 xl:px-0">
       <div className="mt-2 flex w-full justify-between px-3 xl:mt-0">
         {socialIcons.map((item, index) => (
           <Link

@@ -43,7 +43,7 @@ export const navItemsMobile = [
   },
   {
     title: "Certificações",
-    link: "https://pontoonline.com.br/20cbgpl/",
+    link: "https://pontoonline.com.br/20cbgpl/login",
     target: true,
   },
   { title: "Feedback", link: "/", target: false },
@@ -89,7 +89,7 @@ export const sideIcons = [
   {
     title: "Certificações do Congresso",
     icons: FileCheck2,
-    href: "https://pontoonline.com.br/20cbgpl/",
+    href: "https://pontoonline.com.br/20cbgpl/login",
     target: true,
   },
   { title: "Feedback", icons: MessageSquareText, href: "/", target: false },
