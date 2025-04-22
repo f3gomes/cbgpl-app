@@ -99,7 +99,7 @@ export default function PostForm({ setNewPost }: PostForm) {
     if (user) {
       const path = user?.profileImgUrl;
       const baseUrl = `${process.env.NEXT_PUBLIC_URL_ENDPOINT}/tr:w-150,h-150,fo-face`;
-      setProfileImg(`${baseUrl}/${path}`);
+      setProfileImg(`${baseUrl}${path}`);
     }
   }, [user]);
 

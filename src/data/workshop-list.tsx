@@ -110,7 +110,7 @@ export const workshopDetailsList = [
     date: "22/04/2025",
     local: "Beach Park",
     type: "Palestra",
-    theme: "Gerenciamento de Egos: O Que Apenas a Experiência Ensina?",
+    theme: "Gerenciamento de Partes Interessadas",
     speaker: ["Anderson Marques Nunes - Head Global do PMO da Angola Cables"],
     title: "",
     description:
@@ -203,7 +203,7 @@ export const workshopDetailsList = [
     local: "Plenária - Futuro",
     type: "Painel",
     theme:
-      "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos",
+      "Da Estratégia à Execução: O Impacto da Liderança na Gestão de Projetos (Painel dos CEOs)",
     speaker: [
       "Cassio Germano - CEO Grupo Portfolio",
       "Patriciana - Presidente do Conselho de Administração das Farmácias Pague Menos",
@@ -215,15 +215,15 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "premio-melhores-projetos",
-    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    speakerId: "",
     profileImgUrl:
-      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
+      "",
     time: "14:30 - 15:30",
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Prêmio Melhores do Ano: Categoria Projetos",
-    speaker: ["Cristiano Oliveira - Presidente PMI"],
+    speaker: ["Mateus Pereira"],
     title: "",
     description: "",
   },
@@ -235,10 +235,10 @@ export const workshopDetailsList = [
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Patrocinador",
-    theme: "Case - ZOHO",
-    speaker: ["Zoho"],
+    theme: "O Hack dos Projetos Multidisciplinares: O Case Zoho Projects de gerenciamento de projetos na indústria",
+    speaker: ["Abiezer Lima - Zoho"],
     title: "",
-    description: "",
+    description: "O Hack dos Projetos Multidisciplinares: O Case Zoho Projects de gerenciamento de projetos na indústria",
   },
   {
     workshopId: "debate-executivo",
@@ -253,6 +253,38 @@ export const workshopDetailsList = [
       "Ana Pansini",
       "Mariangela",
       "Evelise",
+    ],
+    title: "",
+    description: "",
+  },
+  {
+    workshopId: "BIM_IA",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "16:20 - 17:00",
+    date: "22/04/2025",
+    local: "Jericoacora",
+    type: "Palestra",
+    theme: "Do BIM à IA: Como os Megaprojetos Estão Sendo Reinventados",
+    speaker: [
+      "Marcelo Mor",
+      "João Vitor Barbosa",
+      "Raphael Forte Feijó",
+    ],
+    title: "",
+    description: "",
+  },
+  {
+    workshopId: "PMO",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "16:20 - 17:00",
+    date: "22/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme: "PMO 4.0 – Como construir um PMO com agentes de IA",
+    speaker: [
+      "Sandra Alencar - Moldsoft",
     ],
     title: "",
     description: "",
@@ -320,11 +352,27 @@ export const workshopDetailsList = [
       "Como descobrir o que é valor para o cliente e maximizar os resultados da empresa!",
   },
   {
+    workshopId: "Zoho",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "17:20 - 18:00",
+    date: "22/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme: "Inteligência que vai além do planejamento: Como IA acelera o gerenciamento de projetos",
+    speaker: [
+      "Abiezer Lima - ZOHO",
+    ],
+    title: "",
+    description:
+      "Como descobrir o que é valor para o cliente e maximizar os resultados da empresa!",
+  },
+  {
     workshopId: "futuro-trabalho-ai",
     speakerId: "b881ba4b-5549-4640-9ed0-71e3e14954ac",
     profileImgUrl:
       "https://cbgpl.org.br/wp-content/uploads/2025/02/Ricardo-Vargas-1.png",
-    time: "18:10 - 19:10",
+    time: "18:10 - 19:00",
     date: "22/04/2025",
     local: "Plenária - Futuro",
     type: "Palestra",
@@ -352,17 +400,17 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "palestra-gino-terentim",
-    speakerId: "05004c42-36ef-4b47-bd52-f912eae1e92d",
-    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Gino.png",
+    speakerId: "16d2c7fc-3d23-4092-aec2-44ba94e631fc",
+    profileImgUrl: "https://cbgpl.org.br/wp-content/uploads/2025/02/Kelly-Anselmo.png",
     time: "09:30 - 10:30",
     date: "23/04/2025",
     local: "Plenária - Futuro",
     type: "Palestra",
-    theme: "Gestão Sustentável de Projetos",
-    speaker: ["Gino Terentim - Professor e Curioso"],
+    theme: "Projetos inovadores, impactos sustentáveis: conectando valor e futuro",
+    speaker: ["Kelly Anselmo"],
     title: "",
     description:
-      "Nesta apresentação, exploraremos como incorporar a sustentabilidade na avaliação da viabilidade de projetos, indo além dos aspectos financeiros tradicionais. Discutiremos como adicionar a visão de impactos sociais e ambientais ao Business Case, promovendo decisões mais alinhadas com os Objetivos de Desenvolvimento Sustentável (ODS) e a responsabilidade corporativa. O objetivo é fornecer ferramentas práticas para gestores avaliarem projetos sob uma perspectiva holística e sustentável, contribuindo para um futuro mais equilibrado e consciente.",
+      "Projetos inovadores, impactos sustentáveis: conectando valor e futuro",
   },
   {
     workshopId: "margareth-carneiro-agile-alliance",
@@ -425,7 +473,7 @@ export const workshopDetailsList = [
     local: "Jericoacoara",
     type: "Palestra",
     theme:
-      "Projeto de Conversão de Aeronaves de Passageiros E190 em E190F Cargueiras",
+      "Desenvolvimento do Embraer E-Freighter",
     speaker: ["Marcelo Tocci - Program Director - EMBRAER"],
     title: "",
     description:
@@ -456,7 +504,7 @@ export const workshopDetailsList = [
     date: "23/04/2025",
     local: "Beach Park",
     type: "Palestra",
-    theme: "Mediação de Conflitos e a Gestão de Projetos - Uma dupla perfeita!",
+    theme: "Híbrido, Inteligente e Humano: O Novo DNA da Gestão de Projetos.",
     speaker: [
       "Antônio Duarte - Especialista de Projetos, Programas e Portfólio no Exército Brasileiro",
     ],
@@ -491,10 +539,44 @@ export const workshopDetailsList = [
     type: "Palestra",
     theme: "Otimização Máxima: Como a IA Impulsiona a Eficiência e a Produtividade percebeu",
     speaker: [
-      "Carlos Silva Jr - Cristão, Pai, Esposo, Curioso, Empresário, Mentor e Palestrante - SLUPER",
+      "Carlos Silva Jr - Mentor e Palestrante - SLUPER",
     ],
     title: "",
     description: "",
+  },
+  {
+    workshopId:
+      "Como_a_gestao_de_projetos",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:00 - 13:40",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme:
+      "Como a gestão de projetos na M. Dias Branco ajudou a empresa a gerar inovação próxima a meio bilhão de reais.",
+    speaker: ["Rodrigo Martinez"],
+    title: "",
+    description:
+      "",
+  },
+  {
+    workshopId:
+      "Preservo",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:00 - 13:40",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Palestra",
+    theme:
+      "Preservo - Complexo de Acervos da Fiocruz",
+    speaker: ["Marcelo Pelajo Machado - FIOCRUZ"],
+    title: "",
+    description:
+      "",
   },
   {
     workshopId:
@@ -512,6 +594,23 @@ export const workshopDetailsList = [
     title: "",
     description:
       "O Uncertainty Cycle® é o mais novo workshop de Ricardo Vargas sobre o gerenciamento de incertezas. Em um trabalho em equipe, os participantes aprendem um processo inovador de gerenciamento do desconhecido através de um modelo iterativo e ágil. O workshop utiliza como base conceitos de PESTLE, planejamento de cenários, DevOps, agilidade de negócios, e SAFe® (ScaleAgile Framework). O Uncertainty Cycle® é destinado a Executivos, Equipes de Planejamento Estratégico, responsáveis pelo planejamento de investimentos, gestores de risco, líderes de transformação digital, gerentes de projeto. Todos aqueles envolvidos em atividades que necessitam de rápida avaliação e tomada de decisão para responder com eficiência a condições impostas pelo mercado e fatores externos à uma organização.",
+  },
+  {
+    workshopId:
+      "Preservo",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "13:40 - 14:00",
+    date: "23/04/2025",
+    local: "Plenária - Futuro",
+    type: "CASE FIOCRUZ",
+    theme:
+      "Patrimônio Biológico e Saúde",
+    speaker: ["Marcelo Pelajo Machado"],
+    title: "",
+    description:
+      "",
   },
   {
     workshopId:
@@ -548,6 +647,40 @@ export const workshopDetailsList = [
       "A liderança de sucesso não segue um modelo único. Cada líder é único e deve construir sua própria persona, alinhada aos seus pontos fortes. Essa palestra convida os participantes a explorar os quatro domínios do CliftonStrengths34 – Executando, Influenciando, Construindo Relacionamentos e Pensamento Estratégico – para identificar e potencializar seus talentos naturais. Com uma abordagem prática e reflexiva, os participantes sairão com ferramentas e estratégias para criar um estilo de liderança autêntico e eficaz, maximizando seu impacto em equipes e organizações. Objetivo Proporcionar uma visão clara de como os talentos naturais de cada indivíduo contribuem para um estilo de liderança único. Apresentar os quatro domínios do CliftonStrengths34 como base para a construção de uma liderança personalizada. Inspirar os participantes a abraçarem um processo contínuo de autoconhecimento e desenvolvimento como líderes. Relevância para o Tema 'Liderança: Power Skills' A palestra conecta o desenvolvimento das habilidades comportamentais de liderança – como autoconhecimento, empatia e autenticidade – à aplicação prática de uma ferramenta poderosa, o CliftonStrengths34. Essas 'Power Skills' são essenciais para líderes que desejam criar impacto positivo e sustentável em suas equipes e organizações. Público-Alvo Líderes que buscam desenvolver um estilo autêntico e eficaz. Profissionais interessados em explorar seus talentos e maximizar seu impacto. Gestores e membros de equipes que desejam aprimorar sua liderança com base no autoconhecimento.",
   },
   {
+    workshopId:
+      "estimativas_ageis",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "14:00 - 16:00",
+    date: "23/04/2025",
+    local: "Cumbuco",
+    type: "Workshop",
+    theme:
+      "Estimativas Ágeis: Poemas que Transformam Planejamento",
+    speaker: ["Alaíde Pitombeira"],
+    title: "",
+    description:
+      "",
+  },
+   {
+    workshopId:
+      "hand_on",
+    speakerId: "",
+    profileImgUrl:
+      "",
+    time: "14:00 - 16:00",
+    date: "23/04/2025",
+    local: "Beach Park",
+    type: "Workshop",
+    theme:
+      "Hands-on: Construa comunidades de prática (CoPs - comunidades com interesses em comum) com IA e práticas ágeis.",
+    speaker: ["Gerson Albuquerque e Eliabe Abreu - ATLANTICO"],
+    title: "",
+    description:
+      "",
+  },
+  {
     workshopId: "melhores-do-ano",
     speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
     profileImgUrl:
@@ -571,12 +704,25 @@ export const workshopDetailsList = [
     type: "Painel",
     theme: "Liderança Feminina",
     speaker: [
+      "Fernanda Colares - Médica, Professora e Gestora",
       "Delania Santos - CEO DS - Educação & negócios",
       "Simone Caixeta - Diretora de Pessoas",
-      "Fernanda Colares - Médica, Professora e Gestora",
     ],
     title: "Mentora Executiva Internacional",
     description: "Liderança Feminina",
+  },
+  {
+    workshopId: "case_interact",
+    speakerId: "",
+    profileImgUrl: "",
+    time: "16:30 - 17:10",
+    date: "23/04/2025",
+    local: "Iracema",
+    type: "Painel",
+    theme: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos",
+    speaker: ["Tainá Klein - INTERACT SOLUTIONS"],
+    title: "",
+    description: "Case do Projeto de implantação de Sistema de Gerenciamento de Risco Hospitalares no Hospital Moinhos de Ventos - Um dos Melhores Hospitais do Mundo",
   },
   {
     workshopId: "uncertainty-cycle-gerenciamento-de-incertezas",
@@ -595,15 +741,15 @@ export const workshopDetailsList = [
   },
   {
     workshopId: "resultado-melhores-do-ano-projetos-e-pmo",
-    speakerId: "5e627e95-1f13-4fb1-bdc0-449668f778ab",
+    speakerId: "",
     profileImgUrl:
-      "https://media.licdn.com/dms/image/v2/D4D03AQGtx9EJzKurZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1718272670129?e=1749686400&v=beta&t=Y9WUzhElGZlSh_CFgKYhwImI1yrUGdcgefW3HjY1-K4",
+      "",
     time: "17:10 - 17:30",
     date: "23/04/2025",
     local: "Plenária - Futuro",
     type: "Premiação",
     theme: "Resultado Melhores do Ano - Projetos e PMO",
-    speaker: ["Cristiano Oliveira - Presidente PMI"],
+    speaker: ["Mateus Pereira"],
     title: "",
     description: "Resultado Melhores do Ano - Projetos e PMO",
   },
@@ -614,11 +760,11 @@ export const workshopDetailsList = [
     time: "17:30 - 17:50",
     date: "23/04/2025",
     local: "Plenária - Futuro",
-    type: "Patrocinador",
-    theme: "Case FIOCRUZ",
-    speaker: ["FIOCRUZ"],
+    type: "Palestra",
+    theme: "Pablo Lledó - PMI Argentina ",
+    speaker: ["Pablo Lledó - PMI Argentina"],
     title: "",
-    description: "Case Patrocinador FIOCRUZ",
+    description: "",
   },
   {
     workshopId: "impacto-social-esg-gestao-de-projetos-sociais",
