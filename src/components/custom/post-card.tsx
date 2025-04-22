@@ -29,7 +29,9 @@ const PostCard: React.FC<PostCardProps> = ({
             />
           ) : (
             <Avatar className="h-10 w-10">
-              <AvatarFallback className="font-bold">{name?.substring(0, 1)}</AvatarFallback>
+              <AvatarFallback className="font-bold">
+                {name?.substring(0, 1)}
+              </AvatarFallback>
             </Avatar>
           )}
         </Avatar>
@@ -41,19 +43,17 @@ const PostCard: React.FC<PostCardProps> = ({
         </div>
       </div>
 
-      {imgUrl && (
-        <div className="ml-[3.2rem] w-full">
-          {imgUrl && (
-            <Image
-              width={200}
-              height={200}
-              alt="Post Image"
-              src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
-              className="h-auto border object-cover sm:w-auto"
-            />
-          )}
-        </div>
-      )}
+      <div className="ml-[3.2rem] w-fit">
+        {imgUrl && (
+          <Image
+            width={800}
+            height={800}
+            alt="Post Image"
+            src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
+            className="h-auto w-full border object-cover"
+          />
+        )}
+      </div>
 
       <CardContent className="ml-7">
         <p className="text-sm text-gray-700">{message}</p>
