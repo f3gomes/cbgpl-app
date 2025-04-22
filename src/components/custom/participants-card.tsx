@@ -8,7 +8,7 @@ export interface ParticipantCardProps {
   name: string;
   role: string;
   image: string;
-  activities: string;
+  activities?: string;
 }
 
 export default function ParticipantCard({
@@ -16,7 +16,6 @@ export default function ParticipantCard({
   name,
   role,
   image,
-  activities,
 }: ParticipantCardProps) {
   const [error, setError] = useState(false);
 
@@ -44,7 +43,6 @@ export default function ParticipantCard({
           <CardContent className="flex h-[100px] w-[200px] flex-col items-start justify-center gap-1 rounded-[15px] bg-white p-2 text-left text-sm">
             <span className="text-base font-bold">{name}</span>
             <span className="text-sm">{role}</span>
-            <span>{activities}</span>
           </CardContent>
         </Card>
       </Link>
