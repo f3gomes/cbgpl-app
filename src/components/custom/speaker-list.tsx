@@ -29,7 +29,9 @@ export default function SpeakerList() {
 
       <div className="flex flex-row flex-wrap justify-center gap-4 sm:gap-14">
         {isLoading ? (
-          <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-solid border-[#35246F]"></div>
+          <div className="min-h-60 flex items-center">
+            <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-solid border-[#35246F]"></div>
+          </div>
         ) : (
           speakerList.map((item: any) => (
             <Link href={`/speakers/${item.id}`} key={item.id}>
