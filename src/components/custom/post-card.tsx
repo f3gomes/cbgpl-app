@@ -1,7 +1,11 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
+import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format } from "date-fns";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Spinner from "./spinner";
 
 interface PostCardProps {
   name: string;
@@ -18,6 +22,14 @@ const PostCard: React.FC<PostCardProps> = ({
   createdAt,
   profileImg,
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!imgUrl || imgUrl === "" || imgUrl === undefined) {
+      setIsLoading(false);
+    }
+  }, [imgUrl]);
+
   return (
     <Card className="w-full space-y-4 rounded-2xl p-4 shadow-md">
       <div className="flex items-center space-x-3">
@@ -43,21 +55,30 @@ const PostCard: React.FC<PostCardProps> = ({
         </div>
       </div>
 
-      <div className="ml-[3.2rem] w-fit">
+      <div className="w-fit">
+        {isLoading ? (
+          <div className="flex h-16 w-16 justify-center">
+            <Spinner />
+          </div>
+        ) : (
+          <></>
+        )}
+
         {imgUrl && (
           <Image
             width={800}
             height={800}
-            alt="Post Image"
+            alt="Imagem da publicação"
             src={`${process.env.NEXT_PUBLIC_URL_ENDPOINT}/${imgUrl}`}
             className="h-auto w-full border object-cover"
+            onLoad={() => {
+              setIsLoading(false);
+            }}
           />
         )}
       </div>
 
-      <CardContent className="ml-7">
-        <p className="text-sm text-gray-700">{message}</p>
-      </CardContent>
+      <p className="text-sm text-gray-700">{message}</p>
     </Card>
   );
 };
