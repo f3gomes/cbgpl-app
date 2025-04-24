@@ -107,8 +107,8 @@ export default function PostForm({ setNewPost }: PostForm) {
     <Card className="h-[160px] w-full rounded-2xl p-4 shadow-md">
       <form onSubmit={onSubmit}>
         <div className="mt-1 flex items-center gap-4">
-          <div className="flex h-[72px] min-w-[72px] items-center justify-center rounded-full bg-[#F3F3F3]">
-            <Avatar className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F3F3F3] xl:h-[72px] xl:min-w-[72px]">
+            <Avatar className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 transition-colors hover:bg-orange-600 xl:h-16 xl:w-16">
               <AvatarImage src={profileImg} alt="User avatar" />
               <CircleUserRound size={36} className="text-[#FFFFFF]" />
             </Avatar>
@@ -118,7 +118,7 @@ export default function PostForm({ setNewPost }: PostForm) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Compartilhe uma publicação"
-            className="h-[72px] flex-grow rounded-3xl bg-[#F3F3F3] sm:w-[537px]"
+            className="h-16 flex-grow rounded-3xl bg-[#F3F3F3] sm:w-[537px] xl:h-[72px]"
           />
         </div>
 
@@ -136,6 +136,7 @@ export default function PostForm({ setNewPost }: PostForm) {
                 className="absolute left-0 h-9 w-full opacity-0"
                 onChange={handleImageChange}
               />
+
               <Images size={16} className="text-[#35246F]" />
               {imgUrl ? <span>{imgUrl?.path?.name}</span> : <span>Mídia</span>}
             </div>
