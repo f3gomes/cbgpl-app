@@ -28,12 +28,13 @@ export const navItems = [
   { title: "Início", link: "/" },
   { title: "Programação", link: "/schedule" },
   { title: "Fotos", link: "#" },
+  { title: "Materiais", link: "#" },
 ];
 
 export const navItemsMobile = [
   { title: "Início", link: "/", target: false },
   { title: "Programação", link: "/schedule", target: false },
-  // { title: "Fotos", link: "/", target: false },
+  { title: "Materiais", link: "/", target: false },
   { title: "Palestrantes", link: "/speakers", target: false },
   { title: "Participantes", link: "/participants", target: false },
   {
@@ -42,10 +43,11 @@ export const navItemsMobile = [
     target: true,
   },
   {
-    title: "Certificações",
+    title: "Certificado",
     link: "https://pontoonline.com.br/20cbgpl/login",
     target: true,
   },
+  { title: "Fotos", link: "/", target: false },
   { title: "Feedback", link: "/", target: false },
 ];
 
@@ -87,7 +89,7 @@ export const sideIcons = [
     target: true,
   },
   {
-    title: "Certificações do Congresso",
+    title: "Certificação do Congresso",
     icons: FileCheck2,
     href: "https://pontoonline.com.br/20cbgpl/login",
     target: true,
