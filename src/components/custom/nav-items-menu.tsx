@@ -11,6 +11,7 @@ const NavMenu = () => {
           <a
             key={index}
             href={item.link}
+            target={item.title === "Materiais" ? "_blank" : "_self"}
             className="text-base font-medium text-black transition duration-200 hover:text-slate-700"
           >
             {item.title === "Fotos" ? <PopoverFotos /> : item.title}

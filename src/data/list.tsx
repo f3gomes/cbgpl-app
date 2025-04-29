@@ -28,13 +28,20 @@ export const navItems = [
   { title: "Início", link: "/" },
   { title: "Programação", link: "/schedule" },
   { title: "Fotos", link: "#" },
-  { title: "Materiais", link: "#" },
+  {
+    title: "Materiais",
+    link: "https://drive.google.com/drive/folders/10yhziSd16XyfXnVIg8oURf6kBqVKdZRf",
+  },
 ];
 
 export const navItemsMobile = [
   { title: "Início", link: "/", target: false },
   { title: "Programação", link: "/schedule", target: false },
-  { title: "Materiais", link: "/", target: false },
+  {
+    title: "Materiais",
+    link: "https://drive.google.com/drive/folders/10yhziSd16XyfXnVIg8oURf6kBqVKdZRf",
+    target: true,
+  },
   { title: "Palestrantes", link: "/speakers", target: false },
   { title: "Participantes", link: "/participants", target: false },
   {
