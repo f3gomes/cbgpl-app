@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Card } from "../ui/card";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import FeedbackModal from "./feedback-modal";
-import { PopoverMaterial } from "./popover-material";
 import { Avatar, AvatarImage } from "../ui/avatar";
 
 export type Workshop = {
