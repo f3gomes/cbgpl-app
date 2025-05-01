@@ -27,7 +27,10 @@ export interface ISession {
 export const navItems = [
   { title: "Início", link: "/" },
   { title: "Programação", link: "/schedule" },
-  { title: "Fotos", link: "#" },
+  {
+    title: "Fotos",
+    link: "https://drive.google.com/drive/folders/1Ju_3oGibiw9zI6XETSTb0nnRkzCWMXMh?usp=sharing",
+  },
   {
     title: "Materiais",
     link: "https://drive.google.com/drive/folders/10yhziSd16XyfXnVIg8oURf6kBqVKdZRf",
@@ -54,7 +57,11 @@ export const navItemsMobile = [
     link: "https://pontoonline.com.br/20cbgpl/login",
     target: true,
   },
-  { title: "Fotos", link: "/", target: false },
+  {
+    title: "Fotos",
+    link: "https://drive.google.com/drive/folders/1Ju_3oGibiw9zI6XETSTb0nnRkzCWMXMh?usp=sharing",
+    target: true,
+  },
   { title: "Feedback", link: "/", target: false },
 ];
 

@@ -1,6 +1,4 @@
 import React from "react";
-
-import { PopoverFotos } from "./popover-fotos";
 import { navItems } from "@/data/list";
 
 const NavMenu = () => {
@@ -11,10 +9,14 @@ const NavMenu = () => {
           <a
             key={index}
             href={item.link}
-            target={item.title === "Materiais" ? "_blank" : "_self"}
+            target={
+              item.title === "Materiais" || item.title === "Fotos"
+                ? "_blank"
+                : "_self"
+            }
             className="text-base font-medium text-black transition duration-200 hover:text-slate-700"
           >
-            {item.title === "Fotos" ? <PopoverFotos /> : item.title}
+            {item.title}
           </a>
         ))}
       </div>
