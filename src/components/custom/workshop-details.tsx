@@ -117,14 +117,16 @@ export default function WorkshopDetails({ workshop }: WorkshopProps) {
             <FeedbackModal />
           </Dialog>
 
-          {/* <Link
-            href={`/details`}
+          <Link
+            target="_blank"
             className="flex items-center justify-center overflow-hidden whitespace-nowrap rounded-[21px] border border-orange-400 bg-white px-12 text-base font-semibold text-[#1B1B1B] sm:text-lg md:text-xl"
+            href={
+              "https://drive.google.com/drive/folders/10yhziSd16XyfXnVIg8oURf6kBqVKdZRf"
+            }
           >
             Material
-          </Link> */}
+          </Link>
 
-          <PopoverMaterial />
           <Link
             href="https://pontoonline.com.br/20cbgpl/login"
             rel="noopener noreferrer"
