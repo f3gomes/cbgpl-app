@@ -5,8 +5,10 @@ import { sideIcons, socialIcons } from "@/data/list";
 import WorkshopDetails from "@/components/custom/workshop-details";
 import { workshopDetailsList } from "@/data/workshop-list";
 
-type Params = {
-  id: string;
+type PageProps = {
+  params: Promise<{
+    id: string;
+  }>;
 };
 
 export async function generateStaticParams() {
@@ -15,8 +17,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function WorkshoPage({ params }: { params: Params }) {
-  const workshop = workshopDetailsList.find((e) => e.workshopId === params.id);
+export default async function WorkshoPage({ params }: PageProps) {
+  const { id } = await params;
+
+  const workshop = workshopDetailsList.find((e) => e.workshopId === id);
 
   if (!workshop) {
     return (
@@ -29,12 +33,9 @@ export default function WorkshoPage({ params }: { params: Params }) {
   return (
     <div className="flex min-h-screen w-full flex-col bg-gray-50">
       <Header />
-
       <main className="mx-auto flex w-full flex-grow flex-col justify-center gap-2 p-4 xl:flex-row">
         <AsideLeft sideIcons={sideIcons} socialIcons={socialIcons} />
-
         <WorkshopDetails workshop={workshop} />
-
         <AsideRight />
       </main>
     </div>

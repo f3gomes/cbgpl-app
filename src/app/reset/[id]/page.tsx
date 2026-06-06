@@ -19,13 +19,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { useEffect, useState } from "react";
+// 1. Importe o hook 'use' do React
+import { useEffect, useState, use } from "react";
 import { getUserById } from "@/actions/getUserById";
 
 interface ResetPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 const defaultValues = {
@@ -33,7 +34,11 @@ const defaultValues = {
   confirmPassword: "",
 };
 
-const ResetPage = ({ params: { id } }: ResetPageProps) => {
+// 2. Removemos o 'async' da assinatura do componente do lado do cliente
+const ResetPage = ({ params }: ResetPageProps) => {
+  // 3. Utilizamos o 'use()' para extrair o id de dentro da Promise de forma síncrona
+  const { id } = use(params);
+
   const router = useRouter();
   const [token, setToken] = useState("");
 

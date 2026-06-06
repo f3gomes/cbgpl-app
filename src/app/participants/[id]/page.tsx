@@ -5,12 +5,14 @@ import ParticipantDetails from "@/components/custom/participant-details";
 import { sideIcons, socialIcons } from "@/data/list";
 
 interface ParticipantPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-const ParticipantPage = ({ params: { id } }: ParticipantPageProps) => {
+const ParticipantPage = async ({ params }: ParticipantPageProps) => {
+  const { id } = await params;
+
   return (
     <>
       <div className="flex min-h-screen w-full flex-col bg-gray-50">
